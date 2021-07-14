@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(14, 9, 20);
     overflow-x: hidden;
     font-family: Arial;
 }
@@ -62,7 +62,7 @@ li a:hover {
     margin: auto;
     height: auto;
     max-width: 1500px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     /* border: white dashed 2px; */
 }
 
@@ -72,6 +72,8 @@ li a:hover {
     padding: 20px;
     margin: 30px;
     font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    line-height: 25px;
     text-align: left;
     background-image: linear-gradient(135deg, #a8b9f1, #6e82be,#802e83, #673069);
     /* border: #5600696c solid 2px; */
@@ -125,7 +127,7 @@ li a:hover {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: #0e0e10;
+    background: #351836;
   }
   
   .bn30:hover {

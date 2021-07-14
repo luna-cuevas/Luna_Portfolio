@@ -62,7 +62,7 @@ gsap.from('.pic', {
 		trigger : '.info'
 	},
 	opacity       : 0,
-	duration      : 2,
+	duration      : 1,
 	y             : 400,
 	scrub         : 1
 });

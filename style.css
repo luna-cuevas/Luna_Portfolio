@@ -14,6 +14,9 @@ body {
     background-color: rgb(14, 9, 20);
     overflow-x: hidden;
     font-family: Arial;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 nav {
@@ -128,11 +131,11 @@ li a:hover {
 .blurb {
     display: flex;
     margin: auto;
+    height: 80vh;
     width: auto;
-    gap: 100px;
+    gap: 200px;
     justify-content: center;
     align-items: center;
-
 }
 
 .blurb img {
@@ -144,10 +147,11 @@ li a:hover {
 }
 
 .lorem {
-    width: 600px;
+    width: 700px;
     text-align: left;
-    font-size: 25px;
+    font-size: 28px;
     color: white;
+    line-height: 32px;
 }
 
 #more {display: none;}
@@ -182,8 +186,8 @@ li a:hover {
 .info2 div {
     display: flex;
     margin: auto;
-    width: 1000px;
-    gap: 100px;
+    width: 1400px;
+    gap: 200px;
     justify-content: center;
     align-items: center;
     text-align: left;
@@ -191,17 +195,61 @@ li a:hover {
 }
 
 .info2 img {
-    width: 200px;
+    width: 220px;
     padding: 0;
 }
 
 .info2 p {
-    width: 600px;
-    font-size: 20px;
-    line-height: 25px;
+    width: 750px;
+    font-size: 25px;
+    line-height: 30px;
+    /* line-height: 25px; */
 }
 
+
+#myBtn, #myBtn2, #myBtn3 {
+  /* margin-top: 30px; */
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(135deg, #6382e7, #e262a9);
+  padding: 0.2em 0.5em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: rgb(245, 228, 250);
+}
+
+#myBtn:after, #myBtn2:after, #myBtn3:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  /* background: #0e0e10; */
+}
+
+#myBtn:hover, #myBtn2:hover, #myBtn3:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 12px rgba(128, 128, 128, 0.1);
+}
+
+#myBtn:hover, #myBtn2:hover, #myBtn3:hover .text {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+
+
 #bn30 {
+  margin-top: 30px;
   border: 5em;
   cursor: pointer;
   outline: none;
@@ -245,25 +293,26 @@ li a:hover {
 }
 
 
-
+.coding {
+  color: white;
+  width: 200px;
+  margin: 0 auto 100px auto;
+  justify-content: center;
+}
 .info3 {
     display: flex;
     margin: auto;
     width: 1000px;
-    height: 120vh;
+    height: 80vh;
     color: white;
     justify-content: space-between;
     text-align: center;
 }
 
-.info3-container {
-    margin-top: 200px;
-    width: 400px;
-}
 
 .border {
-    height: 500px;
-    margin-top: 200px;
+    height: 450px;
+    margin-top: 25px;
     border: white solid 2px;
 }
 
@@ -280,6 +329,7 @@ li a:hover {
     height: 80px;
     width: auto;
 }
+
 
 
 .tooltip {
@@ -376,3 +426,6 @@ li a:hover {
       transform: translate(-22px,5px) skew(21deg); 
     }
   }
+
+
+  
