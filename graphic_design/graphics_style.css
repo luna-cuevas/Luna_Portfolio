@@ -1,0 +1,143 @@
+@font-face {
+  font-family: Infynyte;
+  src: url(/fonts/infynyte.otf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(14, 9, 20);
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+  display: flex;
+  margin: auto;
+  width:100%;
+  justify-content: space-between;
+
+}
+
+li a {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #53165f5d;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.pages {
+  margin-top: 0;
+  padding-top: 0;
+  padding: 20px;
+  justify-content:flex-end;
+  display: flex;
+  list-style-type: none;
+}
+
+.socials {
+  margin-top: 0;
+  padding-top: 0;
+  padding: 20px;
+  justify-content:flex-start;
+  display: flex;
+  list-style-type: none;
+}
+
+.container {
+  margin-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#title {
+  font-family: 'Infynyte';
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.column {
+  display: none;
+  width: 33.33%;
+  height: 100%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-image: linear-gradient(135deg, #a8b9f1, #6e82be,#7b2d7e, #53165f);
+  max-width: 500px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.content img {
+  background-color: white;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.show {
+  display: block;
+}
+
+#myBtnContainer {
+  display: flex;
+  width: 334px;
+  justify-content: left;
+  margin-left: 5%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.btn {
+  color: white;
+  font-size: 18px;
+  margin: 1px;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #6e82be;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #a8b9f1;
+}
+
+.btn.active {
+  background-color: #7b2d7e;
+    color: white;
+}
+
+
+

@@ -13,8 +13,9 @@ gsap.from('.hero-text', {
 gsap.from('.hero-text p', {
 	opacity  : 0,
 	delay    : 1.5,
-	duration : 1,
-	stagger  : 0.4
+	y        : 400,
+	duration : 1.2,
+	stagger  : 0.2
 });
 
 gsap.from('.moon', {
@@ -88,6 +89,16 @@ gsap.from('.summary', {
 	delay         : 0.4
 });
 
+gsap.from('.tooltip', {
+	scrollTrigger : {
+		trigger : '.info3'
+	},
+	y             : 400,
+	opacity       : 0,
+	duration      : 1,
+	stagger       : 0.2
+});
+
 function myFunction() {
 	let dots = document.getElementById('dots');
 	let moreText = document.getElementById('more');
@@ -135,3 +146,15 @@ function myFunction3() {
 		moreText.style.display = 'inline';
 	}
 }
+
+$(document).ready(function() {
+	$('.button a').click(function() {
+		$('.overlay').fadeToggle(200);
+		$(this).toggleClass('btn-open').toggleClass('btn-close');
+	});
+});
+$('.overlay').on('click', function() {
+	$('.overlay').fadeToggle(200);
+	$('.button a').toggleClass('btn-open').toggleClass('btn-close');
+	open = false;
+});
