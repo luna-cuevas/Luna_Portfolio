@@ -801,14 +801,16 @@ li a:hover {
     margin: auto;
     max-width: 100vw;
     max-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     color: white;
+    margin-bottom: 20vh;
     justify-content: space-around;
     text-align: center;
   }
 
   .info3-container {
+    width: auto;
     max-width: 100vw;
     width: auto;
   }
@@ -835,8 +837,8 @@ li a:hover {
     text-align: center;
     margin: auto;
     width: auto;
-    height: 100%;
+    height: 30vh;
     justify-content: center;
-    margin-bottom: 50vh;
+    margin-bottom: 40vh;
   }
 }
