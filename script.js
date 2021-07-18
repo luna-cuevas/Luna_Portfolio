@@ -1,102 +1,185 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.hero-text', {
-	scrollTrigger : {
-		toggleActions : 'play pause resume pause',
-		trigger       : '.hero-text'
-	},
-	opacity       : 0,
-	duration      : 2,
-	delay         : 1
-});
+ScrollTrigger.matchMedia({
+	'(min-width: 769px)' : function() {
+		gsap.from('.hero-text p', {
+			scrollTrigger : {
+				toggleActions : 'play none restart restart',
+				trigger       : '.hero-text'
+			},
+			opacity       : 0,
+			delay         : 1.1,
+			z             : 100,
+			duration      : 2,
+			stagger       : 0.5
+		});
 
-gsap.from('.hero-text p', {
-	opacity  : 0,
-	delay    : 1.5,
-	y        : 400,
-	duration : 1.2,
-	stagger  : 0.2
-});
+		gsap.from('.moon', {
+			scrollTrigger : {
+				toggleActions : 'play none restart restart',
+				trigger       : '.moon'
+			},
+			opacity       : 0,
+			duration      : 4,
+			delay         : 3
+		});
 
-gsap.from('.moon', {
-	opacity  : 0,
-	duration : 3,
-	delay    : 3
-});
+		gsap.to('.moon1', {
+			delay    : 3,
+			rotation : 360,
+			duration : 3
+		});
 
-gsap.to('.moon1', {
-	delay    : 4,
-	rotation : 360,
-	duration : 3
-});
+		gsap.from('.cloud1', {
+			opacity  : 0,
+			duration : 3,
+			x        : -400,
+			duration : 4,
+			delay    : 3
+		});
 
-gsap.from('.cloud1', {
-	opacity  : 0,
-	duration : 3,
-	x        : -400,
-	duration : 4,
-	delay    : 3
-});
+		gsap.from('.cloud2', {
+			opacity  : 0,
+			duration : 3,
+			x        : 400,
+			duration : 4,
+			delay    : 3
+		});
 
-gsap.from('.cloud2', {
-	opacity  : 0,
-	duration : 3,
-	x        : 400,
-	duration : 4,
-	delay    : 3
-});
+		gsap.from('.info-btn', {
+			scrollTrigger : {
+				toggleActions : 'play none reverse restart',
+				trigger       : '.info',
+				start         : '20% center',
+				end           : '30% center',
+				scrub         : true
+			},
+			opacity       : 0,
+			duration      : 2,
+			y             : 400
+		});
 
-gsap.from('.lorem', {
-	scrollTrigger : {
-		// toggleActions : 'restart pause resume pause',
-		trigger : '.info'
-	},
-	opacity       : 0,
-	duration      : 2,
-	x             : 400
-	// scrub         : 1
-});
+		gsap.from('.lorem', {
+			scrollTrigger : {
+				toggleActions : 'play none reverse restart',
+				trigger       : '.info',
+				start         : '0% bottom',
+				end           : '30% center',
+				scrub         : true
+			},
+			opacity       : 0,
+			duration      : 2,
+			x             : 200
+		});
 
-gsap.from('.pic', {
-	scrollTrigger : {
-		// toggleActions : 'restart pause resume pause',
-		trigger : '.info'
-	},
-	opacity       : 0,
-	duration      : 1,
-	y             : 400,
-	scrub         : 1
-});
+		gsap.from('.pic', {
+			scrollTrigger : {
+				toggleActions : 'play none reverse restart',
+				trigger       : '.info',
+				start         : '0% bottom',
+				end           : '30% center',
+				scrub         : true
+			},
+			opacity       : 0,
+			duration      : 1,
+			y             : 200
+		});
 
-gsap.from('.logo', {
-	scrollTrigger : {
-		// toggleActions : 'restart pause resume pause',
-		trigger : '.logo'
-	},
-	opacity       : 0,
-	duration      : 2,
-	x             : -200
-});
+		gsap.from('.info2-title', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.info2',
+				start         : '0% bottom',
+				end           : '20% center',
+				scrub         : 0.5
+			},
+			opacity       : 0,
+			duration      : 5,
+			z             : -200
+		});
 
-gsap.from('.summary', {
-	scrollTrigger : {
-		// toggleActions : 'restart pause resume pause',
-		trigger : '.summary'
-	},
-	opacity       : 0,
-	duration      : 2,
-	x             : 200,
-	delay         : 0.4
-});
+		gsap.from('.logo', {
+			scrollTrigger : {
+				toggleActions : 'play none reverse restart',
+				trigger       : '.info2',
+				start         : '0% bottom',
+				end           : '20% center',
+				scrub         : 0.5
+			},
+			opacity       : 0,
+			duration      : 2,
+			x             : -200
+		});
 
-gsap.from('.tooltip', {
-	scrollTrigger : {
-		trigger : '.info3'
-	},
-	y             : 400,
-	opacity       : 0,
-	duration      : 1,
-	stagger       : 0.2
+		gsap.from('.info3', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.info3',
+				start         : '0% center',
+				end           : '20% center',
+				scrub         : 0.5
+			},
+			opacity       : 0,
+			duration      : 2,
+			z             : 200,
+			delay         : 0
+		});
+
+		gsap.from('.line-1', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.info3',
+				start         : '0% bottom',
+				end           : '20% center',
+				scrub         : 0.5
+			},
+			opacity       : 0,
+			duration      : 2,
+			z             : 200,
+			delay         : 0
+		});
+
+		gsap.from('.summary', {
+			scrollTrigger : {
+				toggleActions : 'play none reverse restart',
+				trigger       : '.info2',
+				start         : '0% bottom',
+				end           : '20% center',
+				scrub         : 0.5
+			},
+			opacity       : 0,
+			duration      : 2,
+			x             : 200,
+			delay         : 0.4
+		});
+
+		gsap.from('.tooltip', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.info3',
+				start         : '0% bottom',
+				end           : '10% center',
+				scrub         : 3
+			},
+			y             : 400,
+			opacity       : 0,
+			duration      : 1,
+			stagger       : 0.2
+		});
+
+		gsap.from('.links', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.info3',
+				start         : '0% center',
+				end           : '10% center',
+				scrub         : 1
+			},
+			y             : 400,
+			opacity       : 0,
+			duration      : 1
+		});
+	}
 });
 
 function myFunction() {
