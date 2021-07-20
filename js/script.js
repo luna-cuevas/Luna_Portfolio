@@ -117,8 +117,7 @@ ScrollTrigger.matchMedia({
 				trigger       : '.info2',
 				start         : '40% bottom',
 				end           : '60% bottom',
-				scrub         : 0.5,
-				markers       : true
+				scrub         : 0.5
 			},
 			opacity       : 0,
 			duration      : 1,
@@ -131,8 +130,7 @@ ScrollTrigger.matchMedia({
 				trigger       : '.info3',
 				start         : '-80% bottom',
 				end           : '20% bottom',
-				scrub         : 0.5,
-				markers       : true
+				scrub         : 0.5
 			},
 			opacity       : 0,
 			duration      : 2,
@@ -146,8 +144,7 @@ ScrollTrigger.matchMedia({
 				trigger       : '.info3',
 				start         : '-20% bottom',
 				end           : '20% bottom',
-				scrub         : 1,
-				markers       : true
+				scrub         : 1
 			},
 			y             : 400,
 			opacity       : 0,
