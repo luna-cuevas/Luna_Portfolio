@@ -27,23 +27,34 @@ ScrollTrigger.matchMedia({
 		gsap.to('.moon1', {
 			delay    : 3,
 			rotation : 360,
-			duration : 3
+			duration : 3,
 		});
 
 		gsap.from('.cloud1', {
 			opacity  : 0,
-			duration : 3,
 			x        : -400,
 			duration : 4,
-			delay    : 3
+			delay    : 3,
+		});
+
+		gsap.to('.cloud1', {
+			duration : 3,
+			x        : 10,
+			y		 : 3,
+			delay    : 6
 		});
 
 		gsap.from('.cloud2', {
 			opacity  : 0,
-			duration : 3,
 			x        : 400,
 			duration : 4,
 			delay    : 3
+		});
+
+		gsap.to('.cloud2', {
+			duration : 3,
+			x        : -10,
+			delay    : 6
 		});
 
 		gsap.from('.info-btn', {
