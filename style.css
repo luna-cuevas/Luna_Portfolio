@@ -185,7 +185,7 @@ li a:hover {
   flex-wrap: wrap;
   max-width: 100vw;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1vw;
   margin-top: 0;
   font-size: 2.5rem;
   font-weight: 300;
@@ -292,8 +292,8 @@ li a:hover {
 .blurb {
   display: flex;
   margin: auto;
-  margin-top: 21vh;
-  height: 60vh;
+  margin-top: 10vh;
+  height: auto;
   width: auto;
   gap: 10vw;
   justify-content: center;
@@ -720,7 +720,6 @@ li a:hover {
   .hero-p {
     display: flex;
     width: 100%;
-    /* flex-direction: column; */
     font-size: 1.75rem;
     gap: 2vw;
     z-index: 1;
@@ -731,15 +730,15 @@ li a:hover {
   }
 
   .moon1 {
-    width: 15vw;
+    width: 10vw;
   }
 
   .cloud1 {
-    width: 20vw;
+    width: 15vw;
   }
 
   .cloud2 {
-    width: 20vw;
+    width: 15vw;
   }
 
   .info {
