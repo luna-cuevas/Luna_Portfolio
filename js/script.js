@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
-	'(min-width: 769px)' : function() {
+	'(min-width: 0px)' : function() {
 		gsap.from('.hero-text p', {
 			scrollTrigger : {
 				toggleActions : 'play none restart restart',
@@ -154,7 +154,7 @@ ScrollTrigger.matchMedia({
 		gsap.from('.links', {
 			scrollTrigger : {
 				toggleActions : 'play none none reverse',
-				trigger       : '.info3',
+				trigger       : '.recent-projects',
 				start         : '-15% bottom',
 				end           : '10% center',
 				scrub         : 1
@@ -163,7 +163,21 @@ ScrollTrigger.matchMedia({
 			opacity       : 0,
 			duration      : 2
 		});
-	}
+
+		gsap.from('.recent-projects', {
+			scrollTrigger : {
+				toggleActions : 'play none none reverse',
+				trigger       : '.recent-projects',
+				start         : '-20% bottom',
+				end           : '20% bottom',
+				scrub         : 1
+			},
+			y             : 400,
+			opacity       : 0,
+			duration      : 5
+		});
+	},
+
 });
 
 function myFunction() {
