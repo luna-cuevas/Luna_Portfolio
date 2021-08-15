@@ -15,18 +15,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e0914;
+  background-color: rgb(14, 9, 20);
   height: 100%;
   font-family: "Source Sans Pro", sans-serif;
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100vw;
   height: auto;
@@ -37,7 +33,6 @@ nav ul li a {
   padding: 1rem 1rem;
   text-decoration: none;
   border-bottom: 0.2rem solid #fff;
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
   font-size: 1.5rem;
   color: white;
@@ -59,23 +54,15 @@ li a:hover {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .socials {
   margin-top: 0;
   padding-top: 0;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   z-index: 1;
@@ -84,11 +71,7 @@ li a:hover {
 .pages {
   margin-top: 0;
   padding-top: 0;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   z-index: 1;
@@ -108,25 +91,20 @@ li a:hover {
 }
 
 .btn-open:after {
-  color: #fffdfd;
+  color: rgb(255, 253, 253);
   content: "\f0c9";
   font-family: "FontAwesome";
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
 }
-
 .btn-open:hover:after {
   color: #ffffff;
 }
-
 .btn-close:after {
   color: #fff;
   content: "\f00d";
   font-family: "FontAwesome";
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
 }
-
 .btn-close:hover:after {
   color: #ffffff;
 }
@@ -150,7 +128,6 @@ li a:hover {
   display: block;
   padding: 0.2rem 0 0.2rem 0;
   text-decoration: none;
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
 }
 
@@ -183,15 +160,9 @@ li a:hover {
 }
 
 .hero-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   max-width: 55vw;
   margin: 20vh auto 0 auto;
@@ -209,14 +180,9 @@ li a:hover {
 }
 
 .hero-p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 100vw;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 1vw;
   margin-top: 0;
@@ -232,40 +198,19 @@ li a:hover {
 }
 
 .intro {
-  -webkit-animation: glitch 5s linear infinite;
   animation: glitch 5s linear infinite;
-}
-
-@-webkit-keyframes glitch {
-  2%,
-  64% {
-    -webkit-transform: translate(2px, 0) skew(0deg);
-    transform: translate(2px, 0) skew(0deg);
-  }
-  4%,
-  60% {
-    -webkit-transform: translate(-2px, 0) skew(0deg);
-    transform: translate(-2px, 0) skew(0deg);
-  }
-  62% {
-    -webkit-transform: translate(0, 0) skew(5deg);
-    transform: translate(0, 0) skew(5deg);
-  }
 }
 
 @keyframes glitch {
   2%,
   64% {
-    -webkit-transform: translate(2px, 0) skew(0deg);
     transform: translate(2px, 0) skew(0deg);
   }
   4%,
   60% {
-    -webkit-transform: translate(-2px, 0) skew(0deg);
     transform: translate(-2px, 0) skew(0deg);
   }
   62% {
-    -webkit-transform: translate(0, 0) skew(5deg);
     transform: translate(0, 0) skew(5deg);
   }
 }
@@ -278,95 +223,49 @@ li a:hover {
 }
 
 .intro:before {
-  -webkit-animation: glitchTop 1s linear infinite;
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
-@-webkit-keyframes glitchTop {
-  2%,
-  64% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  4%,
-  60% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  62% {
-    -webkit-transform: translate(13px, -1px) skew(-13deg);
-    transform: translate(13px, -1px) skew(-13deg);
-  }
-}
-
 @keyframes glitchTop {
   2%,
   64% {
-    -webkit-transform: translate(2px, -2px);
     transform: translate(2px, -2px);
   }
   4%,
   60% {
-    -webkit-transform: translate(-2px, 2px);
     transform: translate(-2px, 2px);
   }
   62% {
-    -webkit-transform: translate(13px, -1px) skew(-13deg);
     transform: translate(13px, -1px) skew(-13deg);
   }
 }
 
 .intro:after {
-  -webkit-animation: glitchBotom 1.5s linear infinite;
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@-webkit-keyframes glitchBotom {
-  2%,
-  64% {
-    -webkit-transform: translate(-2px, 0);
-    transform: translate(-2px, 0);
-  }
-  4%,
-  60% {
-    -webkit-transform: translate(-2px, 0);
-    transform: translate(-2px, 0);
-  }
-  62% {
-    -webkit-transform: translate(-22px, 5px) skew(21deg);
-    transform: translate(-22px, 5px) skew(21deg);
-  }
-}
-
 @keyframes glitchBotom {
   2%,
   64% {
-    -webkit-transform: translate(-2px, 0);
     transform: translate(-2px, 0);
   }
   4%,
   60% {
-    -webkit-transform: translate(-2px, 0);
     transform: translate(-2px, 0);
   }
   62% {
-    -webkit-transform: translate(-22px, 5px) skew(21deg);
     transform: translate(-22px, 5px) skew(21deg);
   }
 }
 
 .moon {
   padding: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 7.5rem;
 }
@@ -388,37 +287,14 @@ li a:hover {
   height: 100vh;
   text-align: center;
 }
-
 .info-title {
   font-size: 1.75rem;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 10vw;
   margin: 15vh auto 5vh auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  border: 3px solid;
-  -o-border-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      #4568dc,
-      #b06ab3,
-      rgba(0, 0, 0, 0)
-    )
-    10 0 10 0;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(#4568dc),
-      color-stop(#b06ab3),
-      to(rgba(0, 0, 0, 0))
-    )
-    10 0 10 0;
+  border: 3px solid transparent;
   border-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
@@ -426,24 +302,18 @@ li a:hover {
       #b06ab3,
       rgba(0, 0, 0, 0)
     )
-    10 0 10 0;
+    1;
   padding: 1rem;
 }
 
 .blurb {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
   margin-top: 10vh;
   height: auto;
   width: auto;
   gap: 10vw;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -458,24 +328,6 @@ li a:hover {
 .lorem {
   border-width: 3px;
   border-style: solid;
-  -o-border-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      #4568dc,
-      #b06ab3,
-      rgba(0, 0, 0, 0)
-    )
-    1 100%;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(#4568dc),
-      color-stop(#b06ab3),
-      to(rgba(0, 0, 0, 0))
-    )
-    1 100%;
   border-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
@@ -492,12 +344,6 @@ li a:hover {
   line-height: 1.5rem;
 }
 
-@-webkit-keyframes moveGradient {
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
 @keyframes moveGradient {
   50% {
     background-position: 100% 50%;
@@ -507,11 +353,9 @@ li a:hover {
 #more {
   display: none;
 }
-
 #more2 {
   display: none;
 }
-
 #more3 {
   display: none;
 }
@@ -527,33 +371,11 @@ li a:hover {
 .info2-title {
   font-size: 1.75rem;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 20vw;
   margin: 15vh auto 5vh auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  border: 3px solid;
-  -o-border-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      #4568dc,
-      #b06ab3,
-      rgba(0, 0, 0, 0)
-    )
-    10 0 10 0;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(#4568dc),
-      color-stop(#b06ab3),
-      to(rgba(0, 0, 0, 0))
-    )
-    10 0 10 0;
+  border: 3px solid transparent;
   border-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
@@ -561,23 +383,17 @@ li a:hover {
       #b06ab3,
       rgba(0, 0, 0, 0)
     )
-    10 0 10 0;
+    1;
   padding: 1rem;
 }
 
 .info2 div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
   width: 100vw;
   padding-top: 0.75rem;
   gap: 10vw;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: left;
 }
@@ -590,24 +406,6 @@ li a:hover {
 .info2 p {
   border-width: 3px;
   border-style: solid;
-  -o-border-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      #4568dc,
-      #b06ab3,
-      rgba(0, 0, 0, 0)
-    )
-    1 100%;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(#4568dc),
-      color-stop(#b06ab3),
-      to(rgba(0, 0, 0, 0))
-    )
-    1 100%;
   border-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
@@ -635,13 +433,9 @@ li a:hover {
   transform: translate(0);
   background-image: linear-gradient(135deg, #4568dc, #b06ab3);
   border-radius: 0px;
-  -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   -webkit-transition: box-shadow 0.25s;
-  -webkit-transition: -webkit-box-shadow 0.25s;
-  transition: -webkit-box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
   color: white;
 }
 
@@ -664,7 +458,6 @@ li a:hover {
 #myBtn2:hover,
 #myBtn3:hover {
   background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-  -webkit-box-shadow: 0 12px 12px rgba(128, 128, 128, 0.1);
   box-shadow: 0 12px 12px rgba(128, 128, 128, 0.1);
 }
 
@@ -686,13 +479,9 @@ li a:hover {
   background-image: linear-gradient(135deg, #4568dc, #b06ab3);
   padding: 0.6em 1.5em;
   border-radius: 65px;
-  -webkit-box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   -webkit-transition: box-shadow 0.25s;
-  -webkit-transition: -webkit-box-shadow 0.25s;
-  transition: -webkit-box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
   color: white;
 }
 
@@ -716,7 +505,6 @@ li a:hover {
 
 #bn30:hover {
   background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-  -webkit-box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
 }
 
@@ -725,10 +513,7 @@ li a:hover {
 }
 
 .info3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 10vw 10vh 10vw;
   max-height: 100vh;
@@ -736,7 +521,6 @@ li a:hover {
   height: auto;
   width: auto;
   color: white;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   text-align: center;
 }
@@ -748,14 +532,10 @@ li a:hover {
 
 #info3-icons {
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 35vw;
   gap: 0.5rem;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -772,8 +552,6 @@ li a:hover {
   text-align: center;
   margin: auto;
   width: auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 5vh;
 }
@@ -785,7 +563,7 @@ li a:hover {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 90px;
-  background-color: #03395e;
+  background-color: rgb(3, 57, 94);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -805,7 +583,7 @@ li a:hover {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #03395e transparent transparent transparent;
+  border-color: rgb(3, 57, 94) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -817,33 +595,11 @@ li a:hover {
   margin: auto;
   padding-bottom: 5vh;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 25vw;
   margin: 15vh auto 5vh auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  border: 3px solid;
-  -o-border-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      #4568dc,
-      #b06ab3,
-      rgba(0, 0, 0, 0)
-    )
-    10 0 10 0;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(#4568dc),
-      color-stop(#b06ab3),
-      to(rgba(0, 0, 0, 0))
-    )
-    10 0 10 0;
+  border: 3px solid transparent;
   border-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
@@ -860,25 +616,15 @@ li a:hover {
   font-size: 20px;
   max-width: 80vw;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: auto;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
 .recent-projects div {
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 40%;
   padding: 1rem;
@@ -897,30 +643,12 @@ li a:hover {
   max-width: 100%;
 }
 
-@-webkit-keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20em;
-  }
-}
-
 @keyframes typewriter {
   from {
     width: 0;
   }
   to {
     width: 20em;
-  }
-}
-
-@-webkit-keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
   }
 }
 
@@ -947,10 +675,9 @@ li a:hover {
 }
 
 .btn-open:after {
-  color: #fffdfd;
+  color: rgb(255, 253, 253);
   content: "\f0c9";
   font-family: "FontAwesome";
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
 }
 
@@ -962,7 +689,6 @@ li a:hover {
   color: #fff;
   content: "\f00d";
   font-family: "FontAwesome";
-  -webkit-transition-property: all 0.2s linear 0s;
   transition-property: all 0.2s linear 0s;
 }
 
@@ -983,18 +709,21 @@ li a:hover {
   #particles-js {
     display: none;
   }
+
   html {
     overflow-x: hidden;
     overflow-y: hidden;
     height: 100%;
     width: 100%;
   }
+
   body {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
     width: 100%;
   }
+
   .wrap {
     overflow-y: scroll;
     height: 100%;
@@ -1004,64 +733,62 @@ li a:hover {
     max-width: 90%;
     margin: 0 auto 20vh auto;
   }
+
   #bn30 {
     margin: auto;
   }
+
   .overlay {
     display: none;
     position: fixed;
     top: 0;
     height: 100%;
     width: 100vw;
-    background: #0e0914;
+    background: rgb(14, 9, 20);
     overflow: scroll;
     z-index: 99;
   }
+
   .wrap ul.wrap-nav > li {
     width: 100%;
     padding: 1rexm 0;
     border-bottom: 1px solid #ffffff;
   }
+
   .wrap ul.wrap-nav {
     padding: 5vh 0px 0px 0;
   }
+
   .nav {
     width: 100vw;
     height: 0;
   }
+
   nav ul {
     width: 100vw;
     opacity: 0;
     visibility: hidden;
   }
+
   .hero {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     height: 100vh;
     margin: auto;
     width: 100vw;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
+
   .hero-text {
     max-width: 100vw;
     width: 100%;
     margin: auto;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: #ffffff;
   }
+
   .hero-text h1 {
     font-size: 2.5rem;
     margin: 0 auto 0 auto;
@@ -1069,74 +796,46 @@ li a:hover {
     letter-spacing: 0.4rem;
     z-index: 1;
   }
+
   .hero-p {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     font-size: 1.5rem;
     gap: 2vw;
     z-index: 1;
   }
+
   .moon {
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 5% auto 0vh auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     max-width: 100%;
   }
+
   .moon img {
     width: 70%;
     padding: 5%;
   }
+
   .info {
     margin: 10vh auto 10vh auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 0px;
     height: auto;
     max-width: 100vw;
     text-align: center;
   }
+
   .info-title {
     font-size: 1.75rem;
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 45vw;
     margin: 15vh auto 5vh auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    border: 3px solid;
-    -o-border-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        #4568dc,
-        #b06ab3,
-        rgba(0, 0, 0, 0)
-      )
-      10 0 10 0;
-    border-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(0, 0, 0, 0)),
-        color-stop(#4568dc),
-        color-stop(#b06ab3),
-        to(rgba(0, 0, 0, 0))
-      )
-      10 0 10 0;
+    border: 3px solid transparent;
     border-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0),
@@ -1147,29 +846,23 @@ li a:hover {
       10 0 10 0;
     padding: 1rem;
   }
+
   .info-btn {
     margin: 0.5vh auto 1vh auto;
   }
+
   .blurb {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin: auto;
     height: auto;
     max-height: 100%;
     max-width: 100vw;
     gap: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
+
   .blurb img {
     height: auto;
     width: auto;
@@ -1177,6 +870,7 @@ li a:hover {
     max-height: 40%;
     border-radius: 30%;
   }
+
   .lorem {
     max-width: 80vw;
     width: auto;
@@ -1186,57 +880,28 @@ li a:hover {
     color: white;
     line-height: 1.5rem;
   }
+
   .info2 {
     max-width: 100vw;
     height: auto;
     width: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: auto;
     color: white;
   }
+
   .info2-title {
     font-size: 1.5rem;
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 45vw;
     margin: 5vh auto 5vh auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    border: 3px solid;
-    -o-border-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        #4568dc,
-        #b06ab3,
-        rgba(0, 0, 0, 0)
-      )
-      10 0 10 0;
-    border-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(0, 0, 0, 0)),
-        color-stop(#4568dc),
-        color-stop(#b06ab3),
-        to(rgba(0, 0, 0, 0))
-      )
-      10 0 10 0;
+    border: 3px solid transparent;
     border-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0),
@@ -1247,16 +912,13 @@ li a:hover {
       10 0 10 0;
     padding: 1rem;
   }
+
   .info2 {
     margin: auto auto 10vh auto;
   }
+
   .info2 div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin: auto;
     gap: 0vw;
@@ -1264,47 +926,28 @@ li a:hover {
     width: auto;
     text-align: left;
   }
+
   .info2 img {
     width: 30vw;
     height: auto;
     padding: 0;
   }
+
   .info2 p {
     max-width: 90%;
     width: auto;
     font-size: 1.2rem;
     line-height: 1.5em;
   }
+
   .line-1 {
     font-size: 1.5rem;
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 70vw;
     margin: 15vh auto 5vh auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    border: 3px solid;
-    -o-border-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        #4568dc,
-        #b06ab3,
-        rgba(0, 0, 0, 0)
-      )
-      10 0 10 0;
-    border-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(0, 0, 0, 0)),
-        color-stop(#4568dc),
-        color-stop(#b06ab3),
-        to(rgba(0, 0, 0, 0))
-      )
-      10 0 10 0;
+    border: 3px solid transparent;
     border-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0),
@@ -1315,13 +958,9 @@ li a:hover {
       10 0 10 0;
     padding: 1rem;
   }
+
   .info3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin: auto;
     max-width: 80vw;
@@ -1332,55 +971,44 @@ li a:hover {
     margin-bottom: 10vh;
     text-align: center;
   }
+
   .info3-container {
     width: auto;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     max-width: 100%;
   }
+
   #info3-icons {
     max-width: 100%;
     width: auto;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
+
   #info3-icons img {
     max-width: 12vw;
     height: auto;
     width: auto;
   }
+
   .recent-projects {
     color: white;
     font-size: 20px;
     max-width: 90vw;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
+
   .recent-projects div {
     height: auto;
     width: 100%;
     padding: 1rem;
     margin: 0 auto 2vh auto;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: left;
     background-image: linear-gradient(
@@ -1392,13 +1020,16 @@ li a:hover {
     );
     border-radius: 15px;
   }
+
   .recent-projects p {
     max-width: 80vw;
     font-size: 1.5rem;
   }
+
   .recent-projects img {
     max-width: 80vw;
   }
+
   .links {
     color: white;
     font-size: 1rem;
@@ -1406,10 +1037,7 @@ li a:hover {
     margin: auto;
     width: auto;
     height: 30%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 10%;
   }
 }
-/*# sourceMappingURL=style.css.map */
