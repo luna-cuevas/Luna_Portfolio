@@ -99,14 +99,15 @@ ScrollTrigger.matchMedia({
 		gsap.from('.info2-title', {
 			scrollTrigger : {
 				toggleActions : 'play none none reverse',
-				trigger       : '.info2',
-				start         : '20% bottom',
-				end           : '50% bottom',
+				trigger       : '.info2-title',
+				start         : '-50% bottom',
+				end           : '80% start',
 				scrub         : 0.5
 			},
 			opacity       : 0,
-			duration      : 5,
-			z             : -200
+			duration      : 2,
+			z             : 200,
+			delay         : 0
 		});
 
 		gsap.from('.summary', {

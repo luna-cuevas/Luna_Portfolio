@@ -1,23 +1,8 @@
 .candle {
   width: 34px;
-  height: 500px;
-  /* margin: 0px 0px 0px 300px; */
-  position: absolute;
-  top: 320px;
-  left: 100px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-animation: blink .1s infinite;
-          animation: blink .1s infinite;
-}
-
-.candle2 {
-  width: 34px;
-  height: 400px;
-  /* margin: 0px 0px 0px 300px; */
-  position: absolute;
-  top: 420px;
-  right: 100px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  height: 80%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -webkit-animation: blink .1s infinite;
@@ -25,7 +10,7 @@
 }
 
 .wick {
-  position:absolute;
+  position: absolute;
   width: 6px;
   height: 50px;
   background: #23161a;
@@ -202,12 +187,3 @@
   }
 }
 /*# sourceMappingURL=flame.css.map */
-
-@media only screen and (max-width: 1173px) {
-  .candle {
-    display: none;
-  }
-  .candle2{
-    display: none;
-  }
-}

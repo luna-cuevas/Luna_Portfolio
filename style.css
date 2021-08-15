@@ -31,11 +31,11 @@ nav {
 nav ul li a {
   color: rgb(255, 255, 255);
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 1rem 1rem;
   text-decoration: none;
   border-bottom: 0.2rem solid #fff;
   transition-property: all 0.2s linear 0s;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -288,6 +288,24 @@ li a:hover {
   height: 100vh;
   text-align: center;
 }
+.info-title {
+  font-size: 1.75rem;
+  color: white;
+  display: flex;
+  width: 10vw;
+  margin: 15vh auto 5vh auto;
+  justify-content: center;
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      #4568dc,
+      #b06ab3,
+      rgba(0, 0, 0, 0)
+    )
+    1;
+  padding: 1rem;
+}
 
 .blurb {
   display: flex;
@@ -309,11 +327,28 @@ li a:hover {
 }
 
 .lorem {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      #4568dc,
+      #b06ab3,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
   width: 36vw;
+  padding: 1rem;
   text-align: left;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   color: white;
-  line-height: 2rem;
+  line-height: 1.5rem;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 #more {
@@ -334,6 +369,25 @@ li a:hover {
   color: white;
 }
 
+.info2-title {
+  font-size: 1.75rem;
+  color: white;
+  display: flex;
+  width: 20vw;
+  margin: 15vh auto 5vh auto;
+  justify-content: center;
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      #4568dc,
+      #b06ab3,
+      rgba(0, 0, 0, 0)
+    )
+    1;
+  padding: 1rem;
+}
+
 .info2 div {
   display: flex;
   margin: auto;
@@ -351,24 +405,35 @@ li a:hover {
 }
 
 .info2 p {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      #4568dc,
+      #b06ab3,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
+  padding: 1rem;
   width: 39vw;
-  font-size: 1.6rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 #myBtn,
 #myBtn2,
 #myBtn3 {
-  margin: auto;
-  border: 10em;
+  margin: 0;
+  border: 1px;
+  width: auto;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
   -webkit-transform: translate(0);
   transform: translate(0);
   background-image: linear-gradient(135deg, #4568dc, #b06ab3);
-  padding: 0rem 0.6rem 0rem 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0px;
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
@@ -379,14 +444,15 @@ li a:hover {
 #myBtn2:after,
 #myBtn3:after {
   content: "";
-  border-radius: 18px;
+  border-radius: inherit;
   position: absolute;
-  margin: 0.2rem;
+  margin: 0.1rem;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
+  background: #0e0e10;
 }
 
 #myBtn:hover,
@@ -465,12 +531,6 @@ li a:hover {
   max-width: 25vw;
 }
 
-.border {
-  height: 400px;
-  margin-top: 25px;
-  border: white solid 2px;
-}
-
 #info3-icons {
   margin: auto;
   display: flex;
@@ -532,39 +592,61 @@ li a:hover {
 }
 
 .line-1 {
+  font-size: 2.5rem;
   color: white;
-  height: 40px;
-  margin: 20vh auto 5vh auto;
-  font-size: 30px;
-  text-align: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding-bottom: 5vh;
+
+  font-size: 1.75rem;
+  color: white;
+  display: flex;
+  width: 25vw;
+  margin: 15vh auto 5vh auto;
+  justify-content: center;
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      #4568dc,
+      #b06ab3,
+      rgba(0, 0, 0, 0)
+    )
+    1;
+  padding: 1rem;
 }
 
 .recent-projects {
   color: white;
   font-size: 20px;
-  max-width: 60vw;
+  max-width: 80vw;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .recent-projects div {
   height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
   padding: 1rem;
+  margin: auto;
   text-align: left;
   background-image: linear-gradient(135deg, #a8b9f1, #6e82be, #7b2d7e, #53165f);
   border-radius: 15px;
 }
 
 .recent-projects p {
-  max-width: 22vw;
+  max-width: 100%;
   font-size: 1.5rem;
 }
 
 .recent-projects img {
-  max-width: 22vw;
+  max-width: 100%;
 }
 
 @keyframes typewriter {
@@ -636,7 +718,7 @@ li a:hover {
 
   html {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 100%;
     width: 100%;
   }
@@ -685,6 +767,7 @@ li a:hover {
 
   .nav {
     width: 100vw;
+    height: 0;
   }
 
   nav ul {
@@ -694,19 +777,22 @@ li a:hover {
   }
 
   .hero {
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: auto;
     width: 100vw;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-text {
     max-width: 100vw;
     width: 100%;
-    margin: 10vh auto 0 auto;
+    margin: auto;
     height: auto;
     display: flex;
     color: #ffffff;
-    justify-content: center;
-    text-align: center;
   }
 
   .hero-text h1 {
@@ -739,13 +825,32 @@ li a:hover {
   }
 
   .info {
-    margin: auto auto 10vh auto;
+    margin: 10vh auto 10vh auto;
     display: flex;
     flex-direction: column;
     gap: 0px;
     height: auto;
     max-width: 100vw;
     text-align: center;
+  }
+
+  .info-title {
+    font-size: 1.75rem;
+    color: white;
+    display: flex;
+    width: 45vw;
+    margin: 15vh auto 5vh auto;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1;
+    padding: 1rem;
   }
 
   .info-btn {
@@ -767,7 +872,7 @@ li a:hover {
   .blurb img {
     height: auto;
     width: auto;
-    max-width: 40%;
+    max-width: 30%;
     max-height: 40%;
     border-radius: 30%;
   }
@@ -777,9 +882,9 @@ li a:hover {
     width: auto;
     margin: auto;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.1rem;
     color: white;
-    line-height: 1.25em;
+    line-height: 1.5rem;
   }
 
   .info2 {
@@ -795,12 +900,23 @@ li a:hover {
     color: white;
   }
 
-  #info2-title {
-    font-size: 2.5rem;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    max-width: 100vw;
-    font-family: "Infynyte";
+  .info2-title {
+    font-size: 1.75rem;
+    color: white;
+    display: flex;
+    width: 45vw;
+    margin: 5vh auto 5vh auto;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1;
+    padding: 1rem;
   }
 
   .info2 {
@@ -814,11 +930,11 @@ li a:hover {
     gap: 0vw;
     max-width: 90vw;
     width: auto;
-    text-align: center;
+    text-align: left;
   }
 
   .info2 img {
-    width: 40vw;
+    width: 30vw;
     height: auto;
     padding: 0;
   }
@@ -826,53 +942,62 @@ li a:hover {
   .info2 p {
     max-width: 90%;
     width: auto;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     line-height: 1.5em;
   }
 
-  .border {
-    display: none;
-  }
-
   .line-1 {
+    font-size: 1.75rem;
+    color: white;
     display: flex;
-    width: auto;
+    width: 60vw;
+    margin: 15vh auto 5vh auto;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1;
+    padding: 1rem;
   }
 
   .info3 {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin: auto;
-    max-width: 100vw;
+    max-width: 80vw;
     max-height: 100%;
-    width: 100%;
+    width: auto;
     height: auto;
     color: white;
-    margin-bottom: 20vh;
-    justify-content: space-around;
+    margin-bottom: 10vh;
     text-align: center;
   }
 
   .info3-container {
     width: auto;
-    max-width: 100vw;
-    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
   }
 
   #info3-icons {
-    max-width: 70vw;
+    max-width: 100%;
     width: auto;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   #info3-icons img {
-    max-height: 10vh;
-    max-width: 16vw;
+    max-width: 12vw;
     height: auto;
-    width: 100%;
+    width: auto;
   }
 
   .recent-projects {
@@ -882,14 +1007,15 @@ li a:hover {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .recent-projects div {
     height: auto;
+    width: 100%;
     padding: 1rem;
-    margin: 2vh auto 2vh auto;
+    margin: 0 auto 2vh auto;
+    align-items: center;
     text-align: left;
     background-image: linear-gradient(
       135deg,
@@ -912,7 +1038,7 @@ li a:hover {
 
   .links {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     margin: auto;
     width: auto;
