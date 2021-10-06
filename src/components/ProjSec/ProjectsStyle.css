@@ -1,0 +1,76 @@
+.projects-page {
+  width: 100%;
+  color: white;
+  text-align: center;
+  height: auto;
+  margin-top: 10vh;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: white;
+  display: flex;
+  width: 20vw;
+  margin: 5vh auto 5vh auto;
+  justify-content: center;
+  border: 3px solid transparent;
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4568dc, #b06ab3, rgba(0, 0, 0, 0)) 1;
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4568dc, #b06ab3, rgba(0, 0, 0, 0)) 1;
+  padding: 1rem;
+}
+
+.project {
+  border: 3px solid rgba(0, 0, 0, 0);
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4568dc, #b06ab3, rgba(0, 0, 0, 0)) 1 20%;
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4568dc, #b06ab3, rgba(0, 0, 0, 0)) 1 20%;
+  background-color: rgba(69, 68, 102, 0.616);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  margin: 0 0 2vh 0;
+  padding: 2vh;
+}
+
+#bn30 {
+  margin: 0 auto 0 auto;
+}
+
+.text {
+  color: white;
+  text-align: left;
+  font-size: 1.2rem;
+  max-width: 50%;
+  height: auto;
+}
+
+.text p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#button {
+  justify-content: center;
+  display: flex;
+}
+
+.img-container {
+  width: 45%;
+  height: auto;
+  margin: auto;
+}
+
+.project img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=ProjectsStyle.css.map */
