@@ -8,4 +8,12 @@
 
 .svg img {
   width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .svg {
+    width: 4.5vw;
+    bottom: 5vh;
+    right: 4.5vw;
+  }
 }/*# sourceMappingURL=ToTopButtonStyle.css.map */

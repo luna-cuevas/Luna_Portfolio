@@ -36,9 +36,12 @@ const Contact = () => {
         <>
         <h1 id='contact' className='title'>Contact Me</h1>
         <div id="contact-form">
-            <h2>Get in touch! I'll respond promptly :)</h2>
-            <input type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
-            <input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+            <div className='name-email'>
+                <input type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
+                <input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+            </div>
+            
+            
             <textarea placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
             <div onClick={submit} className='button'>
             <Button  text={'Send Message'} />

@@ -15,10 +15,10 @@
 }
 
 .title {
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
   color: white;
   display: flex;
-  width: 20vw;
+  width: 30vw !important;
   margin: 5vh auto 5vh auto;
   justify-content: center;
   border: 3px solid transparent;
@@ -30,7 +30,6 @@
       rgba(0, 0, 0, 0)
     )
     1;
-  padding: 1rem;
 }
 
 .project {
@@ -53,14 +52,10 @@
   padding: 2vh;
 }
 
-#bn30 {
-  margin: 0 auto 0 auto;
-}
-
 .text {
   color: white;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 50%;
   height: auto;
 }
@@ -68,6 +63,7 @@
 .text p {
   margin-top: 1%;
   margin-bottom: 1%;
+  text-indent: 2%;
 }
 
 #button {
@@ -85,4 +81,152 @@
   border-radius: 10px;
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 761px) {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+  .title {
+    font-size: 1.5rem !important;
+    color: white;
+    display: flex;
+    width: 55% !important;
+    margin: 5vh auto 5vh auto;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1;
+    padding: 1rem;
+  }
+
+  .project {
+    border: 3px solid rgba(0, 0, 0, 0);
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1 20%;
+    background-color: rgba(69, 68, 102, 0.616);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0 0 2vh 0;
+    padding: 2vh;
+  }
+  .img-container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  .project img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .text {
+    color: white;
+    text-align: left;
+    font-size: 1.2rem;
+    max-width: 80%;
+    height: auto;
+  }
+
+  .text p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  #trvl-text {
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  .title {
+    font-size: 1.2rem !important;
+    color: white;
+    display: flex;
+    width: 55% !important;
+    margin: 5vh auto 5vh auto;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1;
+    padding: 0.5rem;
+  }
+
+  .project {
+    border: 3px solid rgba(0, 0, 0, 0);
+    border-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        #4568dc,
+        #b06ab3,
+        rgba(0, 0, 0, 0)
+      )
+      1 20%;
+    background-color: rgba(69, 68, 102, 0.616);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 0 2vh 0;
+    padding: 3vh 0 0 0;
+  }
+  .img-container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  .project img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .text {
+    color: white;
+    text-align: left;
+    font-size: 0.9rem;
+    max-width: 85%;
+    height: auto;
+  }
+
+  .text p {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  #trvl-text {
+    order: 2;
+  }
 }

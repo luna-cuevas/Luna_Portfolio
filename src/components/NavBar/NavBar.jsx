@@ -54,6 +54,9 @@ const NavBar = () => {
                     <HashLink smooth to="#contact">Contact</HashLink>
                 </div>
             </div>
+            <div className='sideBar'>
+                
+            </div>
             <HamburgerEmphatic barColor="white" isActive={isActive} toggleButton={toggleButton} />
         </div>
     )

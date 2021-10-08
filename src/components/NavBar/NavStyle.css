@@ -49,6 +49,14 @@
   display: none;
 }
 
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2vw;
+  bottom: 5vh;
+}
+
 @media only screen and (max-width: 800px) {
   .Nav button {
     display: block;

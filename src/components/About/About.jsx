@@ -21,9 +21,9 @@ import { Link } from 'react-router-dom'
 const About = () => {
     return (
         <div className='info' id='info'>
-            <h1 class="info-title">Who Am I?</h1>
+            <h1 className="title">About Me</h1>
             <div className='blurb gradient-border'>
-                <div>
+                <div className='about-container'>
                     <img id="pic" src={me} alt="a picture of me, Luna Cuevas"></img>
                     <div className='lorem'>
                         <p>Hello! Thanks for taking a moment to check out my website!</p>
@@ -41,15 +41,15 @@ const About = () => {
                 <div className='skills'>
                 <h2>Work Experience</h2>
                 <div className='work'>
-                    <img src={que} alt="" /> 
+                    <img src={que} alt="que bottle image" /> 
                     <div className='work-info'>
-                        <p>Warehouse Manager | Que Bottle | 06/2018 - 10/2020</p>
-                        <p>- Supervising teams of 2-10 fulfillment associates in packaging daily orders.</p>
-                        <p>- Creating operational guides, handbooks, and best practices.</p>
-                        <p>- Contacting customers to resolve delivery issues, returns, or replacements.</p>
-                        <p>- Execute quarterly fulfillment goals and plan inventory restocking accordingly.</p>
-                        <p>- Onboard new permanent and seasonal associates throughout the year.</p>
-                        <p>- Contact B2B clients regarding custom orders or troubleshooting issues.</p>
+                        <span>Warehouse Manager | Que Bottle | 06/2018 - 10/2020</span>
+                        <p>• Supervising teams of 2-10 fulfillment associates in packaging daily orders.</p>
+                        <p>• Creating operational guides, handbooks, and best practices.</p>
+                        <p>• Contacting customers to resolve delivery issues, returns, or replacements.</p>
+                        <p>• Execute quarterly fulfillment goals and plan inventory restocking accordingly.</p>
+                        <p>• Onboard new permanent and seasonal associates throughout the year.</p>
+                        <p>• Contact B2B clients regarding custom orders or troubleshooting issues.</p>
                     </div>
                 </div>
                 <div className='button'><Button link={resume} text={'Resume'} /></div>

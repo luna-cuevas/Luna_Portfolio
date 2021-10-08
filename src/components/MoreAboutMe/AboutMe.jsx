@@ -3,7 +3,7 @@ import './AboutMeStyle.css'
 
 const AboutMe = () => {
     return (
-        <div className='text'>
+        <div className='about-text'>
             <h1 style={{textAlign:'center'}}>A little more about me.</h1>
             <p>I am a hard working and talented non-binary individual. As an immigrant from Mexico and a former foster youth, I've had to overcome many barriers and challenges in my life. Knowing that my future was ultimately left to me and the opportunities I created for myself, I used my intellect to obtain a scholarship from the Bill & Melinda Gates Foundation to attend UC Berkeley. I graduated with a degree in History and Political Science in 2016. I've worked as a customer service manager, warehouse manager, and freelance graphic designer since then.</p>
 
