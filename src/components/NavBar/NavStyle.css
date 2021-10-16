@@ -4,9 +4,8 @@
 }
 
 .Nav {
-  font-family: "Space Mono", sans-serif;
   font-weight: 700;
-  z-index: 999;
+  z-index: 9999999;
 }
 
 .pc-overlay {
@@ -15,7 +14,7 @@
   justify-content: space-around;
   width: 100vw;
   height: auto;
-  z-index: 99;
+  z-index: 9999999;
 }
 
 .pc-overlay a {
@@ -28,7 +27,7 @@
   font-size: 1.7rem;
   color: white;
   text-align: center;
-  z-index: 99;
+  z-index: 999999;
 }
 
 .pc-overlay a:hover {
@@ -60,9 +59,10 @@
 @media only screen and (max-width: 800px) {
   .Nav button {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
+    z-index: 999999999;
   }
 
   .pc-overlay {
@@ -79,15 +79,16 @@
   }
 
   .mobile-overlay #hidden {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     left: 0;
-    top: 6vh;
+    top: 0;
     height: auto;
     width: 100%;
-    background-color: #0a0218;
-    border-radius: 10px;
+    background-color: #454466;
+    border-radius: 0;
+    z-index: 99999;
   }
 
   .mobile-overlay #hidden a {
@@ -98,6 +99,7 @@
     width: auto;
     margin: auto;
     padding: 10px;
+    z-index: 99999;
   }
 
   .socials {

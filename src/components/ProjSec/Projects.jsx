@@ -20,7 +20,7 @@ const Projects = () => {
                     <p>• Implemented a mix of <b>Bootstrap</b> and custom CSS styling to fix videos onto a carousel.</p>
                     <p>• Routed a custom contact page using <b>PHP</b> to send client inquiries.</p>
                     <div id='button'>
-                        <Button  link="https://brooke-cordelia.com/index.html" text={'Live Demo'}/>
+                        <Button link="https://brooke-cordelia.com/" text={'Live Demo'}/>
                     </div>
                   </div>
                 </div>
@@ -37,7 +37,7 @@ const Projects = () => {
                     <p>• Populated the map with small product cards accurately displaying location of attractions.</p>
                     <p>• Implemented a <b>responsive design</b> by using Material UI.</p>
                     <div id='button'>
-                        <Button  link="https://travel-advisory.netlify.app/" text={'Live Demo'}/>
+                        <Button link="https://travel-advisory.netlify.app/" text={'Live Demo'}/>
                     </div>
                 </div>
                 <div id='trvl-img'className='img-container'><img src={travel} alt="" /></div>
@@ -54,7 +54,7 @@ const Projects = () => {
                     <p>• Utilized EmailJS to create a lightweight serverless contact form.</p>
                     <p>• Responsive design using relative units.</p>
                     <div id='button'>
-                        <Button  link="https://github.com/luna-cuevas/luna_portfolio_react" text={'GitHub Repo'}/>
+                        <Button  link="https://github.com/luna-cuevas/Luna_Portfolio" text={'GitHub Repo'}/>
                     </div>
                   </div>  
               </div>

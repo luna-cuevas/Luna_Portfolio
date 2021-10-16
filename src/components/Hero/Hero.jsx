@@ -37,7 +37,7 @@ const Hero = () => {
       
 
     return (
-        <div className='hero'>
+        <div id="top" className='hero'>
             <div className="hero-content">
                 <div className="hero-text">
                     <h1 title="Luna Cuevas" className="intro">Luna Cuevas</h1>

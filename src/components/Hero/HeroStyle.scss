@@ -118,8 +118,12 @@
 }
 
 @media screen and (max-width: 760px) {
+  .hero {
+    height: 80vh;
+    font-family: "Infynyte";
+  }
   .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0rem;
     font-family: SpaceRave;
     letter-spacing: 0.2rem;
@@ -150,5 +154,24 @@
     font-size: 1.5rem;
     margin: 0;
     z-index: 1;
+  }
+  .moon {
+    padding: 1.25rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 5rem;
+  }
+
+  .moon1 {
+    padding: 1rem;
+  }
+
+  .cloud1 {
+    width: 4rem;
+  }
+
+  .cloud2 {
+    width: 4rem;
   }
 }

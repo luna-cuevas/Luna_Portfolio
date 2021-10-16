@@ -3,6 +3,11 @@
   max-width: 100vw;
   text-align: center;
 }
+
+.read-or-hide {
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+}
 .title {
   font-size: 1.75rem;
   color: white;
@@ -212,7 +217,7 @@
     flex-wrap: wrap;
     margin: auto;
     height: auto;
-    width: 90%;
+    width: 80%;
   }
   #pic {
     float: left;
@@ -221,7 +226,7 @@
     border-radius: 30%;
   }
   .about-container {
-    width: 100%;
+    width: 90%;
     margin: 0;
     border-right: 0;
     border-bottom: 1px solid white;
@@ -230,10 +235,19 @@
   .lorem {
     text-align: left;
     width: auto;
-    margin: 0.8rem;
-    font-size: 1rem;
+    margin: auto;
+    font-size: 0.8rem;
     color: white;
-    line-height: 1.25rem;
+    line-height: normal;
+  }
+
+  .work-info {
+    text-align: left;
+    width: auto;
+    margin: auto;
+    font-size: 0.8rem;
+    color: white;
+    line-height: normal;
   }
 
   .lorem p {
@@ -241,7 +255,7 @@
   }
   .skills {
     color: white;
-    width: 95%;
+    width: 90%;
     height: auto;
   }
 

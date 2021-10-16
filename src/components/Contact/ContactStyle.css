@@ -1,7 +1,7 @@
 #contact-form {
   text-align: center;
   margin: auto auto 10vh auto;
-  width: 80%;
+  width: 90%;
   height: auto;
   position: relative;
   border: 3px solid rgba(0, 0, 0, 0);
@@ -42,16 +42,22 @@
 }
 
 @media screen and (max-width: 760px) {
+  .name-email {
+    display: flex;
+    margin: auto;
+    width: 90% !important;
+  }
+
   input,
 textarea {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 0.8rem !important;
+    font-size: 0.7rem !important;
     background-color: #ffffff;
-    width: 80%;
-    height: 20%;
+    width: 90% !important;
+    height: auto;
     display: flex;
-    margin: auto auto 1vh auto;
-    padding: 10px 20px;
+    margin: auto;
+    padding: 0;
     box-sizing: border-box;
   }
 }/*# sourceMappingURL=ContactStyle.css.map */

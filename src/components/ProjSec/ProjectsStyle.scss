@@ -204,7 +204,7 @@
     padding: 3vh 0 0 0;
   }
   .img-container {
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: auto;
   }
@@ -217,14 +217,15 @@
   .text {
     color: white;
     text-align: left;
-    font-size: 0.9rem;
-    max-width: 85%;
+    font-size: 0.8rem;
+    line-height: normal;
+    margin: auto;
+    max-width: 90%;
     height: auto;
   }
 
   .text p {
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin: auto;
   }
   #trvl-text {
     order: 2;
