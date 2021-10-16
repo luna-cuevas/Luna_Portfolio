@@ -1,0 +1,110 @@
+.Nav button {
+  display: none;
+  z-index: 99;
+}
+
+.Nav {
+  font-weight: 700;
+  z-index: 9999999;
+}
+
+.pc-overlay {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100vw;
+  height: auto;
+  z-index: 9999999;
+}
+
+.pc-overlay a {
+  display: inline-block;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 2rem 0;
+  text-decoration: none;
+  border-bottom: 0.2rem solid #fff;
+  transition-property: all 0.2s linear 0s;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
+  z-index: 999999;
+}
+
+.pc-overlay a:hover {
+  background-color: #b7b4b85d;
+  border-radius: 1rem;
+  z-index: 99;
+}
+
+.socials {
+  z-index: 99;
+}
+
+.pages {
+  z-index: 9999;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2vw;
+  bottom: 5vh;
+}
+
+@media only screen and (max-width: 800px) {
+  .Nav button {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999999999;
+  }
+
+  .pc-overlay {
+    display: none;
+  }
+
+  .mobile-overlay {
+    display: block;
+    z-index: 9999;
+  }
+
+  .mobile-overlay #not {
+    display: none;
+  }
+
+  .mobile-overlay #hidden {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background-color: #454466;
+    border-radius: 0;
+    z-index: 99999;
+  }
+
+  .mobile-overlay #hidden a {
+    display: block;
+    font-size: 2rem;
+    color: #e9e9e9;
+    text-decoration: none;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    z-index: 99999;
+  }
+
+  .socials {
+    display: flex;
+    width: 50%;
+    margin: auto;
+  }
+}/*# sourceMappingURL=NavStyle.css.map */

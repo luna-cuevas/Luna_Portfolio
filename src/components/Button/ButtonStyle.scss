@@ -1,0 +1,84 @@
+#bn30 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.25rem;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(135deg, #4568dc, #b06ab3);
+  padding: 0.6em 1.75em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+#bn30 .text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #4568dc, #b06ab3);
+}
+
+#bn30:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 0.2rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #0e0e10;
+}
+
+#bn30:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+#bn30:hover .text {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+@media screen and (max-width: 760px) {
+  #bn30 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2rem;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(135deg, #4568dc, #b06ab3);
+    padding: 0.6rem 1rem;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1200px) {
+  #bn30 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2rem;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.25rem;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(135deg, #4568dc, #b06ab3);
+    padding: 0.8rem 1.25rem;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  }
+}
