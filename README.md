@@ -3,4 +3,4 @@ The original intent of this project was to update my previously cookie-cutter po
 
 The first version of this website ran on a basic HTML, CSS, and light JS but ultimately felt bloated and inefficient. Though the scope of this portfolio is small, I felt like converting this project into the React framework would benefit in the long run. One, it demonstrates my ability to work with React functional components, and two, the addition of Sass and even more JS adds a level of fluidity not present in the first design. 
 
-The challenges I am currently working on is the compatibility issues of GSAP and React. 
+You can view a live demonstration here: https://luna-cuevas.com/
