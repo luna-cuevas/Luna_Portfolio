@@ -8,6 +8,7 @@ import Contact from './components/Contact/Contact'
 import ToTopButton from './components/ToTopButton/ToTopButton';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import AboutMe from './components/MoreAboutMe/AboutMe'
+import shootingStar from './components/img/shooting star.svg'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       params={{
         "particles": {
           "number": {
-            "value": 38,
+            "value": 20,
             "density": {
               "enable": true,
               "value_area": 800
@@ -31,59 +32,59 @@ function App() {
             "value": "#ffffff"
           },
           "shape": {
-            "type": "star",
+            "type": "image",
             "stroke": {
               "width": 0,
-              "color": "#000000"
+              "color": "#fff"
             },
             "polygon": {
               "nb_sides": 5
             },
             "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
+              "src": shootingStar,
+              "width": 5,
+              "height": 5
             }
           },
           "opacity": {
-            "value": 0.5,
-            "random": false,
+            "value": 1,
+            "random": true,
             "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
+              "enable": true,
+              "speed": 2,
+              "opacity_min": 0,
               "sync": false
             }
           },
           "size": {
-            "value": 4,
-            "random": true,
+            "value": 50,
+            "random": false,
             "anim": {
               "enable": true,
-              "speed": 3,
-              "size_min": 0.1,
+              "speed": 10,
+              "size_min": 0,
               "sync": false
             }
           },
           "line_linked": {
             "enable": false,
-            "distance": 347.22496231819997,
+            "distance": 150,
             "color": "#ffffff",
             "opacity": 0.4,
             "width": 1
           },
           "move": {
             "enable": true,
-            "speed": 1.603412060865523,
-            "direction": "none",
-            "random": true,
-            "straight": false,
+            "speed": 4,
+            "direction": "bottom-left",
+            "random": false,
+            "straight": true,
             "out_mode": "out",
             "bounce": false,
             "attract": {
               "enable": false,
-              "rotateX": 1042.21783956259,
-              "rotateY": 1202.559045649142
+              "rotateX": 4261.397264814273,
+              "rotateY": 4498.141557303954
             }
           }
         },
@@ -96,15 +97,15 @@ function App() {
             },
             "onclick": {
               "enable": true,
-              "mode": "push"
+              "mode": "repulse"
             },
             "resize": true
           },
           "modes": {
             "grab": {
-              "distance": 400,
+              "distance": 194.89853095232286,
               "line_linked": {
-                "opacity": 1
+                "opacity": 0.32082394169230544
               }
             },
             "bubble": {

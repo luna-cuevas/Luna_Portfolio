@@ -11,9 +11,8 @@
 
 .pc-overlay {
   display: flex;
-  margin: auto;
-  justify-content: space-around;
-  width: 100vw;
+  justify-content: right;
+  width: 95vw;
   height: auto;
   z-index: 9999999;
 }
@@ -21,18 +20,15 @@
 .pc-overlay a {
   display: inline-block;
   padding: 1rem 1rem 1rem 1rem;
-  margin: 2rem 0;
   text-decoration: none;
-  border-bottom: 0.2rem solid #fff;
-  transition-property: all 0.2s linear 0s;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   z-index: 999999;
 }
 
 .pc-overlay a:hover {
-  background-color: #b7b4b85d;
+  background-color: #fd76fd86;
   border-radius: 1rem;
   z-index: 99;
 }
