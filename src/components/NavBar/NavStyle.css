@@ -4,7 +4,6 @@
 }
 
 .Nav {
-  font-weight: 700;
   z-index: 9999999;
 }
 
@@ -18,7 +17,8 @@
 
 .pc-overlay a {
   display: inline-block;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   text-decoration: none;
   font-size: 1.5rem;
   color: white;
@@ -26,10 +26,9 @@
   z-index: 999999;
 }
 
-.pc-overlay a:hover {
-  background-color: #fd76fd86;
-  border-radius: 1rem;
+.pages a:hover {
   z-index: 99;
+  box-shadow: 2px 2px 0px #7f99f0;
 }
 
 .socials {
@@ -42,14 +41,6 @@
 
 .mobile-overlay {
   display: none;
-}
-
-.sideBar {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 2vw;
-  bottom: 5vh;
 }
 
 @media only screen and (max-width: 800px) {

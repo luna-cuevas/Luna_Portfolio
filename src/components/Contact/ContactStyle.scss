@@ -1,7 +1,7 @@
 #contact-form {
   text-align: center;
   margin: auto auto 10vh auto;
-  width: 90%;
+  width: 80%;
   height: auto;
   position: relative;
   border: 3px solid rgba(0, 0, 0, 0);
@@ -36,6 +36,7 @@
   .button {
     text-align: center;
     border: none;
+    display: revert;
   }
 
   .name-email {

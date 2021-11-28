@@ -47,7 +47,7 @@
 }
 
 .intro {
-  width: 25%;
+  width: 35%;
   padding-right: 1rem;
   border-right: solid 1px #ffffff;
 }
@@ -67,8 +67,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
-  width: 20%;
-  font-size: 1rem;
+  width: 30%;
+  font-size: 1.1rem;
   z-index: 1;
 }
 
@@ -79,15 +79,24 @@
   background: linear-gradient(90deg, rgb(196, 201, 252), #f8b4f8);
 }
 
+.button {
+  display: flex;
+  margin: 0.25rem !important;
+}
+
+.info-btn {
+  padding: 0 0.5rem;
+}
+
 .ellipse-container {
   z-index: -1;
   position: absolute;
-  top: 3vh;
-  left: -8vw;
-  width: 120%;
+  top: -1vh;
+  left: -35vw;
+  width: 150vw;
   fill: none;
   stroke: rgba(255, 255, 255, 0.144);
-  transform: rotate(5deg);
+  transform: rotate(10deg);
 }
 
 #realmoon {
