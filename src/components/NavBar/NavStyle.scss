@@ -13,6 +13,30 @@
   width: 95vw;
   height: auto;
   z-index: 9999999;
+  .special-a-tag {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #f1f7ee;
+    overflow: hidden;
+  }
+  .special-a-tag:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: -1px;
+    left: 0;
+    background-color: #4568dc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .special-a-tag:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .pc-overlay a {
@@ -28,7 +52,6 @@
 
 .pages a:hover {
   z-index: 99;
-  box-shadow: 2px 2px 0px #7f99f0;
 }
 
 .socials {
