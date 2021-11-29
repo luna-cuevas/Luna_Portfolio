@@ -3,15 +3,31 @@ import './ProjectsStyle.css'
 import brooke from '../img/brooke.gif'
 import Button from '../Button/Button'
 import travel from '../img/travel advisor.png'
+import JAndP from '../img/j&p-webpage-mockup.png'
 import my from '../img/my.gif'
+import frame from '../img/chrome frame.png'
 
 const Projects = () => {
     return (
         <div id='projects' className='projects-page'>
             <h1 className='title'>Programming Projects</h1>
             <div className='projects-container'>
-                <div className='project first'>
-                  <div className='img-container'><img src={brooke} alt="" /></div>
+            <div className='project first'>
+                  <div className='img-container'><img src={frame} alt="" /><img src={JAndP} alt="" /></div>
+                  <div className='text'>
+                    <span><h3>Jazz And Print</h3>The task was to design a captivating portfolio for a professional roller skater. Key features requested were 80s themes, pastel colors, blog-style graphics, and an emphasis on video playback. Features implemented:</span>
+                    <p>• <b>Responsive design</b> suitable for all devices.</p>
+                    <p>• Play on hover feature implemented using <b>Vimeo Player API</b>.</p>
+                    <p>• Utilized vibrant colors to match the skater's style and brand.</p>
+                    <p>• Implemented a mix of <b>Bootstrap</b> and custom CSS styling to fix videos onto a carousel.</p>
+                    <p>• Routed a custom contact page using <b>PHP</b> to send client inquiries.</p>
+                    <div id='button'>
+                        <Button link="https://brooke-cordelia.com/" text={'Live Demo'}/>
+                    </div>
+                  </div>
+                </div>
+                <div className='project second'>
+                  <div className='img-container'><img src={frame} alt="" /><img src={brooke} alt="" /></div>
                   <div className='text'>
                     <span><h3>Roller Diva</h3>The task was to design a captivating portfolio for a professional roller skater. Key features requested were 80s themes, pastel colors, blog-style graphics, and an emphasis on video playback. Features implemented:</span>
                     <p>• <b>Responsive design</b> suitable for all devices.</p>
@@ -25,6 +41,7 @@ const Projects = () => {
                   </div>
                 </div>
             <div className='project'>
+            <div id='trvl-img'className='img-container'><img src={frame} alt="" /><img src={travel} alt="" /></div>
                 <div id='trvl-text' className='text'>
                     <span><h3>Attractions Advisor</h3>The goal of this <b>React</b> application is to help users find local eateries, attractions, and hotels in their area. Using the Travel Advisor and Google Maps APIs, the user can search their locale attractions based on ratings ranging from 3 to 5 stars. Other information includes weather information, awards, phone numbers, and rankings. Features implemented:
                     </span>
@@ -40,10 +57,10 @@ const Projects = () => {
                         <Button link="https://travel-advisory.netlify.app/" text={'Live Demo'}/>
                     </div>
                 </div>
-                <div id='trvl-img'className='img-container'><img src={travel} alt="" /></div>
+                
             </div>
               <div className='project'>
-                  <div className='img-container'><img src={my} alt="" /></div>
+                  <div className='img-container'><img src={frame} alt="" /><img src={my} alt="" /></div>
                   <div className='text'>
                     <span><h3>This Website</h3>The first initial version did not use the React framework nor Sass compiling which resulted in a functional but clunky portfolio. After some tinkering and further research, I realized that the React component structure could allow my website to function more efficiently. </span>
                     <span>
