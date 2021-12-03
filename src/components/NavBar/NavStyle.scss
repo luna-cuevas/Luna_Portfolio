@@ -54,10 +54,6 @@
   z-index: 99;
 }
 
-.socials {
-  z-index: 99;
-}
-
 .pages {
   z-index: 9999;
 }
@@ -72,7 +68,11 @@
     position: fixed;
     right: 0;
     top: 0;
+    background-color: rgba(34, 34, 34, 0.932);
     z-index: 999999999;
+    .jXqDQz {
+      position: revert;
+    }
   }
 
   .pc-overlay {
@@ -91,29 +91,25 @@
   .mobile-overlay #hidden {
     position: fixed;
     display: flex;
-    flex-direction: column;
     left: 0;
     top: 0;
     height: auto;
-    width: 100%;
-    background-color: rgb(69, 68, 102);
+    background-color: rgba(34, 34, 34, 0.932);
+    justify-content: center;
+    width: 90%;
+    background-color: none;
     border-radius: 0;
     z-index: 99999;
   }
 
   .mobile-overlay #hidden a {
     display: block;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #e9e9e9;
     text-decoration: none;
     width: auto;
-    margin: auto;
-    padding: 10px;
+    margin: 1.05rem 0.5rem;
+    padding: 0.1rem;
     z-index: 99999;
-  }
-  .socials {
-    display: flex;
-    width: 50%;
-    margin: auto;
   }
 }
