@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0036cede.chunk.css",
-    "main.js": "/static/js/main.b081b1ae.chunk.js",
-    "main.js.map": "/static/js/main.b081b1ae.chunk.js.map",
+    "main.js": "/static/js/main.4ca25d42.chunk.js",
+    "main.js.map": "/static/js/main.4ca25d42.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f03ca7ef.js",
     "runtime-main.js.map": "/static/js/runtime-main.f03ca7ef.js.map",
     "static/js/2.a4270865.chunk.js": "/static/js/2.a4270865.chunk.js",
@@ -10,11 +10,12 @@
     "index.html": "/index.html",
     "static/css/main.0036cede.chunk.css.map": "/static/css/main.0036cede.chunk.css.map",
     "static/js/2.a4270865.chunk.js.LICENSE.txt": "/static/js/2.a4270865.chunk.js.LICENSE.txt",
-    "static/media/Luna.Cuevas.prod.dc7a9784.pdf": "/static/media/Luna.Cuevas.prod.dc7a9784.pdf",
+    "static/media/Luna.Cuevas.Resume.08bba1b4.pdf": "/static/media/Luna.Cuevas.Resume.08bba1b4.pdf",
     "static/media/bootstrap.19c3fd09.svg": "/static/media/bootstrap.19c3fd09.svg",
     "static/media/brooke.87d74ca5.gif": "/static/media/brooke.87d74ca5.gif",
     "static/media/css.29319a45.svg": "/static/media/css.29319a45.svg",
     "static/media/github.eb5c46ae.svg": "/static/media/github.eb5c46ae.svg",
+    "static/media/gsap.dff87e2d.svg": "/static/media/gsap.dff87e2d.svg",
     "static/media/html5.03e4823e.svg": "/static/media/html5.03e4823e.svg",
     "static/media/illustrator.2504aae6.svg": "/static/media/illustrator.2504aae6.svg",
     "static/media/HeroStyle.css": "/static/media/spacerave.e8766fa7.ttf",
@@ -27,6 +28,7 @@
     "static/media/my.1c96d506.png": "/static/media/my.1c96d506.png",
     "static/media/nodejs.697e6461.svg": "/static/media/nodejs.697e6461.svg",
     "static/media/photoshop.29f7031a.svg": "/static/media/photoshop.29f7031a.svg",
+    "static/media/php.633e69cf.svg": "/static/media/php.633e69cf.svg",
     "static/media/react.db5e01fa.svg": "/static/media/react.db5e01fa.svg",
     "static/media/sass.38497bdd.svg": "/static/media/sass.38497bdd.svg",
     "static/media/shooting star.c0ee8eca.svg": "/static/media/shooting star.c0ee8eca.svg",
@@ -37,6 +39,6 @@
     "static/js/runtime-main.f03ca7ef.js",
     "static/js/2.a4270865.chunk.js",
     "static/css/main.0036cede.chunk.css",
-    "static/js/main.b081b1ae.chunk.js"
+    "static/js/main.4ca25d42.chunk.js"
   ]
 }

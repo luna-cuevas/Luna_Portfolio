@@ -3,7 +3,7 @@ import './HeroStyle.css'
 import Button from '../Button/Button'
 import { gsap } from "gsap";
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
-import Resume from '../misc./Luna.Cuevas.prod.pdf'
+import Resume from '../misc./Luna.Cuevas.Resume.pdf'
 import moon from '../img/moon.svg'
 gsap.registerPlugin(MotionPathPlugin);
 
