@@ -6,6 +6,7 @@ import travel from '../img/travel advisor.png'
 import JAndP from '../img/j&p-webpage-mockup.png'
 import my from '../img/my.png'
 import frame from '../img/chrome-frame.png'
+import todo from '../img/todo.png'
 
 const Projects = () => {
     return (
@@ -33,7 +34,7 @@ const Projects = () => {
                         <Button link="https://github.com/luna-cuevas/jazzandprint" text={'Github Repo'} />
                     </div>
                 </div>
-            </div>
+                </div>
                 <div className='project second'>
                   <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={brooke} alt="" /></div>
                   <div className='text'>
@@ -56,34 +57,54 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-            <div className='project'>
-            <div id='trvl-img'className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={travel} alt="" /></div>
-                <div id='trvl-text' className='text'>
-                    <h2>Attractions Advisor</h2>
+                <div className='project'>
+                    <div id='trvl-img'className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={travel} alt="" /></div>
+                    <div id='trvl-text' className='text'>
+                        <h2>Attractions Advisor</h2>
+                        <span className='techs'>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Javascript</p>
+                            <p>Material</p>                        
+                        </span>
+                        <span>The goal of this <b>React</b> application is to help users find local eateries, attractions, and hotels in their area. Using the Travel Advisor and Google Maps APIs, the user can search their locale attractions based on ratings ranging from 3 to 5 stars. Other information includes weather information, awards, phone numbers, and rankings. Features implemented:
+                        </span>
+                        <p>
+                        • Utilized <b>Google Maps API</b> to show accurate location for attractions.  
+                        </p>
+                        <p>
+                        • Scraped business information like address, phone number, ratings, and awards from the <b>Travel Advisor API</b>.
+                        </p>
+                        <p>• Populated the map with small product cards accurately displaying location of attractions.</p>
+                        <p>• Implemented a <b>responsive design</b> by using Material UI.</p>
+                        <div className='button'>
+                            <Button link="https://trvler.netlify.app/" text={'Live Demo'}/>
+                            <Button link="https://github.com/luna-cuevas/travel-advisor" text={'Github Repo'} />
+                        </div>
+                    </div>
+                </div>
+                <div className='project'>
+                  <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={todo} alt="todo app image" /></div>
+                  <div className='text'>
+                    <h2>Task Tracker</h2>
                     <span className='techs'>
                         <p>HTML</p>
                         <p>CSS</p>
+                        <p>Material</p>
                         <p>Javascript</p>
-                        <p>Material</p>                        
+                        <p>React</p>                        
                     </span>
-                    <span>The goal of this <b>React</b> application is to help users find local eateries, attractions, and hotels in their area. Using the Travel Advisor and Google Maps APIs, the user can search their locale attractions based on ratings ranging from 3 to 5 stars. Other information includes weather information, awards, phone numbers, and rankings. Features implemented:
-                    </span>
-                    <p>
-                    • Utilized <b>Google Maps API</b> to show accurate location for attractions.  
-                    </p>
-                    <p>
-                    • Scraped business information like address, phone number, ratings, and awards from the <b>Travel Advisor API</b>.
-                    </p>
-                    <p>• Populated the map with small product cards accurately displaying location of attractions.</p>
-                    <p>• Implemented a <b>responsive design</b> by using Material UI.</p>
+                    <span>A simple but elegant task tracker using Material-UI, React, and the Spotify API to create an elevated and productive workflow:</span>
+                    <p>• Added a Spotify media player with a relaxing playlist to enhance  ambiance.</p>
+                    <p>• Leveraged Material-UI components to create a responsive, elegant design.</p>
+                    <p>• Utilized local storage to hold todo items.</p>
                     <div className='button'>
-                        <Button link="https://trvler.netlify.app/" text={'Live Demo'}/>
-                        <Button link="https://github.com/luna-cuevas/travel-advisor" text={'Github Repo'} />
+                        <Button link="https://task-trkr.netlify.app/" text={'Live Demo'}/>
+                        <Button  link="https://github.com/luna-cuevas/task-trkr" text={'GitHub Repo'}/>
                     </div>
+                  </div>  
                 </div>
-                
-            </div>
-              <div className='project'>
+                <div className='project'>
                   <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={my} alt="" /></div>
                   <div className='text'>
                     <h2>This Website</h2>
@@ -105,7 +126,7 @@ const Projects = () => {
                         <Button  link="https://github.com/luna-cuevas/Luna_Portfolio" text={'GitHub Repo'}/>
                     </div>
                   </div>  
-              </div>
+                </div>
             </div>
         </div>
     )

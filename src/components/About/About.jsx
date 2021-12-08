@@ -28,8 +28,8 @@ const About = () => {
                     <img id="pic" src={me} alt="a picture of me, Luna Cuevas"></img>
                     <div className='lorem'>
                         <p>Hello! Thanks for taking a moment to check out my website!</p>
-                        <p>I'm a front end developer with over two years of self-taught knowledge and a few months of professional experience. I use Udemy courses, bootcamp material, Youtube tutorials, and <i>plenty</i> of books to reinforce the fundamentals of web development. I've also gained a community of developers through online forums and discord. </p>
-                        <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with SEO optimization and cross browser compatibility. I can also modify CSS and PHP code in CMS tools like Wordpress, Wix, and Squarespace.</p>
+                        <p>I'm a front end developer with over two years of knowledge and experience. I use Udemy courses, bootcamp material, tutorials, and <i>plenty</i> of books to reinforce the fundamentals of web development. I've also gained a community of developers through online forums.</p>
+                        <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with SEO optimization and cross browser compatibility. I can also modify CSS and PHP code in CMS tools like Wordpress, Wix, and Squarespace. </p>
                         <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. You can check out my projects and work below. Thanks again for taking time to read through this, you're awesome!</p>
                     </div>
                 </div>
