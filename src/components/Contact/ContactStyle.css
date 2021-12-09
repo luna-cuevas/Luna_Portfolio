@@ -125,7 +125,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: auto auto 20vh auto;
+    margin: auto auto 5vh auto;
   }
 
   #contact-form {
@@ -137,7 +137,7 @@
     box-shadow: 0 5px 10px 0 #000;
     background-color: #2b2b2b;
     color: white !important;
-    padding: 0;
+    padding: 5px;
   }
   #contact-form .message {
     font-family: "Heebo", sans-serif;

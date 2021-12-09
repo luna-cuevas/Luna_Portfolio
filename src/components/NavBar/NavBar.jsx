@@ -18,11 +18,11 @@ const NavBar = () => {
     )
 
     return (
-        <div id="top" className="Nav">
+        <div className="Nav">
             <div className="mobile-overlay">
                 {/* I'm using Hashlinks to leverage smooth scrolling functionality initialized by "smooth  to" */}
                 <div id={isActive ? 'hidden' : 'not'}>
-                    <Link className='special-a-tag' to="/">Home</Link>
+                    <HashLink className='special-a-tag' smooth to="#top">Home</HashLink>
                     <HashLink className='special-a-tag' smooth to="#info">About</HashLink>
                     <HashLink className='special-a-tag' smooth to="#projects">Projects</HashLink>
                     <HashLink className='special-a-tag' smooth to="#contact">Contact</HashLink>

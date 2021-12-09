@@ -3,7 +3,7 @@ import './ProjectsStyle.css'
 import brooke from '../img/brooke.gif'
 import Button from '../Button/Button'
 import travel from '../img/travel advisor.png'
-import JAndP from '../img/j&p-webpage-mockup.png'
+import JAndP from '../img/JAndP.png'
 import my from '../img/my.png'
 import frame from '../img/chrome-frame.png'
 import todo from '../img/todo.png'
@@ -14,7 +14,7 @@ const Projects = () => {
             <h1 className='title'>Work & Projects</h1>
             <div className='projects-container'>
                 <div className='project first'>
-                    <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={JAndP} alt="" /></div>
+                    <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={JAndP} alt="project image" /></div>
                     <div className='text'>
                     <h2>Jazz And Print</h2>
                     <span className='techs'>
@@ -30,13 +30,13 @@ const Projects = () => {
                     <p>• Updated image carousel to include a colorful progress bar.</p>
                     <p>• Designed 10 product mockups and banners for display on home page.</p>
                     <div className='button'>
-                        <Button link="https://brooke-cordelia.com/" text={'Live Demo'}/>
+                        <Button link="https://store.jazzandprint.com/" text={'Live Demo'}/>
                         <Button link="https://github.com/luna-cuevas/jazzandprint" text={'Github Repo'} />
                     </div>
                 </div>
                 </div>
                 <div className='project second'>
-                  <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={brooke} alt="" /></div>
+                  <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={brooke} alt="project image" /></div>
                   <div className='text'>
                     <h2>Roller Diva</h2>
                     <span className='techs'>
@@ -58,7 +58,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className='project'>
-                    <div id='trvl-img'className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={travel} alt="" /></div>
+                    <div id='trvl-img'className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={travel} alt="project image" /></div>
                     <div id='trvl-text' className='text'>
                         <h2>Attractions Advisor</h2>
                         <span className='techs'>
@@ -84,7 +84,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className='project'>
-                  <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={todo} alt="todo app image" /></div>
+                  <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={todo} alt="todo app image" /></div>
                   <div className='text'>
                     <h2>Task Tracker</h2>
                     <span className='techs'>
@@ -105,7 +105,7 @@ const Projects = () => {
                   </div>  
                 </div>
                 <div className='project'>
-                  <div className='img-container'><img id='frame' src={frame} alt="" /><img id='project-img' src={my} alt="" /></div>
+                  <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={my} alt="project image" /></div>
                   <div className='text'>
                     <h2>This Website</h2>
                     <span className='techs'>

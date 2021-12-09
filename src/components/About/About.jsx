@@ -37,18 +37,18 @@ const About = () => {
                     <h2 className='skills-title'>Skills</h2>
                     <div className='icons'>
                         <p>React <img src={react} alt="react icon" /></p>
-                        <p>JavaScript <img src={javascript} alt="" /></p>
-                        <p>HTML5 <img src={html5} alt="" /></p> 
-                        <p>CSS3 <img src={css3} alt="" /></p>
-                        <p>Sass <img src={sass} alt="" /></p>
-                        <p>Bootstrap <img src={bootstrap} alt="" /></p>
-                        <p>GSAP <img src={Gsap} alt="gsap" /></p>
-                        <p>Node.js <img src={node} alt="" /></p>
-                        <p>MongoDB <img src={mongo} alt="" /></p>
-                        <p>GitHub <img src={github} alt="" /></p>
-                        <p>Photoshop <img src={photoshop} alt="" /></p>
-                        <p>Illustrator <img src={illustrator} alt="" /></p>
-                        <p>Material<img src={material} alt="" /></p>
+                        <p>JavaScript <img src={javascript} alt="Javascript icon" /></p>
+                        <p>HTML5 <img src={html5} alt="HTML5 icon" /></p> 
+                        <p>CSS3 <img src={css3} alt="CSS icon" /></p>
+                        <p>Sass <img src={sass} alt="Sass icon" /></p>
+                        <p>Bootstrap <img src={bootstrap} alt="Bootstrap icon" /></p>
+                        <p>GSAP <img src={Gsap} alt="gsap icon" /></p>
+                        <p>Node.js <img src={node} alt="Node icon" /></p>
+                        <p>MongoDB <img src={mongo} alt="MongoDB Icon" /></p>
+                        <p>GitHub <img src={github} alt="Github icon" /></p>
+                        <p>Photoshop <img src={photoshop} alt="Photoshop icon" /></p>
+                        <p>Illustrator <img src={illustrator} alt="illustrator photoshop" /></p>
+                        <p>Material<img src={material} alt="Material icon" /></p>
                         <p>Wordpress<img src={wordpress} alt="wordpress icon" /></p>
                     </div>
                     <h2 className='skills-title'>In Progress</h2>

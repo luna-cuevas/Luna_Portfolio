@@ -30,7 +30,7 @@ const Hero = () => {
 
     return (
         <div className='hero'>
-            <img id='moon' src={moon} alt="" />
+            <img id='moon' src={moon} alt="Moon SVG icon" />
             <div className="hero-content">
                 <div className="hero-text">
                     {/* SVG orbital moon graphics powered by GSAP */}

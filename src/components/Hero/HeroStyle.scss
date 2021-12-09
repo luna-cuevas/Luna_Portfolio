@@ -9,8 +9,9 @@
 }
 
 .hero {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
+  margin: 20vh auto 0 auto;
   font-family: "Infynyte";
 }
 
@@ -24,7 +25,7 @@
   align-content: center;
   justify-content: center;
   width: 85%;
-  margin: 20vh auto 0 auto;
+  margin: auto;
   height: auto;
   color: #020101;
   z-index: 1;
