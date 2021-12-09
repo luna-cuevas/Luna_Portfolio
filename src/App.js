@@ -3,141 +3,138 @@ import NavBar from './components/NavBar/NavBar';
 import Hero from './components/Hero/Hero';
 import Particles from 'react-particles-js';
 import About from './components/About/About'
-import Projects from './components/ProjSec/Projects'
+import Projects from './components/Works/Projects'
 import Contact from './components/Contact/Contact'
 import ToTopButton from './components/ToTopButton/ToTopButton';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import AboutMe from './components/MoreAboutMe/AboutMe'
+import shootingStar from './components/img/shooting star.svg'
 
 
 function App() {
   return (
     <Router>
-    <div>
-      <NavBar />
-      <Switch>
-        <Route exact path='/' >
+      <div>
+        <NavBar />
         <Particles id="particles-js"
-      params={{
-        "particles": {
-          "number": {
-            "value": 38,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "star",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
-            }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 4,
-            "random": true,
-            "anim": {
-              "enable": true,
-              "speed": 3,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": false,
-            "distance": 347.22496231819997,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 1.603412060865523,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 1042.21783956259,
-              "rotateY": 1202.559045649142
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "grab"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
+        params={{
+          "particles": {
+            "number": {
+              "value": 20,
+              "density": {
+                "enable": true,
+                "value_area": 800
               }
             },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
+            "color": {
+              "value": "#ffffff"
             },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
+            "shape": {
+              "type": "image",
+              "stroke": {
+                "width": 0,
+                "color": "#fff"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": shootingStar,
+                "width": 5,
+                "height": 5
+              }
             },
-            "push": {
-              "particles_nb": 4
+            "opacity": {
+              "value": 1,
+              "random": true,
+              "anim": {
+                "enable": true,
+                "speed": 2,
+                "opacity_min": 0,
+                "sync": false
+              }
             },
-            "remove": {
-              "particles_nb": 2
+            "size": {
+              "value": 50,
+              "random": false,
+              "anim": {
+                "enable": true,
+                "speed": 10,
+                "size_min": 0,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "bottom-left",
+              "random": false,
+              "straight": true,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 4261.397264814273,
+                "rotateY": 4498.141557303954
+              }
             }
-          }
-        },
-        "retina_detect": true}} />
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </Route>
-        <Route exact path='/about'>
-          <AboutMe />
-        </Route>
-      </Switch>
-      <ToTopButton />
-    </div>
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 194.89853095232286,
+                "line_linked": {
+                  "opacity": 0.32082394169230544
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+            "retina_detect": true}} />
+        <Switch>
+          <Route exact path='/' >
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+            <ToTopButton />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }

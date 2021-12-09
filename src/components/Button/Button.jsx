@@ -1,12 +1,12 @@
 import React from 'react'
 import './ButtonStyle.css'
 
-const Button = ( {link, text} ) => {
+const Button = ( {link, text, targetTo} ) => {
     return (
         <div>
-            <div class="info-btn">
-                <a target='_blank' href={link} ><button id="bn30">{text}</button></a>
-            </div>
+            <a target={ !targetTo ? '_blank' : targetTo } href={ link }>
+                <button id="bn30"> { text } </button>
+            </a>
         </div>
     )
 }

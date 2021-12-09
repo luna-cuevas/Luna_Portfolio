@@ -4,39 +4,53 @@
 }
 
 .Nav {
-  font-weight: 700;
   z-index: 9999999;
 }
 
 .pc-overlay {
   display: flex;
-  margin: auto;
-  justify-content: space-around;
-  width: 100vw;
+  justify-content: right;
+  width: 95vw;
   height: auto;
   z-index: 9999999;
+}
+.pc-overlay .special-a-tag {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #f1f7ee;
+  overflow: hidden;
+}
+.pc-overlay .special-a-tag:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -1px;
+  left: 0;
+  background-color: #4568dc;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.pc-overlay .special-a-tag:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .pc-overlay a {
   display: inline-block;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 2rem 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
   text-decoration: none;
-  border-bottom: 0.2rem solid #fff;
-  transition-property: all 0.2s linear 0s;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   z-index: 999999;
 }
 
-.pc-overlay a:hover {
-  background-color: #b7b4b85d;
-  border-radius: 1rem;
-  z-index: 99;
-}
-
-.socials {
+.pages a:hover {
   z-index: 99;
 }
 
@@ -48,21 +62,17 @@
   display: none;
 }
 
-.sideBar {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 2vw;
-  bottom: 5vh;
-}
-
 @media only screen and (max-width: 800px) {
   .Nav button {
     display: block;
     position: fixed;
     right: 0;
     top: 0;
+    background-color: rgba(34, 34, 34, 0.932);
     z-index: 999999999;
+  }
+  .Nav button .jXqDQz {
+    position: revert;
   }
 
   .pc-overlay {
@@ -81,30 +91,25 @@
   .mobile-overlay #hidden {
     position: fixed;
     display: flex;
-    flex-direction: column;
     left: 0;
     top: 0;
     height: auto;
-    width: 100%;
-    background-color: #454466;
+    background-color: rgba(34, 34, 34, 0.932);
+    justify-content: center;
+    width: 90%;
+    background-color: none;
     border-radius: 0;
     z-index: 99999;
   }
 
   .mobile-overlay #hidden a {
     display: block;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #e9e9e9;
     text-decoration: none;
     width: auto;
-    margin: auto;
-    padding: 10px;
+    margin: 1.05rem 0.5rem;
+    padding: 0.1rem;
     z-index: 99999;
-  }
-
-  .socials {
-    display: flex;
-    width: 50%;
-    margin: auto;
   }
 }/*# sourceMappingURL=NavStyle.css.map */
