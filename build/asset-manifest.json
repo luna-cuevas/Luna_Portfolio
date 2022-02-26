@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.524fe786.chunk.css",
-    "main.js": "/static/js/main.bd316c94.chunk.js",
-    "main.js.map": "/static/js/main.bd316c94.chunk.js.map",
+    "main.css": "/static/css/main.154a9140.chunk.css",
+    "main.js": "/static/js/main.b8a56e20.chunk.js",
+    "main.js.map": "/static/js/main.b8a56e20.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f03ca7ef.js",
     "runtime-main.js.map": "/static/js/runtime-main.f03ca7ef.js.map",
     "static/js/2.72b29430.chunk.js": "/static/js/2.72b29430.chunk.js",
     "static/js/2.72b29430.chunk.js.map": "/static/js/2.72b29430.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.524fe786.chunk.css.map": "/static/css/main.524fe786.chunk.css.map",
+    "static/css/main.154a9140.chunk.css.map": "/static/css/main.154a9140.chunk.css.map",
     "static/js/2.72b29430.chunk.js.LICENSE.txt": "/static/js/2.72b29430.chunk.js.LICENSE.txt",
-    "static/media/JAndP.5950a607.png": "/static/media/JAndP.5950a607.png",
-    "static/media/Luna.Cuevas.Resume.08bba1b4.pdf": "/static/media/Luna.Cuevas.Resume.08bba1b4.pdf",
+    "static/media/Luna.Cuevas.Resume.d3224e8b.pdf": "/static/media/Luna.Cuevas.Resume.d3224e8b.pdf",
     "static/media/bootstrap.19c3fd09.svg": "/static/media/bootstrap.19c3fd09.svg",
     "static/media/brooke.87d74ca5.gif": "/static/media/brooke.87d74ca5.gif",
     "static/media/css.29319a45.svg": "/static/media/css.29319a45.svg",
+    "static/media/dk.f5c47c6e.png": "/static/media/dk.f5c47c6e.png",
     "static/media/github.eb5c46ae.svg": "/static/media/github.eb5c46ae.svg",
     "static/media/gsap.dff87e2d.svg": "/static/media/gsap.dff87e2d.svg",
     "static/media/html5.03e4823e.svg": "/static/media/html5.03e4823e.svg",
     "static/media/illustrator.2504aae6.svg": "/static/media/illustrator.2504aae6.svg",
     "static/media/HeroStyle.css": "/static/media/spacerave.e8766fa7.ttf",
+    "static/media/janp_v2.ddf5c405.png": "/static/media/janp_v2.ddf5c405.png",
     "static/media/javascript.64d9e0e7.svg": "/static/media/javascript.64d9e0e7.svg",
     "static/media/material.62dcadca.svg": "/static/media/material.62dcadca.svg",
     "static/media/me.4e95afdb.png": "/static/media/me.4e95afdb.png",
     "static/media/mongoDB.64aabbfa.svg": "/static/media/mongoDB.64aabbfa.svg",
-    "static/media/moon.6065c938.svg": "/static/media/moon.6065c938.svg",
+    "static/media/moon.3571870a.svg": "/static/media/moon.3571870a.svg",
     "static/media/my.1c96d506.png": "/static/media/my.1c96d506.png",
     "static/media/nodejs.697e6461.svg": "/static/media/nodejs.697e6461.svg",
     "static/media/photoshop.29f7031a.svg": "/static/media/photoshop.29f7031a.svg",
@@ -32,6 +33,8 @@
     "static/media/react.db5e01fa.svg": "/static/media/react.db5e01fa.svg",
     "static/media/sass.38497bdd.svg": "/static/media/sass.38497bdd.svg",
     "static/media/shooting star.c0ee8eca.svg": "/static/media/shooting star.c0ee8eca.svg",
+    "static/media/shopify.e1b52907.svg": "/static/media/shopify.e1b52907.svg",
+    "static/media/threejs.34faec93.svg": "/static/media/threejs.34faec93.svg",
     "static/media/todo.a0b7e368.png": "/static/media/todo.a0b7e368.png",
     "static/media/travel advisor.92ee91d4.png": "/static/media/travel advisor.92ee91d4.png",
     "static/media/upbutton.77c937cc.svg": "/static/media/upbutton.77c937cc.svg"
@@ -39,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.f03ca7ef.js",
     "static/js/2.72b29430.chunk.js",
-    "static/css/main.524fe786.chunk.css",
-    "static/js/main.bd316c94.chunk.js"
+    "static/css/main.154a9140.chunk.css",
+    "static/js/main.b8a56e20.chunk.js"
   ]
 }

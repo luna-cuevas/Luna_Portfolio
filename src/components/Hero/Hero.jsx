@@ -54,8 +54,8 @@ const Hero = () => {
                     </div>
                     <div  className="hero-p">
                         {/* I added a gradient background on some of the techs to highlight/emphasize */}
-                        <p>I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using  <span className='language'>HTML</span> <span className='language'>CSS/SCSS</span> and <span className='language'>Javascript</span>.</p>
-                        <p>I develop web apps using <span className='language'>React</span> and various CSS frameworks like Bootstrap and Material-UI. </p>
+                        <p>I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using  <span className='language'>HTML</span> <span className='language'>CSS/SCSS</span>,<span className='language'>Javascript</span>, and <span className='language'>React</span>.</p>
+                        <p>Creating particles, parallax designs and scroll triggered animations using libraries like <span className='language'>GSAP</span> and <span className='language'>threejs</span> is my forte.</p>
                         <div className='button'>
                             <Button targetTo={ '_self' } link={ '#projects' } text={ 'Projects' } />
                             <Button link={ Resume }  text={ 'Resume' } />

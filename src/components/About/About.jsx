@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './AboutStyle.css'
 import me from '../img/me.png'
 import react  from '../img/react.svg'
@@ -18,6 +18,8 @@ import magento from '../img/magento.png'
 import wordpress from '../img/wordpress.png'
 import Gsap from '../img/gsap.svg'
 import figma from '../img/figma.png'
+import shopify from '../img/shopify.svg'
+import threejs from '../img/threejs.svg'
 
 const About = () => {
     return (
@@ -25,7 +27,7 @@ const About = () => {
             <h1 className="title">About Me</h1>
             <div className='blurb gradient-border'>
                 <div className='about-container'>
-                    <img id="pic" src={me} alt="a picture of me, Luna Cuevas"></img>
+                    <img id="pic" src={me} alt="Luna Cuevas"></img>
                     <div className='lorem'>
                         <p>Hello! Thanks for taking a moment to check out my website!</p>
                         <p>I'm a front end developer with over two years of knowledge and experience. I use Udemy courses, bootcamp material, tutorials, and <i>plenty</i> of books to reinforce the fundamentals of web development. I've also gained a community of developers through online forums.</p>
@@ -36,26 +38,28 @@ const About = () => {
                 <div className='skills'>
                     <h2 className='skills-title'>Skills</h2>
                     <div className='icons'>
-                        <p>React <img src={react} alt="react icon" /></p>
-                        <p>JavaScript <img src={javascript} alt="Javascript icon" /></p>
-                        <p>HTML5 <img src={html5} alt="HTML5 icon" /></p> 
-                        <p>CSS3 <img src={css3} alt="CSS icon" /></p>
-                        <p>Sass <img src={sass} alt="Sass icon" /></p>
-                        <p>Bootstrap <img src={bootstrap} alt="Bootstrap icon" /></p>
-                        <p>GSAP <img src={Gsap} alt="gsap icon" /></p>
-                        <p>Node.js <img src={node} alt="Node icon" /></p>
-                        <p>MongoDB <img src={mongo} alt="MongoDB Icon" /></p>
-                        <p>GitHub <img src={github} alt="Github icon" /></p>
-                        <p>Photoshop <img src={photoshop} alt="Photoshop icon" /></p>
-                        <p>Illustrator <img src={illustrator} alt="illustrator photoshop" /></p>
+                        <p>React<img src={react} alt="react icon" /></p>
+                        <p>JavaScript<img src={javascript} alt="Javascript icon" /></p>
+                        <p>HTML5<img src={html5} alt="HTML5 icon" /></p> 
+                        <p>CSS3<img src={css3} alt="CSS icon" /></p>
+                        <p>Sass<img src={sass} alt="Sass icon" /></p>
+                        <p>Bootstrap<img src={bootstrap} alt="Bootstrap icon" /></p>
+                        <p>GSAP<img src={Gsap} alt="gsap icon" /></p>
+                        <p>Node.js<img src={node} alt="Node icon" /></p>
+                        <p>MongoDB<img src={mongo} alt="MongoDB Icon" /></p>
+                        <p>GitHub<img src={github} alt="Github icon" /></p>
+                        <p>Photoshop<img src={photoshop} alt="Photoshop icon" /></p>
+                        <p>Illustrator<img src={illustrator} alt="illustrator photoshop" /></p>
                         <p>Material<img src={material} alt="Material icon" /></p>
                         <p>Wordpress<img src={wordpress} alt="wordpress icon" /></p>
+                        <p>Figma<img src={figma} alt="figma icon" /></p> 
                     </div>
                     <h2 className='skills-title'>In Progress</h2>
                     <div className='icons'>
-                        <p>PHP <img src={php} alt="php icon" /></p>
-                        <p>Magento <img src={magento} alt="magento icon" /></p>
-                        <p>Figma <img src={figma} alt="figma icon" /></p> 
+                        <p>Magento<img src={magento} alt="magento icon" /></p>
+                        <p>PHP<img src={php} alt="php icon" /></p>
+                        <p>Three.js<img src={threejs} alt="php icon" /></p>
+                        <p>Shopify<img style={{filter: "invert(99%) sepia(0%) saturate(7500%) hue-rotate(243deg) brightness(103%) contrast(102%)"}}src={shopify} alt="php icon" /></p>
                     </div>
                 </div>
             </div>

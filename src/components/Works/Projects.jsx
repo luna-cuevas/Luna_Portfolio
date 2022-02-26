@@ -3,7 +3,8 @@ import './ProjectsStyle.css'
 import brooke from '../img/brooke.gif'
 import Button from '../Button/Button'
 import travel from '../img/travel advisor.png'
-import JAndP from '../img/JAndP.png'
+import dk from '../img/dk.png'
+import janp_v2 from '../img/janp_v2.png'
 import my from '../img/my.png'
 import frame from '../img/chrome-frame.png'
 import todo from '../img/todo.png'
@@ -14,7 +15,32 @@ const Projects = () => {
             <h1 className='title'>Work & Projects</h1>
             <div className='projects-container'>
                 <div className='project first'>
-                    <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={JAndP} alt="project image" /></div>
+                    <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={dk} alt="project image" /></div>
+                        <div className='text'>
+                            <h2>Dolls Kill</h2>
+                            <span className='techs'>
+                            <p>HTML</p>
+                            <p>CSS/SCSS</p>
+                            <p>Javascript</p>
+                            <p>React</p> 
+                            <p>PHP</p>                                               
+                            <p>Next.js</p>                        
+                            <p>Layer0</p>                        
+                            </span>
+                            <div className='job-description'>
+                                <span>I initially started as a support representative but was able to connect with the engineers and assisted them with visual updates in their Next.js and Magento powered app.</span>
+                                <p>• Improved UX/UI of navigation bar to be consistent with the mobile/tablet experience and removed bugs related to resizing.</p>
+                                <p>• Updated Magento 2 HTML blocks within a Next.js environment and coordinated with the site merchandising team to update navigation links and nav tiles in M2.</p>
+                                <p>• Working with the product owner and UX designer, I implemented a redesign of the ‘Collabs’ submenu.</p>
+                                <p>• Attended daily standup meetings and tracked my work using a Jira board and bitbucket version control system. This is an agile team.</p>
+                            </div>
+                            <div className='button'>
+                                <Button link="https://www.dollskill.com/" text={'Live Demo'}/>
+                            </div>
+                        </div>
+                    </div>
+                <div className='project first'>
+                    <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={janp_v2} alt="project image" /></div>
                     <div className='text'>
                     <h2>Jazz And Print</h2>
                     <span className='techs'>
@@ -23,12 +49,15 @@ const Projects = () => {
                         <p>Javascript</p>
                         <p>PHP</p>                        
                     </span>
-                    <span>This client reached out requesting an update to their printing shop webpage. Run on a PHP-based CMS, some of the challenges included finding overwritten style sheets and modifying PHP code to improve UX. The goal was to improve the design, optimize SEO keywords, and generate more web traffic. Features implemented:</span>
-                    <p>• Increased SEO rating from 22% to 91%, fixed meta tags, improved sitemap. </p>
-                    <p>• Improved user experience across browsers and devices.</p>
-                    <p>• Increased web traffic by 31%.</p>
-                    <p>• Updated image carousel to include a colorful progress bar.</p>
-                    <p>• Designed 10 product mockups and banners for display on home page.</p>
+                    <div className='job-description'>
+                        <span>This client reached out requesting an update to their printing shop webpage. Run on a PHP-based CMS, some of the challenges included finding overwritten style sheets and modifying PHP code to improve UX. The goal was to improve the design, optimize SEO keywords, and generate more web traffic. Features implemented:</span>
+                        <p>• Increased SEO rating from 22% to 91%, fixed meta tags, improved sitemap. </p>
+                        <p>• Improved user experience across browsers and devices.</p>
+                        <p>• Increased web traffic by 31%.</p>
+                        <p>• Updated image carousel to include a colorful progress bar.</p>
+                        <p>• Designed 10 product mockups and banners for display on home page.</p>
+                    </div>
+                    
                     <div className='button'>
                         <Button link="https://store.jazzandprint.com/" text={'Live Demo'}/>
                         <Button link="https://github.com/luna-cuevas/jazzandprint" text={'Github Repo'} />
@@ -38,19 +67,22 @@ const Projects = () => {
                 <div className='project second'>
                   <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={brooke} alt="project image" /></div>
                   <div className='text'>
-                    <h2>Roller Diva</h2>
+                    <h2>Client Portfolio</h2>
                     <span className='techs'>
                         <p>HTML</p>
                         <p>CSS/SCSS</p>
                         <p>Javascript</p>
                         <p>React</p>                        
                     </span>
-                    <span>The task was to design a captivating portfolio for a professional roller skater. Key features requested were 80s themes, pastel colors, blog-style graphics, and an emphasis on video playback. Features implemented:</span>
-                    <p>• <b>Responsive design</b> suitable for all devices.</p>
-                    <p>• Play on hover feature implemented using <b>Vimeo Player API</b>.</p>
-                    <p>• Utilized vibrant colors to match the skater's style and brand.</p>
-                    <p>• Implemented a mix of <b>Bootstrap</b> and custom CSS styling to fix videos onto a carousel.</p>
-                    <p>• Routed a custom contact page using <b>PHP</b> to send client inquiries.</p>
+                    <div className='job-description'>
+                        <span>The task was to design a captivating portfolio for a professional roller skater. Key features requested were 80s themes, pastel colors, blog-style graphics, and an emphasis on video playback. Features implemented:</span>
+                        <p>• <b>Responsive design</b> suitable for all devices.</p>
+                        <p>• Play on hover feature implemented using <b>Vimeo Player API</b>.</p>
+                        <p>• Utilized vibrant colors to match the skater's style and brand.</p>
+                        <p>• Implemented a mix of <b>Bootstrap</b> and custom CSS styling to fix videos onto a carousel.</p>
+                        <p>• Routed a custom contact page using <b>PHP</b> to send client inquiries.</p>
+                        </div>
+                    
                     <div className='button'>
                         <Button link="https://brooke-cordelia.com/" text={'Live Demo'}/>
                         <Button link="https://github.com/luna-cuevas/Cordelia_Portfolio" text={'Github Repo'} />
@@ -67,16 +99,13 @@ const Projects = () => {
                             <p>Javascript</p>
                             <p>Material</p>                        
                         </span>
-                        <span>The goal of this <b>React</b> application is to help users find local eateries, attractions, and hotels in their area. Using the Travel Advisor and Google Maps APIs, the user can search their locale attractions based on ratings ranging from 3 to 5 stars. Other information includes weather information, awards, phone numbers, and rankings. Features implemented:
-                        </span>
-                        <p>
-                        • Utilized <b>Google Maps API</b> to show accurate location for attractions.  
-                        </p>
-                        <p>
-                        • Scraped business information like address, phone number, ratings, and awards from the <b>Travel Advisor API</b>.
-                        </p>
-                        <p>• Populated the map with small product cards accurately displaying location of attractions.</p>
-                        <p>• Implemented a <b>responsive design</b> by using Material UI.</p>
+                        <div className='job-description'>
+                            <span>The goal of this <b>React</b> application is to help users find local eateries, attractions, and hotels in their area. Using the Travel Advisor and Google Maps APIs, the user can search their locale attractions based on ratings ranging from 3 to 5 stars. Other information includes weather information, awards, phone numbers, and rankings. Features implemented:</span>
+                            <p>• Utilized <b>Google Maps API</b> to show accurate location for attractions.</p>
+                            <p>• Scraped business information like address, phone number, ratings, and awards from the <b>Travel Advisor API</b>.</p>
+                            <p>• Populated the map with small product cards accurately displaying location of attractions.</p>
+                            <p>• Implemented a <b>responsive design</b> by using Material UI.</p>
+                        </div>
                         <div className='button'>
                             <Button link="https://trvler.netlify.app/" text={'Live Demo'}/>
                             <Button link="https://github.com/luna-cuevas/travel-advisor" text={'Github Repo'} />
@@ -94,10 +123,12 @@ const Projects = () => {
                         <p>Javascript</p>
                         <p>React</p>                        
                     </span>
-                    <span>A simple but elegant task tracker using Material-UI, React, and the Spotify API to create an elevated and productive workflow:</span>
-                    <p>• Added a Spotify media player with a relaxing playlist to enhance  ambiance.</p>
-                    <p>• Leveraged Material-UI components to create a responsive, elegant design.</p>
-                    <p>• Utilized local storage to hold todo items.</p>
+                    <div className='job-description'>
+                        <span>A simple but elegant task tracker using Material-UI, React, and the Spotify API to create an elevated and productive workflow:</span>
+                        <p>• Added a Spotify media player with a relaxing playlist to enhance  ambiance.</p>
+                        <p>• Leveraged Material-UI components to create a responsive, elegant design.</p>
+                        <p>• Utilized local storage to hold todo items.</p>
+                    </div>
                     <div className='button'>
                         <Button link="https://task-trkr.netlify.app/" text={'Live Demo'}/>
                         <Button  link="https://github.com/luna-cuevas/task-trkr" text={'GitHub Repo'}/>
@@ -114,14 +145,15 @@ const Projects = () => {
                         <p>Javascript</p>
                         <p>React</p>                        
                     </span>
-                    <span>The first initial version did not use the React framework nor Sass compiling which resulted in a functional but clunky portfolio. After some tinkering and further research, I realized that the React component structure could allow my website to function more efficiently. </span>
-                    <span>
-                    You are currently looking at the latest iteration of this portfolio. Here are some of the key features:</span>
-                    <p>• Structured using the <b>React</b> framework so components like buttons and navigation are shared across the app. </p>
-                    <p>• Optimized CSS styling with the <b>Sass</b> compiler to ensure cross-browser functionality.</p>
-                    <p>• Animated text, elements, and images using <b>GSAP</b> and ScrollTrigger.</p>
-                    <p>• Utilized EmailJS to create a lightweight serverless contact form.</p>
-                    <p>• Responsive design using relative units.</p>
+                    <div className='job-description'>
+                        <span>The first initial version did not use the React framework nor Sass compiling which resulted in a functional but clunky portfolio. After some tinkering and further research, I realized that the React component structure could allow my website to function more efficiently. </span>
+                        <span>You are currently looking at the latest iteration of this portfolio. Here are some of the key features:</span>
+                        <p>• Structured using the <b>React</b> framework so components like buttons and navigation are shared across the app. </p>
+                        <p>• Optimized CSS styling with the <b>Sass</b> compiler to ensure cross-browser functionality.</p>
+                        <p>• Animated text, elements, and images using <b>GSAP</b> and ScrollTrigger.</p>
+                        <p>• Utilized EmailJS to create a lightweight serverless contact form.</p>
+                        <p>• Responsive design using relative units.</p>
+                    </div>
                     <div className='button'>
                         <Button  link="https://github.com/luna-cuevas/Luna_Portfolio" text={'GitHub Repo'}/>
                     </div>
