@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import './ContactStyle.css'
 import Button from '../Button/Button'
-import Resume from '../misc./Luna.Cuevas.Resume.pdf'
+import Resume from '../misc./luna-cuevas-resume.pdf'
 
 const Contact = () => {
     const [name, setName] = useState('');

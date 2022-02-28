@@ -1,20 +1,44 @@
 import React, { useState } from 'react'
 import './ProjectsStyle.css'
-import brooke from '../img/brooke.gif'
+import brooke from '../img/brooke.jpeg'
 import Button from '../Button/Button'
 import travel from '../img/travel advisor.png'
 import dk from '../img/dk.png'
 import janp_v2 from '../img/janp_v2.png'
-import my from '../img/my.png'
 import frame from '../img/chrome-frame.png'
 import todo from '../img/todo.png'
+import spotifyClone from '../img/spotify-clone.jpeg'
 
 const Projects = () => {
     return (
         <div id='projects' className='projects-page'>
             <h1 className='title'>Work & Projects</h1>
             <div className='projects-container'>
-                <div className='project first'>
+            <div className='project'>
+                    <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={spotifyClone} alt="project image" /></div>
+                        <div className='text'>
+                            <h2>Spotify Clone</h2>
+                            <span className='techs' id='tailwind'>
+                            <p>HTML</p>
+                            <p>Tailwind CSS</p>
+                            <p>Javascript</p>
+                            <p>React</p> 
+                            <p>Next.js</p>                        
+                            <p>Spotify API</p>                        
+                            </span>
+                            <div className='job-description'>
+                                <span>I wanted to learn how to use Tailwind CSS and NextAuth so I grabbed the Spotify API and tried to replicate some of Spotify's functionality. Next steps are adding an audio visualizer using P5. Currently you will need to have an active session of the spotify app open to view this project.</span>
+                                <p>• Using NextAuth and the Spotify API, I created a login session that checks if the user's credentials are valid on the server side. If not, the user is redirected to the login screen.</p>
+                                <p>• Then I found a node wrapper/client for the API and used that to fetch ids, album name, songs, artist, and playback times from the Spotify Web API. </p>
+                                <p>• Using the Spotify node wrapper, I created functions that control the volume, pause/play, and next/prev buttons.</p>
+                            </div>
+                            <div className='button'>
+                                <Button link="https://spotify-clone-luna-cuevas.vercel.app/" text={'Live Demo'}/>
+                                <Button link="https://github.com/luna-cuevas/spotify-clone" text={'Github Repo'} />
+                            </div>
+                        </div>
+                </div>
+                <div className='project'>
                     <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={dk} alt="project image" /></div>
                         <div className='text'>
                             <h2>Dolls Kill</h2>
@@ -38,8 +62,8 @@ const Projects = () => {
                                 <Button link="https://www.dollskill.com/" text={'Live Demo'}/>
                             </div>
                         </div>
-                    </div>
-                <div className='project first'>
+                </div>
+                <div className='project'>
                     <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={janp_v2} alt="project image" /></div>
                     <div className='text'>
                     <h2>Jazz And Print</h2>
@@ -64,7 +88,7 @@ const Projects = () => {
                     </div>
                 </div>
                 </div>
-                <div className='project second'>
+                <div className='project'>
                   <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={brooke} alt="project image" /></div>
                   <div className='text'>
                     <h2>Client Portfolio</h2>
@@ -132,30 +156,6 @@ const Projects = () => {
                     <div className='button'>
                         <Button link="https://task-trkr.netlify.app/" text={'Live Demo'}/>
                         <Button  link="https://github.com/luna-cuevas/task-trkr" text={'GitHub Repo'}/>
-                    </div>
-                  </div>  
-                </div>
-                <div className='project'>
-                  <div className='img-container'><img id='frame' src={frame} alt="web frame image" /><img id='project-img' src={my} alt="project image" /></div>
-                  <div className='text'>
-                    <h2>This Website</h2>
-                    <span className='techs'>
-                        <p>HTML</p>
-                        <p>CSS/SCSS</p>
-                        <p>Javascript</p>
-                        <p>React</p>                        
-                    </span>
-                    <div className='job-description'>
-                        <span>The first initial version did not use the React framework nor Sass compiling which resulted in a functional but clunky portfolio. After some tinkering and further research, I realized that the React component structure could allow my website to function more efficiently. </span>
-                        <span>You are currently looking at the latest iteration of this portfolio. Here are some of the key features:</span>
-                        <p>• Structured using the <b>React</b> framework so components like buttons and navigation are shared across the app. </p>
-                        <p>• Optimized CSS styling with the <b>Sass</b> compiler to ensure cross-browser functionality.</p>
-                        <p>• Animated text, elements, and images using <b>GSAP</b> and ScrollTrigger.</p>
-                        <p>• Utilized EmailJS to create a lightweight serverless contact form.</p>
-                        <p>• Responsive design using relative units.</p>
-                    </div>
-                    <div className='button'>
-                        <Button  link="https://github.com/luna-cuevas/Luna_Portfolio" text={'GitHub Repo'}/>
                     </div>
                   </div>  
                 </div>

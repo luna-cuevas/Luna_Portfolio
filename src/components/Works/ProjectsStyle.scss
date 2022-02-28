@@ -22,6 +22,12 @@
   margin: 4vh 0;
 }
 
+@media only screen and (max-width: 760px) {
+  #tailwind {
+    max-width: 80%;
+  }
+}
+
 .text {
   color: white;
   background-color: #222;

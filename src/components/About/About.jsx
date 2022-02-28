@@ -20,6 +20,7 @@ import Gsap from '../img/gsap.svg'
 import figma from '../img/figma.png'
 import shopify from '../img/shopify.svg'
 import threejs from '../img/threejs.svg'
+import jest from '../img/jest-icon.svg'
 
 const About = () => {
     return (
@@ -52,7 +53,8 @@ const About = () => {
                         <p>Illustrator<img src={illustrator} alt="illustrator photoshop" /></p>
                         <p>Material<img src={material} alt="Material icon" /></p>
                         <p>Wordpress<img src={wordpress} alt="wordpress icon" /></p>
-                        <p>Figma<img src={figma} alt="figma icon" /></p> 
+                        <p>Figma<img src={figma} alt="figma icon" /></p>
+                        <p>Jest<img src={jest} alt="figma icon" /></p> 
                     </div>
                     <h2 className='skills-title'>In Progress</h2>
                     <div className='icons'>
