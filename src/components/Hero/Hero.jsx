@@ -58,7 +58,7 @@ const Hero = () => {
                         <p>Creating particles, parallax designs and scroll triggered animations using libraries like <span className='language'>GSAP</span> and <span className='language'>threejs</span> is my forte.</p>
                         <div className='button'>
                             <Button targetTo={ '_self' } link={ '#projects' } text={ 'Projects' } />
-                            <Button link={ Resume }  text={ 'Resume' } />
+                            <Button link='https://docs.google.com/document/d/1hte0znHbBU6Q0-iv1nGLWFGsl9Ti2tj5/edit?usp=sharing&ouid=102956530355571931970&rtpof=true&sd=true'  text={ 'Resume' } />
                         </div>
                     </div>
                 </div>
