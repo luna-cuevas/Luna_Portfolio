@@ -139,7 +139,7 @@
   .work img {
     width: 8vw;
     padding: 0.25vw;
-    border: 2px solid #ebd7f5;
+    border: 2px solid rgb(235, 215, 245);
     border-radius: 10px;
   }
 }
@@ -240,7 +240,7 @@
   .work img {
     width: 20%;
     padding: 0.25vw;
-    border: 2px solid #ebd7f5;
+    border: 2px solid rgb(235, 215, 245);
     border-radius: 10px;
   }
 }/*# sourceMappingURL=AboutStyle.css.map */

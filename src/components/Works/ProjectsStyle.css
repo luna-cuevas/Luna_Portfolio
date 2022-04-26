@@ -63,7 +63,7 @@
   display: flex;
   flex-direction: column;
   background-color: #222;
-  box-shadow: 0 5px 10px 5px #030303;
+  box-shadow: 0 5px 10px 5px rgb(3, 3, 3);
 }
 .img-container #frame {
   width: 100.2% !important;

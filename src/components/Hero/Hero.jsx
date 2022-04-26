@@ -8,6 +8,7 @@ import moon from '../img/moon.svg'
 gsap.registerPlugin(MotionPathPlugin);
 
 const Hero = () => {
+
     const moonRef = useRef();
 
     // GSAP gradient sphere follows the path #ellipse
@@ -57,7 +58,7 @@ const Hero = () => {
                         <p>I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using  <span className='language'>HTML</span> <span className='language'>CSS/SCSS</span> and <span className='language'>Javascript</span>.</p>
                         <p>I develop web apps using <span className='language'>React</span> and various CSS frameworks like Bootstrap and Material-UI. </p>
                         <div className='button'>
-                            <Button targetTo={ '_self' } link={ '#projects' } text={ 'Projects' } />
+                            <Button data-testid='button' targetTo={ '_self' } link={ '#projects' } text={ 'Projects' } />
                             <Button link={ Resume }  text={ 'Resume' } />
                         </div>
                     </div>

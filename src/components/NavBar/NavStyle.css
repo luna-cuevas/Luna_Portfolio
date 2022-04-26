@@ -68,7 +68,11 @@
     position: fixed;
     right: 0;
     top: 0;
+<<<<<<< Updated upstream
     background-color: rgba(34, 34, 34, 0.932);
+=======
+    background-color: rgb(34, 34, 34);
+>>>>>>> Stashed changes
     z-index: 999999999;
   }
   .Nav button .jXqDQz {
@@ -85,7 +89,32 @@
   }
 
   .mobile-overlay #not {
+<<<<<<< Updated upstream
     display: none;
+=======
+    display: flex;
+    position: fixed;
+    left: 100%;
+    transition: left 0.5s ease;
+    top: 0;
+    height: auto;
+    background-color: rgb(34, 34, 34);
+    justify-content: center;
+    width: 90%;
+    background-color: none;
+    border-radius: 0;
+    z-index: 99999;
+  }
+  .mobile-overlay #not a {
+    display: block;
+    font-size: 1rem;
+    color: #e9e9e9;
+    text-decoration: none;
+    width: auto;
+    margin: 1.05rem 0.5rem;
+    padding: 0.1rem;
+    z-index: 99999;
+>>>>>>> Stashed changes
   }
 
   .mobile-overlay #hidden {
@@ -94,7 +123,11 @@
     left: 0;
     top: 0;
     height: auto;
+<<<<<<< Updated upstream
     background-color: rgba(34, 34, 34, 0.932);
+=======
+    background-color: rgb(34, 34, 34);
+>>>>>>> Stashed changes
     justify-content: center;
     width: 90%;
     background-color: none;
