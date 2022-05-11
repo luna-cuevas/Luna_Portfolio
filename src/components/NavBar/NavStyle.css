@@ -70,7 +70,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    background-color: #222222;
+    background-color: rgb(34, 34, 34);
     z-index: 999999999;
   }
   .Nav button .jXqDQz {
@@ -93,7 +93,7 @@
     transition: left 0.5s ease;
     top: 0;
     height: auto;
-    background-color: #222222;
+    background-color: rgb(34, 34, 34);
     justify-content: center;
     width: 90%;
     background-color: none;
@@ -118,7 +118,7 @@
     left: 0%;
     top: 0;
     height: auto;
-    background-color: #222222;
+    background-color: rgb(34, 34, 34);
     justify-content: center;
     width: 90%;
     background-color: none;

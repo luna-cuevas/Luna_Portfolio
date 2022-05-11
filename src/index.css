@@ -8,6 +8,7 @@ body {
   width: 100vw;
   font-family: "Heebo", sans-serif;
   background-color: #222 !important;
+  white-space: pre-line;
 }
 
 #particles-js {

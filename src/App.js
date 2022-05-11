@@ -128,8 +128,8 @@ function App() {
         <Switch>
           <Route exact path='/' >
             <Hero />
-            <About />
             <Projects />
+            <About />
             <Contact />
             <ToTopButton />
           </Route>
