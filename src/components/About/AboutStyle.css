@@ -2,7 +2,7 @@
   height: auto;
   max-width: 100vw;
   text-align: center;
-  margin: auto auto 25vh auto;
+  margin: 15vh auto;
 }
 .info .blurb {
   display: flex;
@@ -13,7 +13,7 @@
   width: 85%;
 }
 .info .blurb .about-container {
-  max-width: 800px;
+  max-width: 600px;
   border-right: 1px solid white;
 }
 .info .blurb .about-container #pic {
@@ -142,7 +142,7 @@
   .work img {
     width: 8vw;
     padding: 0.25vw;
-    border: 2px solid #ebd7f5;
+    border: 2px solid rgb(235, 215, 245);
     border-radius: 10px;
   }
 }
@@ -248,7 +248,7 @@
   .work img {
     width: 20%;
     padding: 0.25vw;
-    border: 2px solid #ebd7f5;
+    border: 2px solid rgb(235, 215, 245);
     border-radius: 10px;
   }
 }/*# sourceMappingURL=AboutStyle.css.map */

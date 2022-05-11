@@ -23,8 +23,8 @@ const NavBar = () => {
                 {/* I'm using Hashlinks to leverage smooth scrolling functionality initialized by "smooth  to" */}
                 <div id={isActive ? 'hidden' : 'not'}>
                     <HashLink className='special-a-tag' smooth to="#top">Home</HashLink>
-                    <HashLink className='special-a-tag' smooth to="#info">About</HashLink>
                     <HashLink className='special-a-tag' smooth to="#projects">Projects</HashLink>
+                    <HashLink className='special-a-tag' smooth to="#info">About</HashLink>
                     <HashLink className='special-a-tag' smooth to="#contact">Contact</HashLink>
                 </div>
             </div>
@@ -32,8 +32,8 @@ const NavBar = () => {
             <div className="pc-overlay">
                 <div className='pages'>
                     <Link className='special-a-tag' to="/">Home</Link>
-                    <HashLink className='special-a-tag' smooth to="#info">About</HashLink>
                     <HashLink className='special-a-tag' smooth to="#projects">Projects</HashLink>
+                    <HashLink className='special-a-tag' smooth to="#info">About</HashLink>
                     <HashLink className='special-a-tag' smooth to="#contact">Contact</HashLink>
                 </div>
             </div>

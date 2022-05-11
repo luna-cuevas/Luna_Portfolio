@@ -1,6 +1,5 @@
 import React from 'react'
 import './AboutStyle.css'
-import me from '../img/me.png'
 import react  from '../img/react.svg'
 import javascript from '../img/javascript.svg'
 import html5 from '../img/html5.svg'
@@ -21,6 +20,9 @@ import figma from '../img/figma.png'
 import shopify from '../img/shopify.svg'
 import threejs from '../img/threejs.svg'
 import jest from '../img/jest-icon.svg'
+import sanity from '../img/sanity-seeklogo.com.svg'
+import graphql from '../img/graphql.svg'
+import stripe from '../img/stripe-4.svg'
 
 const About = () => {
     return (
@@ -28,12 +30,11 @@ const About = () => {
             <h1 className="title">About Me</h1>
             <div className='blurb gradient-border'>
                 <div className='about-container'>
-                    <img id="pic" src={me} alt="Luna Cuevas"></img>
                     <div className='lorem'>
                         <p>Hello! Thanks for taking a moment to check out my website!</p>
-                        <p>I'm a front end developer with over two years of knowledge and experience. I use Udemy courses, bootcamp material, tutorials, and <i>plenty</i> of books to reinforce the fundamentals of web development. I've also gained a community of developers through online forums.</p>
-                        <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with SEO optimization and cross browser compatibility. I can also modify CSS and PHP code in CMS tools like Wordpress, Wix, and Squarespace. </p>
-                        <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. You can check out my projects and work below. Thanks again for taking time to read through this, you're awesome!</p>
+                        <p>I'm a self-taught full stack developer primarily specializing in JAM Stack technologies and animation libraries like GSAP and three.js</p>
+                        <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer Wordpress but I'm agile in can work with any of the major headless and traditional CMS's to ensure future updates can be done by the user.</p>
+                        <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. Thanks again for taking time to read through this, if you feel like we can work together please feel free to reach out below and I'll get back to you ASAP!</p>
                     </div>
                 </div>
                 <div className='skills'>
@@ -55,6 +56,9 @@ const About = () => {
                         <p>Wordpress<img src={wordpress} alt="wordpress icon" /></p>
                         <p>Figma<img src={figma} alt="figma icon" /></p>
                         <p>Jest<img src={jest} alt="figma icon" /></p> 
+                        <p>Sanity<img src={sanity} alt="figma icon" /></p>
+                        <p>Stripe<img src={stripe} alt="figma icon" /></p>    
+                        <p>GraphQL<img src={graphql} alt="figma icon" /></p>                     
                     </div>
                     <h2 className='skills-title'>In Progress</h2>
                     <div className='icons'>
