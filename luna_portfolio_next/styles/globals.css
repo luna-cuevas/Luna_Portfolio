@@ -6,13 +6,21 @@ html {
   padding: 0;
   margin: 0;
 }
-
+.swiper-button-prev, .swiper-button-next {
+  color: white !important;
+}
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+}
+.swiper-pagination-bullet {
+  background: rgb(191, 191, 191) !important;
+}
 @font-face {
-    font-family: SpaceRave;
-    src: url(/fonts/spacerave.ttf);
-  }
-  @font-face {
-    font-family: Infynyte;
-    src: url(/fonts/infynyte.otf);
-  }
+  font-family: SpaceRave;
+  src: url(/fonts/spacerave.ttf);
+}
+@font-face {
+  font-family: Infynyte;
+  src: url(/fonts/infynyte.otf);
+}
   

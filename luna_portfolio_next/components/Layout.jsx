@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 
 const Layout = ({children}) => {
   return (
-    <main className='bg-[#222] min-h-screen text-white'>
+    <main className='bg-[#222] min-h-screen text-white whitespace-pre-wrap'>
       <NavBar />
       {children}
       {/* Footer */}
