@@ -42,7 +42,33 @@ const Home = () => {
     // </div>
     <>
       <div className='border-2 border-gray-700'>
-        test
+        <div className='flex h-screen'>
+          <div className='m-auto flex justify-around max-w-[800px]'>
+            <div className='w-1/2 py-4 pr-4 border-r-2 border-gray-300'>
+              <h1 className='text-8xl text-right'>Luna <br />Cuevas</h1>
+            </div>
+            <div className='flex flex-col w-1/2 py-4 pl-4'>
+              I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using HTML CSS/SCSS,Javascript, and React.
+              <br />
+              <br />
+              Creating particles, parallax designs and scroll triggered animations using libraries like GSAP and threejs is my forte.
+              <div>
+                <a href={`/project-details/`}>
+                  <button className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1">
+                    Projects
+                  </button>
+                </a>
+                <a href={`/project-details/`}>
+                  <button className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1 m-3">
+                    Resume
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </>

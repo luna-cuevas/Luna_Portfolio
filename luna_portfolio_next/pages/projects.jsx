@@ -3,7 +3,7 @@ import { fetcher } from './api/api'
 
 const projects = ({ projects }) => {
   return (
-    <div className='flex justify-center mt-20 gap-5 md:gap-10 flex-wrap max-w-[1400px] m-auto'>
+    <div className='flex justify-center pt-20 gap-5 md:gap-10 flex-wrap max-w-[1400px] m-auto'>
       {projects && projects?.map((project) => (
         <Project key={project.id} project={project} />
       ))}

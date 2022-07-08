@@ -25,7 +25,7 @@ const ProjectDetails = ({ project }) => {
   })
   
   return (
-    <div className='max-w-[1400px] w-screen md:min-h-[600px] overflow-scroll m-auto justify-center flex flex-col md:flex-row mt-20'>
+    <div className='max-w-[1400px] w-screen md:min-h-[600px] overflow-scroll m-auto justify-center flex flex-col md:flex-row pt-20'>
       <div className="h-fit rounded-xl md:w-1/2 flex flex-col">
         <div className='md:w-full w-screen'>
           <Swiper
