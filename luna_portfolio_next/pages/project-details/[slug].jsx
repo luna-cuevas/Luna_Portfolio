@@ -9,9 +9,9 @@ const ProjectDetails = ({ project }) => {
   const images = process.env.NEXT_PUBLIC_STRAPI_URL + project.attributes.projectImages.data.attributes.url;
 
   return (
-    <div>
-      <img src={images} alt="" />
-      <h1>{title}</h1>
+    <div className='max-w-[1400px] m-auto flex flex-col mt-10'>
+      <img className='w-2/3 p-4 m-auto' src={images} alt="" />
+      <h1 className='text-2xl'>{title}</h1>
       <p>{skills}</p>
       <p>{desc}</p>
     </div>
