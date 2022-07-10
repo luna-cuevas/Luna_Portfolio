@@ -1,78 +1,312 @@
-import { useRef } from 'react';
-import Button from '../components/Button';
+import { fetcher } from '../pages/api/api'
+import Highlight from '../components/Highlight'
+import Button from '../components/Button'
+import emailjs from 'emailjs-com'
 
-const Home = () => {
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css";
+
+import { gsap } from "gsap";
+import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
+gsap.registerPlugin(MotionPathPlugin);
+
+import Particles from 'react-particles-js';
+import { useEffect, useRef, useState } from 'react';
+
+const Home = ( { projects } ) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
+  // EmailJS setting id and template id variables
+  const submit = () => {
+    if (name && email && message) {
+      const serviceId = 'service_neh1oii';
+      const templateId = 'template_vdw3ffh';
+      const userId = 'user_JcD1331LVSdIeKGHTgDqA';
+      const templateParams = {
+        name,
+        email,
+        message
+      };
+      // If variable isn't set or input is missing, error will be console logged
+      emailjs.send(serviceId, templateId, templateParams, userId)
+        .then(response => console.log(response))
+        .then(error => console.log(error));
+      // After email has been sent, all variables are now set to blank again.
+      setName('');
+      setEmail('');
+      setMessage('');
+      setEmailSent(true);
+    } else {
+      // if no data is input, error will alert user
+      alert('Please fill in all fields.');
+    }
+  };
+
+  const skillsData = [
+    {id: 1, name: 'HTML', icon: '/images/skills/html5.svg'}, 
+    {id: 2, name: 'CSS', icon: '/images/skills/css.svg'}, 
+    {id: 3, name: 'JavaScript', icon: '/images/skills/javascript.svg'}, 
+    {id: 4, name: 'React', icon: '/images/skills/react.svg'}, 
+    {id: 5, name: 'Node', icon: '/images/skills/nodejs.svg'}, 
+    {id: 6, name: 'PHP', icon: '/images/skills/php.svg'}, 
+    {id: 7, name: 'Github', icon: '/images/skills/github.svg'}, 
+    {id: 8, name: 'Sass', icon: '/images/skills/sass.svg'},
+    {id: 9, name: 'Wordpress', icon: '/images/skills/wordpress.png'},
+    {id: 10, name: 'Jest', icon: '/images/skills/jest-icon.svg'},
+  ];
+
   const moonRef = useRef();
 
-  return (
-    // <div className='hero'>
-    //   <img id='moon' src='/images/moon.svg' alt="Moon SVG icon" />
-    //   <div className="hero-content">
-    //     <div className="hero-text">
-    //         {/* SVG orbital moon graphics powered by GSAP */}
-    //         <svg className='ellipse-container' viewBox="-213 10 812 190">
-    //             {/* this sets the gradient fill on the sphere, check CSS for more info */}
-    //             <linearGradient id="lg">
-    //                 <stop id="color1" offset="0" />
-    //                 <stop id="color2" offset="1" />
-    //             </linearGradient>
-    //             <path id='ellipse' x="0px" y="0px" d="M103.3,56.9c25.4-4.4,54.4-7.3,85.3-8.2c100.6-3,182.7,16.3,183.5,43.1c0.8,26.8-80.1,50.9-180.6,53.9
-    //               C90.9,148.7,8.7,129.4,8,102.6c-0.6-18.5,38-35.8,95.2-45.7"/>
-    //             <circle fill="url(#lg)" id='realmoon'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
-    //         </svg>
-    //         <div className='intro'>
-    //             <h1  title="Luna Cuevas">Luna Cuevas</h1>
-    //             <div className='social'>
-    //                 <a target='_blank' href="https://www.instagram.com/redi8/?hl=en"><svg xmlns="http://www.w3.org/2000/svg" fill="white" width="30" height="30" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-    //                 <a target='_blank' href="https://www.linkedin.com/in/luna-cuevas/"><svg xmlns="http://www.w3.org/2000/svg" fill="white" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-    //                 <a target='_blank' href="https://github.com/luna-cuevas"><svg xmlns="http://www.w3.org/2000/svg" fill="white" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg></a>    
-    //             </div>
-    //         </div>
-    //         <div  className="hero-p">
-    //             {/* I added a gradient background on some of the techs to highlight/emphasize */}
-    //             <p>I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using  <span className='language'>HTML</span> <span className='language'>CSS/SCSS</span>,<span className='language'>Javascript</span>, and <span className='language'>React</span>.</p>
-    //             <p>Creating particles, parallax designs and scroll triggered animations using libraries like <span className='language'>GSAP</span> and <span className='language'>threejs</span> is my forte.</p>
-    //             <div className='button'>
-    //                 <Button targetTo={ '_self' } link={ '#projects' } text={ 'Projects' } />
-    //                 <Button link='https://docs.google.com/document/d/1hte0znHbBU6Q0-iv1nGLWFGsl9Ti2tj5/edit?usp=sharing&ouid=102956530355571931970&rtpof=true&sd=true'  text={ 'Resume' } />
-    //             </div>
-    //         </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <>
-      <div className='border-2 border-gray-700'>
-        <div className='flex h-screen'>
-          <div className='m-auto flex justify-around max-w-[800px]'>
-            <div className='w-1/2 py-4 pr-4 border-r-2 border-gray-300'>
-              <h1 className='text-8xl text-right'>Luna <br />Cuevas</h1>
-            </div>
-            <div className='flex flex-col w-1/2 py-4 pl-4'>
-              I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using HTML CSS/SCSS,Javascript, and React.
-              <br />
-              <br />
-              Creating particles, parallax designs and scroll triggered animations using libraries like GSAP and threejs is my forte.
-              <div>
-                <a href={`/project-details/`}>
-                  <button className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1">
-                    Projects
-                  </button>
-                </a>
-                <a href={`/project-details/`}>
-                  <button className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1 m-3">
-                    Resume
-                  </button>
-                </a>
-              </div>
+    // GSAP gradient sphere follows the path #ellipse
+    useEffect(() => {
+        gsap.to(moonRef.current, {
+            motionPath: {
+                path: "#ellipse",
+                align: "#ellipse",
+                alignOrigin: [0.5, 0.5],
+                // auto rotate allows the sphere to seemingly face the same direction
+                autoRotate: true,
+                start: 2,        
+            },
+            // setting repeat to -1 creates an infinite loop
+            repeat: -1,
+            ease: 'none',
+            duration: 20,
+        });
+    }) 
 
+  return (
+    <container className='h-fit relative'>
+      <Particles 
+        className='fixed top-0 bottom-0 left-0 right-0 z-0'
+        params={{
+          "particles": {
+            "number": {
+              "value": 20,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "image",
+              "stroke": {
+                "width": 0,
+                "color": "#fff"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": '/images/shooting-star.svg',
+                "width": 5,
+                "height": 5
+              }
+            },
+            "opacity": {
+              "value": 1,
+              "random": true,
+              "anim": {
+                "enable": true,
+                "speed": 2,
+                "opacity_min": 0,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 50,
+              "random": false,
+              "anim": {
+                "enable": true,
+                "speed": 10,
+                "size_min": 0,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "bottom-left",
+              "random": false,
+              "straight": true,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 4261.397264814273,
+                "rotateY": 4498.141557303954
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 194.89853095232286,
+                "line_linked": {
+                  "opacity": 0.32082394169230544
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+            "retina_detect": true}} 
+      />
+      <div className=''>
+        <div className=' flex min-h-screen'>
+          <div className='m-auto flex justify-around max-w-[800px]'>
+            <svg className='fill-transparent z-0 stroke-white absolute top-auto bottom-auto left-0 right-0 w-[100%]' viewBox="-213 10 812 190">
+              {/* this sets the gradient fill on the sphere, check CSS for more info */}
+              <linearGradient id="lg">
+                <stop style={{'stopColor': 'rgb(172, 171, 243)'}} offset="0" />
+                <stop style={{'stopColor': 'rgb(209, 119, 194)'}} offset="1" />
+              </linearGradient>
+              <path id='ellipse' x="0px" y="0px" d="M103.3,56.9c25.4-4.4,54.4-7.3,85.3-8.2c100.6-3,182.7,16.3,183.5,43.1c0.8,26.8-80.1,50.9-180.6,53.9C90.9,148.7,8.7,129.4,8,102.6c-0.6-18.5,38-35.8,95.2-45.7"/>
+              <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
+            </svg>
+            <div className='z-10 w-1/2 py-4 pr-4 text-right border-r-2 border-gray-300'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInLeft' animateOut='animate__fadeOutLeft'>
+                <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
+                <div className='flex justify-end gap-4 my-2'>
+                  <a target='_blank' className='my-auto' href="https://www.linkedin.com/in/luna-cuevas/">
+                    <img className='w-[35px]' src="/images/skills/linkedin.svg" alt="" />
+                  </a>
+                  <a target='_blank' href="https://github.com/luna-cuevas">
+                    <img className='w-[40px]' src="/images/skills/github.svg" alt="" />
+                  </a>
+                </div>
+              </ScrollAnimation>
+            </div>
+            <div className='z-10 flex flex-col w-1/2 py-4 pl-4'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+                <div className='bg-[#222]'>
+                  I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using HTML CSS/SCSS,Javascript, and React.
+                  <br />
+                  <br />
+                  Creating particles, parallax designs and scroll triggered animations using libraries like GSAP and threejs is my forte.
+                </div>
+                <div className=' flex gap-4'>
+                  <Button targetTo text='Projects' link='/projects' />
+                  <Button targetTo text='Contact' link='/contact' />
+                </div>
+              </ScrollAnimation>
             </div>
           </div>
-
         </div>
       </div>
-
-    </>
+      {/* Works */}
+      <div className='flex flex-col items-center w-screen min-h-screen'>
+        <h1 className='border-y-2 h-fit mx-auto text-3xl border-gray-300'>Work & Projects</h1>
+        <div className='h-fit'>
+          <Highlight projects={projects} />
+        </div>
+        <Button targetTo text='See More Projects' link='/projects' />
+      </div>
+      {/* About Me */}
+      <div className='flex flex-col items-center justify-center w-screen min-h-screen'>
+        <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
+        <div className='max-w-[1200px] flex'>
+          <ScrollAnimation className='flex flex-col w-1/2 gap-4 p-4 text-base font-light text-left' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+            <p>Hello! Thanks for taking a moment to check out my website!</p>
+            <p>I'm a self-taught full stack developer primarily specializing in JAM Stack technologies and animation libraries like GSAP and three.js</p>
+            <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer Wordpress but I'm agile in can work with any of the major headless and traditional CMS's to ensure future updates can be done by the user.</p>
+            <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. Thanks again for taking time to read through this, if you feel like we can work together please feel free to reach out below and I'll get back to you ASAP!</p>
+          </ScrollAnimation>
+          <ScrollAnimation className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
+          <ScrollAnimation className='flex flex-col w-1/2 gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+            <h1>Skills</h1>
+            <div className='flex flex-wrap max-w-[500px] gap-8 text-sm'>
+              {skillsData?.map(skill => (
+                <div key={skill.id} className='w-fit m-auto'>
+                  <p className=''>{skill.name}</p>
+                  <img className='w-[40px] m-auto' src={skill.icon} alt="" />
+                </div>
+              ))}
+            </div>
+          </ScrollAnimation>
+        </div>
+      </div>
+      {/* Contact */}
+      <div className='flex flex-col m-auto items-center max-w-[1200px] min-h-screen mt-20'>
+        <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>Contact Me</h1>
+        <div className='flex'>
+          <div className='flex justify-end w-1/2'>            
+            <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] p-10 w-11/12 bg-[#2b2b2b]'>
+              <div className='h-full'>
+                <div className='flex flex-col gap-6 m-auto'>
+                  {/* input fields for name and email */}
+                  <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
+                  <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+                </div>
+                <div className='my-6'>Message</div>
+                {/* Input field for message */}
+                <textarea style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 w-full bg-transparent border-[3px] h-1/3' placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+                <div onClick={submit} className='button'>
+                  <Button text={'Send Message'} />
+                </div>
+                <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message, we will be in touch in no time!</span>
+              </div>
+            </div>
+          </div>
+          <div className='flex flex-col w-1/3 gap-2 pl-10'>
+            <h1>Let's Talk?</h1>
+            <p>I'm available to take on projects and collaborate with a team to find solutions. Tell me more about your goals and the vision you're seeking to accomplish, I'll get back to you promptly.</p>
+            <p>Via Email: <span>s.cuevas14@gmail.com</span></p>
+            <p>Via: <span>LinkedIn</span></p>
+            <Button link='https://github.com/luna-cuevas' text='Github' />
+          </div>
+        </div>
+      </div>
+    </container>
   )
-}
+};
 
-export default Home
+export default Home;
+
+export async function getStaticProps() {
+  const projectResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/highlights?populate=*`)
+  return {
+    props: {
+      projects: projectResponse.data
+    }
+  }
+};

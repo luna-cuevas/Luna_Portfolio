@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 const Project = ({ project }) => {
   const title = project.attributes.projectTitle;
   const skills = project.attributes.projectSkills;
@@ -11,11 +13,7 @@ const Project = ({ project }) => {
         <p className='my-2 text-xs'>{skills}</p>
         <p className="text-sm font-light text-left">{desc}</p>
       </div>
-      <a href={`/project-details/${project.id}`}>
-        <button className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1 m-3">
-          link
-        </button>
-      </a>
+      <Button targetTo text='Read More' link={`/project-details/${project.id}`} className="hover:bg-gradient-to-l hover:shadow-[2px_3px_0px_#c679c9] transition-all duration-600 bg-gradient-to-r from-[#4568dc] to-[#b06ab3] rounded-lg px-8 py-1 m-3" />
     </div>
   ) 
 }
