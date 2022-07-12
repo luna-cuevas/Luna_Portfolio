@@ -3,14 +3,13 @@ import Highlight from '../components/Highlight'
 import Button from '../components/Button'
 import emailjs from 'emailjs-com'
 
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css";
-
 import { gsap } from "gsap";
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
 gsap.registerPlugin(MotionPathPlugin);
 
-import Particles from 'react-particles-js';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css";
+
 import { useEffect, useRef, useState } from 'react';
 
 const Home = ( { projects } ) => {
@@ -79,122 +78,10 @@ const Home = ( { projects } ) => {
 
   return (
     <container className='h-fit relative'>
-      <Particles 
-        className='fixed top-0 bottom-0 left-0 right-0 z-0'
-        params={{
-          "particles": {
-            "number": {
-              "value": 20,
-              "density": {
-                "enable": true,
-                "value_area": 800
-              }
-            },
-            "color": {
-              "value": "#ffffff"
-            },
-            "shape": {
-              "type": "image",
-              "stroke": {
-                "width": 0,
-                "color": "#fff"
-              },
-              "polygon": {
-                "nb_sides": 5
-              },
-              "image": {
-                "src": '/images/shooting-star.svg',
-                "width": 5,
-                "height": 5
-              }
-            },
-            "opacity": {
-              "value": 1,
-              "random": true,
-              "anim": {
-                "enable": true,
-                "speed": 2,
-                "opacity_min": 0,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 50,
-              "random": false,
-              "anim": {
-                "enable": true,
-                "speed": 10,
-                "size_min": 0,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": false,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 4,
-              "direction": "bottom-left",
-              "random": false,
-              "straight": true,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 4261.397264814273,
-                "rotateY": 4498.141557303954
-              }
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "grab"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "repulse"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 194.89853095232286,
-                "line_linked": {
-                  "opacity": 0.32082394169230544
-                }
-              },
-              "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-            "retina_detect": true}} 
-      />
       <div className=''>
         <div className=' flex min-h-screen'>
           <div className='m-auto flex justify-around max-w-[800px]'>
-            <svg className='fill-transparent z-0 stroke-white absolute top-auto bottom-auto left-0 right-0 w-[100%]' viewBox="-213 10 812 190">
+            <svg className='fill-transparent z-0 stroke-white absolute top-auto bottom-auto left-auto right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
               {/* this sets the gradient fill on the sphere, check CSS for more info */}
               <linearGradient id="lg">
                 <stop style={{'stopColor': 'rgb(172, 171, 243)'}} offset="0" />
@@ -204,7 +91,7 @@ const Home = ( { projects } ) => {
               <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
             </svg>
             <div className='z-10 w-1/2 py-4 pr-4 text-right border-r-2 border-gray-300'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInLeft' animateOut='animate__fadeOutLeft'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInDown' animateOut='animate__fadeOutUp'>
                 <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
                 <div className='flex justify-end gap-4 my-2'>
                   <a target='_blank' className='my-auto' href="https://www.linkedin.com/in/luna-cuevas/">
@@ -217,7 +104,7 @@ const Home = ( { projects } ) => {
               </ScrollAnimation>
             </div>
             <div className='z-10 flex flex-col w-1/2 py-4 pl-4'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInDown' animateOut='animate__fadeOutUp'>
                 <div className='bg-[#222]'>
                   I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using HTML CSS/SCSS,Javascript, and React.
                   <br />
@@ -235,24 +122,34 @@ const Home = ( { projects } ) => {
       </div>
       {/* Works */}
       <div className='flex flex-col items-center w-screen min-h-screen'>
-        <h1 className='border-y-2 h-fit mx-auto text-3xl border-gray-300'>Work & Projects</h1>
+        <h1 className='border-y-2 h-fit mx-auto text-3xl border-gray-300'>Highlights</h1>
         <div className='h-fit'>
           <Highlight projects={projects} />
         </div>
-        <Button targetTo text='See More Projects' link='/projects' />
+        <div className='flex gap-4'>
+          <ScrollAnimation className='w-[50px] flex' animateIn='animate__fadeInLeft'>
+            <img src="/images/love-arrow-left.png" alt="" />
+            {/* <svg className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg> */}
+          </ScrollAnimation>
+          <Button targetTo text='See More Work' link='/projects' />
+          <ScrollAnimation className='w-[50px] flex' animateIn='animate__fadeInRight'>
+            <img src="/images/love-arrow-right.png" alt="" />
+            {/* <svg  style={{'filter': 'invert(98%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(113%) contrast(100%);'}} className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero"/></svg> */}
+          </ScrollAnimation>
+        </div>
       </div>
       {/* About Me */}
       <div className='flex flex-col items-center justify-center w-screen min-h-screen'>
         <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
         <div className='max-w-[1200px] flex'>
-          <ScrollAnimation className='flex flex-col w-1/2 gap-4 p-4 text-base font-light text-left' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+          <ScrollAnimation animateOnce className='flex flex-col w-1/2 gap-4 p-4 text-base font-light text-left' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
             <p>Hello! Thanks for taking a moment to check out my website!</p>
             <p>I'm a self-taught full stack developer primarily specializing in JAM Stack technologies and animation libraries like GSAP and three.js</p>
             <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer Wordpress but I'm agile in can work with any of the major headless and traditional CMS's to ensure future updates can be done by the user.</p>
             <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. Thanks again for taking time to read through this, if you feel like we can work together please feel free to reach out below and I'll get back to you ASAP!</p>
           </ScrollAnimation>
-          <ScrollAnimation className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
-          <ScrollAnimation className='flex flex-col w-1/2 gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+          <ScrollAnimation duration='2' className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
+          <ScrollAnimation animateOnce className='flex flex-col w-1/2 gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
             <h1>Skills</h1>
             <div className='flex flex-wrap max-w-[500px] gap-8 text-sm'>
               {skillsData?.map(skill => (
@@ -266,7 +163,7 @@ const Home = ( { projects } ) => {
         </div>
       </div>
       {/* Contact */}
-      <div className='flex flex-col m-auto items-center max-w-[1200px] min-h-screen mt-20'>
+      <div className='flex flex-col m-auto items-center max-w-[1200px] min-h-[800px] pb-28'>
         <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>Contact Me</h1>
         <div className='flex'>
           <div className='flex justify-end w-1/2'>            

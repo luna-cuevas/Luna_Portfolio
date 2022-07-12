@@ -1,13 +1,10 @@
 import React from 'react'
 import NavBar from './NavBar'
-import { gsap } from "gsap";
-import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
-gsap.registerPlugin(MotionPathPlugin);
 import Particles from 'react-particles-js';
 
 const Layout = ({children}) => {
   return (
-    <main className='bg-[#222] -z-20 min-h-screen text-white whitespace-pre-wrap'>
+    <main className='bg-[#222] overflow-hidden -z-20 min-h-screen text-white whitespace-pre-wrap'>
       <Particles 
         className='fixed top-0 bottom-0 left-0 right-0 z-0'
         params={{
