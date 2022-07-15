@@ -29,7 +29,16 @@
     "projectTitle": {
       "type": "string"
     },
-    "projectSkills": {
+    "projectSkillz": {
+      "displayName": "projectSkills",
+      "type": "component",
+      "repeatable": true,
+      "component": "skill.project-skills"
+    },
+    "projectLink": {
+      "type": "string"
+    },
+    "gitRepo": {
       "type": "string"
     }
   }

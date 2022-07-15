@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-creative";
-
+import Button from "../../components/Button";
 
 const ProjectDetails = ({ project }) => {
   const title = project.attributes.projectTitle;
@@ -23,9 +23,11 @@ const ProjectDetails = ({ project }) => {
   const images = project.attributes.projectImages.data.map((image) => {
     return process.env.NEXT_PUBLIC_STRAPI_URL + image.attributes.url
   })
+  const link = project.attributes.projectLink;
+  const gitRepo = project.attributes.gitRepo;
   
   return (
-    <div className='max-w-[1400px] w-screen md:min-h-[600px] overflow-scroll m-auto justify-center flex flex-col md:flex-row pt-20'>
+    <div className='max-w-[1400px] gap-6 w-screen md:min-h-[500px] overflow-y-scroll m-auto justify-center flex flex-col md:flex-row md:pt-10'>
       <div className="h-fit rounded-xl md:w-1/2 flex flex-col">
         <div className='md:w-full w-screen'>
           <Swiper
@@ -56,19 +58,16 @@ const ProjectDetails = ({ project }) => {
             pagination={{ clickable: true }}
           >
             {images.map((image, id) => (
-              <SwiperSlide className="p-10"><img key={id} className='w-full m-auto rounded-lg' src={image} alt="" /></SwiperSlide>
+              <SwiperSlide className="p-10"><img key={id} className='w-full p-2 bg-[#2e2e2e] m-auto border-2 border-gray-700 rounded-lg' src={image} alt="" /></SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="flex justify-around w-1/2 gap-4 m-auto">
-          <button className="w-fit rounded-xl px-4 py-2 my-3 bg-gray-400">
-            <a href="/">Live Demo</a>
-          </button>
-          <button className="w-fit rounded-xl px-4 py-2 my-3 bg-gray-400">
-            <a href="/">Code Repo</a>
-          </button>
+          <div className="flex justify-around w-1/2 gap-4 m-auto">
+            <Button link={link} text='Live Demo' className="w-fit rounded-xl px-4 py-2 my-3 bg-gray-400" />
+            <Button link={gitRepo} text='Git Repo' className="w-fit rounded-xl px-4 py-2 my-3 bg-gray-400" />
+          </div>
         </div>
       </div>
+      <div className="h-auto w-[1px] border-2 border-gray-500" />
       <div className='md:w-1/2 px-6 text-center'>
         <h1 className='my-4 text-2xl'>{title}</h1>
         <p className='my-4 whitespace-pre'>{skills}</p>

@@ -21,8 +21,8 @@ const Highlight = ( { projects } ) => {
   return (
     <>
       {projects && projects?.map(( project ) => (
-        <div key={project.id} id='projects' className='flex max-w-[1300px] py-14 m-auto'>
-          <div className='w-1/2'>
+        <div key={project.id} id='projects' className='flex flex-col w-screen md:flex-row md:max-w-[1300px] py-6 md:py-14 m-auto'>
+          <div className='md:w-1/2'>
             <ScrollAnimation animateOnce animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
               <Swiper
                 modules={[ 
@@ -59,18 +59,19 @@ const Highlight = ( { projects } ) => {
               </Swiper>
             </ScrollAnimation>
           </div>
-          <div className='flex flex-col w-1/2 px-6'>
+          <div className='flex flex-col bg-[#222] md:w-1/2 px-6'>
             <ScrollAnimation animateOnce animateIn='animate__slideInRight' animateOut='animate__fadeOutRight'>
               <h2 className='text-2xl'>{project.attributes.title}</h2>
-              <span className='flex gap-4 my-4 text-xs' id='tailwind'>
+              <span className='flex flex-wrap gap-4 my-4 text-xs' id='tailwind'>
                 {project.attributes.skills.map((skillObj) => (
                   <span key={skillObj.id} className='text-xs'>{skillObj.skill}</span>
                 ))}
               </span>
               <div className='text-sm'>
                 <span>{project.attributes.description}</span>
+                <button className='px-2'>read more</button>
               </div>
-              <div className='flex gap-2 mt-4'>
+              <div className='md:justify-start md:gap-2 flex justify-center gap-6 mt-4'>
                 <Button link={project.attributes.linkToDemo} text={'Live Demo'}/>
                 <Button link={project.attributes.linkToRepo} text={'Github Repo'} />
               </div>

@@ -1,11 +1,12 @@
 import React from 'react'
 import NavBar from './NavBar'
+import Footer from './Footer'
 import Particles from 'react-particles-js';
 
 const Layout = ({children}) => {
   return (
-    <main className='bg-[#222] overflow-hidden -z-20 min-h-screen text-white whitespace-pre-wrap'>
-      <Particles 
+    <main className='bg-[#222] overflow-hidden min-h-screen text-white whitespace-pre-wrap'>
+      {/* <Particles 
         className='fixed top-0 bottom-0 left-0 right-0 z-0'
         params={{
           "particles": {
@@ -116,10 +117,10 @@ const Layout = ({children}) => {
             }
           },
             "retina_detect": true}} 
-      />
+      /> */}
       <NavBar />
       {children}
-      {/* Footer */}
+      <Footer />
     </main>
   )
 }

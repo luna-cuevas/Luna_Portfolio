@@ -11,6 +11,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css";
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 const Home = ( { projects } ) => {
   const [name, setName] = useState('');
@@ -79,9 +80,9 @@ const Home = ( { projects } ) => {
   return (
     <container className='h-fit relative'>
       <div className=''>
-        <div className=' flex min-h-screen'>
-          <div className='m-auto flex justify-around max-w-[800px]'>
-            <svg className='fill-transparent z-0 stroke-white absolute top-auto bottom-auto left-auto right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
+        <div className='min-h-[90vh] flex'>
+          <div className='m-auto flex flex-col w-screen md:flex-row justify-around md:max-w-[800px]'>
+            <svg className='fill-transparent z-0 stroke-white absolute top-0 md:top-auto bottom-auto md:left-auto w-[130%] -left-16 right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
               {/* this sets the gradient fill on the sphere, check CSS for more info */}
               <linearGradient id="lg">
                 <stop style={{'stopColor': 'rgb(172, 171, 243)'}} offset="0" />
@@ -90,10 +91,10 @@ const Home = ( { projects } ) => {
               <path id='ellipse' x="0px" y="0px" d="M103.3,56.9c25.4-4.4,54.4-7.3,85.3-8.2c100.6-3,182.7,16.3,183.5,43.1c0.8,26.8-80.1,50.9-180.6,53.9C90.9,148.7,8.7,129.4,8,102.6c-0.6-18.5,38-35.8,95.2-45.7"/>
               <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
             </svg>
-            <div className='z-10 w-1/2 py-4 pr-4 text-right border-r-2 border-gray-300'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInDown' animateOut='animate__fadeOutUp'>
-                <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
-                <div className='flex justify-end gap-4 my-2'>
+            <div className='md:w-1/2 md:text-right mdpr-4 z-10 py-4 text-center border-r-2 border-gray-300'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInLeft'>
+                <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-7xl md:text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
+                <div className='md:justify-end flex justify-center gap-4 my-2'>
                   <a target='_blank' className='my-auto' href="https://www.linkedin.com/in/luna-cuevas/">
                     <img className='w-[35px]' src="/images/skills/linkedin.svg" alt="" />
                   </a>
@@ -103,17 +104,21 @@ const Home = ( { projects } ) => {
                 </div>
               </ScrollAnimation>
             </div>
-            <div className='z-10 flex flex-col w-1/2 py-4 pl-4'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInDown' animateOut='animate__fadeOutUp'>
+            <div className='md:w-1/2 md:p-0 md:pl-4 z-10 flex flex-col w-screen p-10 py-4 m-auto'>
+              <ScrollAnimation initiallyVisible animateIn='animate__fadeInRight'>
                 <div className='bg-[#222]'>
-                  I am a front end developer with a background in graphic design. I love to build dynamic mobile-responsive websites using HTML CSS/SCSS,Javascript, and React.
+                  I am a Full Stack developer specializing in front end technologies. My expertise is in building dynamic, mobile-responsive websites using React, Next.js, and Tailwind.
                   <br />
                   <br />
-                  Creating particles, parallax designs and scroll triggered animations using libraries like GSAP and threejs is my forte.
+                  I have a background in graphic design and can make cool animations using GSAP and Three.js. 
                 </div>
-                <div className=' flex gap-4'>
-                  <Button targetTo text='Projects' link='/projects' />
-                  <Button targetTo text='Contact' link='/contact' />
+                <div className='md:justify-start flex justify-center gap-4'>
+                  <button id='bn30'>
+                    <Link href='/projects'>Projects</Link>
+                  </button>
+                  <button id='bn30'>
+                    <Link href='/contact'>Contact</Link>
+                  </button>
                 </div>
               </ScrollAnimation>
             </div>
@@ -121,7 +126,7 @@ const Home = ( { projects } ) => {
         </div>
       </div>
       {/* Works */}
-      <div className='flex flex-col items-center w-screen min-h-screen'>
+      <div className='flex flex-col items-center w-screen min-h-screen mb-20'>
         <h1 className='border-y-2 h-fit mx-auto text-3xl border-gray-300'>Highlights</h1>
         <div className='h-fit'>
           <Highlight projects={projects} />
@@ -139,17 +144,16 @@ const Home = ( { projects } ) => {
         </div>
       </div>
       {/* About Me */}
-      <div className='flex flex-col items-center justify-center w-screen min-h-screen'>
+      <div className='flex flex-col items-center justify-center w-screen min-h-screen p-4'>
         <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
-        <div className='max-w-[1200px] flex'>
-          <ScrollAnimation animateOnce className='flex flex-col w-1/2 gap-4 p-4 text-base font-light text-left' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
-            <p>Hello! Thanks for taking a moment to check out my website!</p>
-            <p>I'm a self-taught full stack developer primarily specializing in JAM Stack technologies and animation libraries like GSAP and three.js</p>
-            <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer Wordpress but I'm agile in can work with any of the major headless and traditional CMS's to ensure future updates can be done by the user.</p>
-            <p>My goal is to find a group of talented engineers and help tackle modern problems with creative solutions. Thanks again for taking time to read through this, if you feel like we can work together please feel free to reach out below and I'll get back to you ASAP!</p>
+        <div className='md:max-w-[1200px] flex-col md:flex-row flex'>
+          <ScrollAnimation animateOnce className='flex flex-col md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+            <p>I'm a self-taught full stack developer primarily specializing in front end technologies and animation libraries like GSAP and three.js</p>
+            <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer to work with a CMS so I frequently implement a headless CMS like Strapi, Wordpress API, or Sanity. With E-Commerce clients, I've integrated Shopify, Shipstation, and Stripe APIs to empower businesses to scale at the speed they want.</p>
+            <p>Currently open to new clients and opportunities. If you think we could collaborate, please feel free to  reach out below.</p>
           </ScrollAnimation>
           <ScrollAnimation duration='2' className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
-          <ScrollAnimation animateOnce className='flex flex-col w-1/2 gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+          <ScrollAnimation animateOnce className='md:w-1/2 flex flex-col gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
             <h1>Skills</h1>
             <div className='flex flex-wrap max-w-[500px] gap-8 text-sm'>
               {skillsData?.map(skill => (
@@ -163,33 +167,41 @@ const Home = ( { projects } ) => {
         </div>
       </div>
       {/* Contact */}
-      <div className='flex flex-col m-auto items-center max-w-[1200px] min-h-[800px] pb-28'>
+      <div className='flex flex-col m-auto items-center md:max-w-[1200px] md:min-h-[800px] pb-28'>
         <h1 className='border-y-2 h-fit mb-14 mx-auto text-3xl border-gray-300'>Contact Me</h1>
-        <div className='flex'>
-          <div className='flex justify-end w-1/2'>            
-            <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] p-10 w-11/12 bg-[#2b2b2b]'>
-              <div className='h-full'>
-                <div className='flex flex-col gap-6 m-auto'>
-                  {/* input fields for name and email */}
-                  <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
-                  <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+        <div className='md:flex-row flex flex-col justify-center'>
+          <div className='md:w-1/2 md:justify-end md:order-1 flex justify-center order-2'>            
+            <ScrollAnimation animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
+              <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] m-auto p-10 w-11/12 bg-[#2b2b2b]'>
+                <div className='h-full'>
+                  <div className='flex flex-col gap-6 m-auto'>
+                    {/* input fields for name and email */}
+                    <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
+                    <input style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 bg-transparent border-[3px]' type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+                  </div>
+                  <div className='my-6'>Message</div>
+                  {/* Input field for message */}
+                  <textarea style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 w-full bg-transparent border-[3px] h-1/3' placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+                  <div onClick={submit} className='button'>
+                    <Button text={'Send Message'} />
+                  </div>
+                  <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message, we will be in touch in no time!</span>
                 </div>
-                <div className='my-6'>Message</div>
-                {/* Input field for message */}
-                <textarea style={{'borderImage': 'linear-gradient(90deg,#4568dc,#b06ab3) 1 1 10%'}} className='p-2 w-full bg-transparent border-[3px] h-1/3' placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-                <div onClick={submit} className='button'>
-                  <Button text={'Send Message'} />
-                </div>
-                <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message, we will be in touch in no time!</span>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
-          <div className='flex flex-col w-1/3 gap-2 pl-10'>
-            <h1>Let's Talk?</h1>
-            <p>I'm available to take on projects and collaborate with a team to find solutions. Tell me more about your goals and the vision you're seeking to accomplish, I'll get back to you promptly.</p>
-            <p>Via Email: <span>s.cuevas14@gmail.com</span></p>
-            <p>Via: <span>LinkedIn</span></p>
-            <Button link='https://github.com/luna-cuevas' text='Github' />
+          <div className='md:w-1/3 md:pl-10 md:px-2 md:my-0 flex flex-col order-1 gap-2 px-8 my-10'>
+            <ScrollAnimation animateOnce animateIn='animate__fadeInRight'>
+              <div className='bg-[#222]'>
+                <h1 className='md:text-left mb-4 text-3xl text-center'>Let's Talk?</h1>
+                <p>I'm available to take on projects and collaborate with a team to find solutions. Tell me more about your goals and the vision you're seeking to accomplish, I'll get back to you promptly.</p>
+                <p className='my-2'>Via Email: <a className='text-blue-400' target='_blank' href='mailto:s.cuevas14@gmail.com'>s.cuevas14@gmail.com</a></p>
+                <p>Via: <a className='text-blue-400' target='_blank' href='https://www.linkedin.com/in/luna-cuevas/'>LinkedIn</a></p>
+              </div>
+              <div>
+                <Button link='https://github.com/luna-cuevas' text='Github' />
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
       </div>
