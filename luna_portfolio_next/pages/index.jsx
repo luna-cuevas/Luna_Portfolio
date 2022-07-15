@@ -91,7 +91,7 @@ const Home = ( { projects } ) => {
               <path id='ellipse' x="0px" y="0px" d="M103.3,56.9c25.4-4.4,54.4-7.3,85.3-8.2c100.6-3,182.7,16.3,183.5,43.1c0.8,26.8-80.1,50.9-180.6,53.9C90.9,148.7,8.7,129.4,8,102.6c-0.6-18.5,38-35.8,95.2-45.7"/>
               <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
             </svg>
-            <div className='md:w-1/2 md:text-right mdpr-4 z-10 py-4 text-center border-r-2 border-gray-300'>
+            <div className='md:w-1/2 md:text-right md:pr-4 z-10 py-4 text-center border-r-2 border-gray-300'>
               <ScrollAnimation initiallyVisible animateIn='animate__fadeInLeft'>
                 <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-7xl md:text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
                 <div className='md:justify-end flex justify-center gap-4 my-2'>
@@ -100,6 +100,9 @@ const Home = ( { projects } ) => {
                   </a>
                   <a target='_blank' href="https://github.com/luna-cuevas">
                     <img className='w-[40px]' src="/images/skills/github.svg" alt="" />
+                  </a>
+                  <a className='relative' target='_blank' href="https://www.upwork.com/freelancers/~016c0c41196fda1a07">
+                    <img className='w-[40px] ' src="/images/upwork.png" alt="" />
                   </a>
                 </div>
               </ScrollAnimation>

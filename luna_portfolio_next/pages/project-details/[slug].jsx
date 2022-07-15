@@ -68,7 +68,7 @@ const ProjectDetails = ({ project }) => {
         </div>
       </div>
       <div className="h-auto w-[1px] border-2 border-gray-500" />
-      <div className='md:w-1/2 px-6 text-center'>
+      <div className='md:w-1/2 px-6 z-10 bg-[#222] text-center'>
         <h1 className='my-4 text-2xl'>{title}</h1>
         <p className='my-4 whitespace-pre'>{skills}</p>
         <p className='font-light text-left'>{desc}</p>

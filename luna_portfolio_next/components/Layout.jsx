@@ -6,7 +6,7 @@ import Particles from 'react-particles-js';
 const Layout = ({children}) => {
   return (
     <main className='bg-[#222] overflow-hidden min-h-screen text-white whitespace-pre-wrap'>
-      {/* <Particles 
+      <Particles 
         className='fixed top-0 bottom-0 left-0 right-0 z-0'
         params={{
           "particles": {
@@ -117,7 +117,7 @@ const Layout = ({children}) => {
             }
           },
             "retina_detect": true}} 
-      /> */}
+      />
       <NavBar />
       {children}
       <Footer />
