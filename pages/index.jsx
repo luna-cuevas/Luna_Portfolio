@@ -105,7 +105,7 @@ const Home = ( { projects } ) => {
               <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
             </svg>
             <div className='md:w-1/2 md:text-right md:pr-4 z-10 py-4 text-center border-r-2 border-gray-300'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInLeft'>
+              <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} initiallyVisible animateIn='animate__fadeInLeft'>
                 <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-7xl md:text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
                 <div className='md:justify-end flex justify-center gap-4 my-2'>
                   <a target='_blank' className='my-auto' href="https://www.linkedin.com/in/luna-cuevas/">
@@ -121,7 +121,7 @@ const Home = ( { projects } ) => {
               </ScrollAnimation>
             </div>
             <div className='md:w-1/2 md:p-0 md:pl-4 z-10 flex flex-col w-screen p-10 py-4 m-auto'>
-              <ScrollAnimation initiallyVisible animateIn='animate__fadeInRight'>
+              <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} initiallyVisible animateIn='animate__fadeInRight'>
                 <div className='bg-[#222]'>
                   I am a Full Stack developer specializing in front end technologies. My expertise is in building dynamic, mobile-responsive websites using React, Next.js, and Tailwind.
                   <br />
@@ -148,14 +148,14 @@ const Home = ( { projects } ) => {
           <Highlight projects={projects} />
         </div>
         <div className='flex gap-4'>
-          <ScrollAnimation className='w-[70px] flex' animateIn='animate__fadeInLeft'>
+          <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='w-[70px] flex' animateIn='animate__fadeInLeft'>
             <img src="/images/love-arrow-left.png" alt="" />
             {/* <svg className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg> */}
           </ScrollAnimation>
           <button id='bn30'>
             <Link href="/projects">See More Work</Link>
           </button>
-          <ScrollAnimation className='w-[70px] flex' animateIn='animate__fadeInRight'>
+          <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='w-[70px] flex' animateIn='animate__fadeInRight'>
             <img src="/images/love-arrow-right.png" alt="" />
             {/* <svg  style={{'filter': 'invert(98%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(113%) contrast(100%);'}} className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero"/></svg> */}
           </ScrollAnimation>
@@ -165,13 +165,13 @@ const Home = ( { projects } ) => {
       <div className='flex flex-col items-center justify-center w-screen min-h-screen p-4'>
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 py-[2px] h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
         <div className='md:max-w-[1200px] flex-col md:flex-row flex'>
-          <ScrollAnimation animateOnce className='flex flex-col justify-center items-center md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+          <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce className='flex flex-col justify-center items-center md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
             <p>I'm a self-taught full stack developer primarily specializing in front end technologies and animation libraries like GSAP and three.js</p>
             <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer to work with a CMS so I frequently implement a headless CMS like Strapi, Wordpress API, or Sanity. With E-Commerce clients, I've integrated Shopify, Shipstation, and Stripe APIs to empower businesses to scale at the speed they want.</p>
             <p>Currently open to new clients and opportunities. If you think we could collaborate, please feel free to  reach out below.</p>
           </ScrollAnimation>
-          <ScrollAnimation duration={2} className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
-          <ScrollAnimation animateOnce className='md:w-1/2 flex flex-col gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+          <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} duration={2} className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
+          <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce className='md:w-1/2 flex flex-col gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
             <h1 className='text-2xl underline'>Skills</h1>
             <div className='flex flex-wrap max-w-[500px] gap-8 text-sm'>
               {skillsData?.map(skill => (
@@ -189,7 +189,7 @@ const Home = ( { projects } ) => {
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 h-fit mb-14 py-[2px] mx-auto text-3xl border-gray-300'>Contact Me</h1>
         <div className='md:flex-row flex flex-col justify-center'>
           <div className='md:w-1/2 md:justify-end md:order-1 flex justify-center order-2'>            
-            <ScrollAnimation animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
+            <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
               <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] m-auto p-10 w-11/12 bg-[#2b2b2b]'>
                 <div className='h-full'>
                   <div className='flex flex-col gap-6 m-auto'>
@@ -209,7 +209,7 @@ const Home = ( { projects } ) => {
             </ScrollAnimation>
           </div>
           <div className='md:w-1/3 md:pl-10 md:px-2 md:my-0 flex flex-col order-1 gap-2 px-8 my-10'>
-            <ScrollAnimation animateOnce animateIn='animate__fadeInRight'>
+            <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce animateIn='animate__fadeInRight'>
               <div className='bg-[#222]'>
                 <h1 className='md:text-left mb-4 text-3xl text-center'>Let's Talk?</h1>
                 <p>I'm available to take on projects and collaborate with a team to find solutions. Tell me more about your goals and the vision you're seeking to accomplish, I'll get back to you promptly.</p>
