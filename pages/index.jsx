@@ -94,7 +94,7 @@ const Home = ( { projects } ) => {
     <container className='h-fit relative'>
       <div className=''>
         <div className='flex min-h-screen'>
-          <div className='m-auto flex flex-col w-screen md:flex-row justify-around md:max-w-[800px]'>
+          <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='m-auto flex flex-col w-screen md:flex-row justify-around md:max-w-[800px]'>
             <svg className='fill-transparent z-0 stroke-white absolute top-0 md:top-auto bottom-auto md:left-auto w-[130%] -left-16 right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
               {/* this sets the gradient fill on the sphere, check CSS for more info */}
               <linearGradient id="lg">
@@ -120,7 +120,7 @@ const Home = ( { projects } ) => {
                 </div>
               </ScrollAnimation>
             </div>
-            <div className='md:w-1/2 md:p-0 md:pl-4 z-10 flex flex-col w-screen p-10 py-4 m-auto'>
+            <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='md:w-1/2 md:p-0 md:pl-4 z-10 flex flex-col w-screen p-10 py-4 m-auto'>
               <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} initiallyVisible animateIn='animate__fadeInRight'>
                 <div className='bg-[#222]'>
                   I am a Full Stack developer specializing in front end technologies. My expertise is in building dynamic, mobile-responsive websites using React, Next.js, and Tailwind.
@@ -147,7 +147,7 @@ const Home = ( { projects } ) => {
         <div className='h-fit'>
           <Highlight projects={projects} />
         </div>
-        <div className='flex gap-4'>
+        <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='flex gap-4'>
           <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='w-[70px] flex' animateIn='animate__fadeInLeft'>
             <img src="/images/love-arrow-left.png" alt="" />
             {/* <svg className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg> */}
@@ -164,7 +164,7 @@ const Home = ( { projects } ) => {
       {/* About Me */}
       <div className='flex flex-col items-center justify-center w-screen min-h-screen p-4'>
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 py-[2px] h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
-        <div className='md:max-w-[1200px] flex-col md:flex-row flex'>
+        <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='md:max-w-[1200px] flex-col md:flex-row flex'>
           <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce className='flex flex-col justify-center items-center md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
             <p>I'm a self-taught full stack developer primarily specializing in front end technologies and animation libraries like GSAP and three.js</p>
             <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer to work with a CMS so I frequently implement a headless CMS like Strapi, Wordpress API, or Sanity. With E-Commerce clients, I've integrated Shopify, Shipstation, and Stripe APIs to empower businesses to scale at the speed they want.</p>
@@ -188,7 +188,7 @@ const Home = ( { projects } ) => {
       <div className='flex flex-col m-auto items-center md:max-w-[1200px] md:min-h-[800px] pb-28'>
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 h-fit mb-14 py-[2px] mx-auto text-3xl border-gray-300'>Contact Me</h1>
         <div className='md:flex-row flex flex-col justify-center'>
-          <div className='md:w-1/2 md:justify-end md:order-1 flex justify-center order-2'>            
+          <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='md:w-1/2 md:justify-end md:order-1 flex justify-center order-2'>            
             <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
               <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] m-auto p-10 w-11/12 bg-[#2b2b2b]'>
                 <div className='h-full'>
@@ -208,7 +208,7 @@ const Home = ( { projects } ) => {
               </div>
             </ScrollAnimation>
           </div>
-          <div className='md:w-1/3 md:pl-10 md:px-2 md:my-0 flex flex-col order-1 gap-2 px-8 my-10'>
+          <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='md:w-1/3 md:pl-10 md:px-2 md:my-0 flex flex-col order-1 gap-2 px-8 my-10'>
             <ScrollAnimation style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} animateOnce animateIn='animate__fadeInRight'>
               <div className='bg-[#222]'>
                 <h1 className='md:text-left mb-4 text-3xl text-center'>Let's Talk?</h1>
