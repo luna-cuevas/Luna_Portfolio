@@ -8,8 +8,9 @@ const NavBar = () => {
     <nav id="site-menu" className="flex z-50 flex-wrap md:absolute justify-end w-screen max-h-96 pl-12 md:justify-around pr-8 bg-[#222]">  
       <div className='h-fit w-fit relative flex'> 
         <div className="w-fit sm:w-auto sm:self-center z-100 sm:flex-none flex flex-col flex-no-wrap items-center self-start justify-between">
-          <a onClick={() => setIsOpen(!isOpen)}>
-            <button id="menuBtn" className={`${isOpen ? 'hamburger' : 'open'} block md:hidden mt-10 z-50 focus:outline-none`} type="button">
+          <a>
+            <div onClick={() => setIsOpen(!isOpen)} className={`absolute ${isOpen ? 'top-3 -left-3' : 'top-9 -left-4'} cursor-grab z-[100] w-8 h-8 md:hidden`} />
+            <button id="menuBtn" className={`${isOpen ? 'hamburger' : 'open'} block relative md:hidden mt-10 z-50 focus:outline-none`} type="button">
               <span className="hamburger__top-bun"></span>
               <span className="hamburger__bottom-bun"></span>
             </button>
