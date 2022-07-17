@@ -9,7 +9,7 @@ const Project = ({ project }) => {
 
   return (
     <div  className='lg:w-1/4 z-20 h-fit transition-all duration-200 hover:shadow-[0px_5px_10px_5px_#474646eb] pb-4 w-10/12 bg-[#1c1b1bee] sm:w-[45%] border-2 rounded-xl border-gray-700 mx-auto text-center'>
-      <img className='h-1/3 p-4 m-auto' src={image} alt="" />
+      <img className='h-auto p-4 m-auto' src={image} alt="" />
       <div className="w-5/6 m-auto">
         <h1 className='md:text-xl py-1 text-base border-b-2 border-gray-600'>{title}</h1>
         <div className="flex flex-wrap justify-center gap-2 my-4">

@@ -52,7 +52,7 @@ const contact = () => {
       {!emailSent ? 
         <div className='md:w-1/2 h-fit md:justify-end z-50 flex flex-col justify-center w-11/12 mx-auto'>            
           <h1 className='m-auto my-2 text-2xl'>~Send me a message for a reward~</h1>
-          <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] p-10 w-11/12 bg-[#2b2b2b]'>
+          <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] mx-auto p-10 w-11/12 bg-[#2b2b2b]'>
             <div className='h-full'>
               <div className='flex flex-col gap-6 m-auto'>
                 {/* input fields for name and email */}
