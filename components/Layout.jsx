@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Head from 'next/head';
 
 
 const Layout = ({children}) => {
@@ -14,6 +15,7 @@ const Layout = ({children}) => {
   
   return (
     <main className='bg-[#222] overflow-hidden min-h-screen text-white whitespace-pre-wrap'>
+      
       <Particles 
         init={particlesInit} 
         loaded={particlesLoaded}
