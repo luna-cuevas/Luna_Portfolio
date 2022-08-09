@@ -15,7 +15,7 @@ const projects = ({ projects }) => {
 export default projects;
 
 export async function getStaticProps() {
-  const projectResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/projects?populate=*`)
+  const projectResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/projects?populate=*&_sort=updatedAt:DESC`)
   return {
     props: {
       projects: projectResponse.data
