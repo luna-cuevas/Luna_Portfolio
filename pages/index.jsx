@@ -3,6 +3,9 @@ import Highlight from '../components/Highlight'
 import Button from '../components/Button'
 import emailjs from 'emailjs-com'
 
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+
 import { gsap } from "gsap";
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
 gsap.registerPlugin(MotionPathPlugin);
@@ -90,10 +93,130 @@ const Home = ( { projects } ) => {
         });
     }) 
 
+    const particlesInit = async (main) => {
+      await loadFull(main);
+    };
+    const particlesLoaded = (container) => {};
+
   return (
     <container className='h-fit relative'>
+      
       <div className=''>
-        <div className='flex min-h-screen'>
+        <div className='relative flex min-h-screen'>
+          <Particles 
+          init={particlesInit} 
+          loaded={particlesLoaded}
+          className='absolute top-0 bottom-0 left-0 right-0 z-0'
+          params={{
+            "particles": {
+              "number": {
+                "value": 10,
+                "density": {
+                  "enable": true,
+                  "value_area": 3000
+                }
+              },
+              "color": {
+                "value": "#ffffff"
+              },
+              "shape": {
+                "type": "image",
+                "stroke": {
+                  "width": 0,
+                  "color": "#fff"
+                },
+                "polygon": {
+                  "nb_sides": 5
+                },
+                "image": {
+                  "src": '/images/shooting-star.svg',
+                  "width": 5,
+                  "height": 5
+                }
+              },
+              "opacity": {
+                "value": 1,
+                "random": true,
+                "anim": {
+                  "enable": true,
+                  "speed": 2,
+                  "opacity_min": 0,
+                  "sync": false
+                }
+              },
+              "size": {
+                "value": 50,
+                "random": false,
+                "anim": {
+                  "enable": true,
+                  "speed": 10,
+                  "size_min": 0,
+                  "sync": false
+                }
+              },
+              "line_linked": {
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+              },
+              "move": {
+                "enable": true,
+                "speed": 4,
+                "direction": "bottom-left",
+                "random": false,
+                "straight": true,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                  "enable": false,
+                  "rotateX": 4261.397264814273,
+                  "rotateY": 4498.141557303954
+                }
+              }
+            },
+            "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                "onhover": {
+                  "enable": true,
+                  "mode": "grab"
+                },
+                "onclick": {
+                  "enable": true,
+                  "mode": "repulse"
+                },
+                "resize": true
+              },
+              "modes": {
+                "grab": {
+                  "distance": 194.89853095232286,
+                  "line_linked": {
+                    "opacity": 0.32082394169230544
+                  }
+                },
+                "bubble": {
+                  "distance": 400,
+                  "size": 40,
+                  "duration": 2,
+                  "opacity": 8,
+                  "speed": 3
+                },
+                "repulse": {
+                  "distance": 200,
+                  "duration": 0.4
+                },
+                "push": {
+                  "particles_nb": 4
+                },
+                "remove": {
+                  "particles_nb": 2
+                }
+              }
+            },
+              "retina_detect": true}} 
+        />
           <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='m-auto flex flex-col w-screen md:flex-row justify-around md:max-w-[800px]'>
             <svg className='fill-transparent z-0 stroke-white absolute top-0 md:top-auto bottom-auto md:left-auto w-[130%] -left-16 right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
               {/* this sets the gradient fill on the sphere, check CSS for more info */}
