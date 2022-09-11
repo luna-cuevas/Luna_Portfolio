@@ -14,16 +14,21 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-creative";
 
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css";
+import { client, urlFor } from '../lib/client'
 
-const Highlight = ( { projects } ) => {
+
+// import ScrollAnimation from 'react-animate-on-scroll';
+// import "animate.css";
+
+const Highlight = ( { posts } ) => {
+
+  console.log(posts)
   return (
     <>
-      {projects && projects?.map(( project ) => (
-        <div key={project.id} id='projects' className='flex flex-col w-screen md:flex-row md:max-w-[1300px] py-6 md:py-14 m-auto'>
+      {posts && posts?.map(( project ) => (
+        <div key={project._id} id='projects' className='flex flex-col w-screen md:flex-row md:max-w-[1300px] py-6 md:py-14 m-auto'>
           <div className='md:w-1/2'>
-            <ScrollAnimation animateOnce animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+            <div>
               <Swiper
                 modules={[ 
                   Navigation, 
@@ -51,30 +56,30 @@ const Highlight = ( { projects } ) => {
                 style={{'color': 'white !important'}}
                 pagination={{ clickable: true }}
               >
-                {project.attributes.images.data.map((image, id) => (
+                {project.images?.map((image, id) => (
                   <SwiperSlide key={id} className="p-10">
-                    <img className='w-full m-auto rounded-lg select-none' src={image.attributes.url} alt="" />
+                    <img className='w-full m-auto rounded-lg select-none' src={urlFor(image)} alt="" />
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </ScrollAnimation>
+            </div>
           </div>
           <div className='flex flex-col bg-[#222] md:w-1/2 px-6'>
-            <ScrollAnimation animateOnce animateIn='animate__slideInRight' animateOut='animate__fadeOutRight'>
-              <h2 className='md:text-left text-2xl text-center'>{project.attributes.title}</h2>
+            <div>
+              <h2 className='md:text-left text-2xl text-center'>{project.title}</h2>
               <span className='md:justify-start flex flex-wrap justify-center gap-4 my-4 text-xs' id='tailwind'>
-                {project.attributes.skills.map((skillObj) => (
-                  <span style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} key={skillObj.id} className='text-xs border-2 border-[#b06ab3]'>{skillObj.skill}</span>
+                {project.Skills?.map((skill) => (
+                  <span style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} key={skill._id} className='text-xs border-2 border-[#b06ab3]'>{skill}</span>
                 ))}
               </span>
               <div className='text-sm'>
-                <span>{project.attributes.description}</span>
+                <span>{project.body}</span>
               </div>
               <div className='md:justify-start md:gap-2 flex justify-center gap-6 mt-4'>
-                <Button link={project.attributes.linkToDemo} text={'Live Demo'}/>
-                <Button link={project.attributes.linkToRepo} text={'Github Repo'} />
+                <Button link={project.demoLink} text={'Live Demo'}/>
+                <Button link={project.gitLink} text={'Github Repo'} />
               </div>
-            </ScrollAnimation>
+            </div>
           </div>
         </div>
       ))}

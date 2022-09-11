@@ -1,11 +1,7 @@
 import React, { useRef, useState } from "react";
-import { fetcher } from '../api/api'
-import qs from 'qs'
 import { 
   Navigation, 
   Pagination, 
-  Scrollbar, 
-  A11y, 
   EffectCreative, 
   Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,16 +11,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-creative";
 import Button from "../../components/Button";
+import { client, urlFor } from "../../lib/client";
 
-const ProjectDetails = ({ project }) => {
-  const title = project.attributes.projectTitle;
-  const skills = project.attributes.projectSkillz;
-  const desc = project.attributes.projectDesc;
-  const images = project.attributes.projectImages.data.map((image) => {
-    return image.attributes.url
-  })
-  const link = project.attributes.projectLink;
-  const gitRepo = project.attributes.gitRepo;
+const ProjectDetails = ({ product }) => {
+  const title = product.title;
+  const skills = product.Skills;
+  const desc = product.body;
+  const images = product.images.map(image => urlFor(image)) ;
+  const link = product.demoLink;
+  const gitRepo = product.gitLink;
   
   return (
     <div className='max-w-[1400px] mt-10 gap-2 md:gap-6 w-screen md:min-h-[500px] md:mt-[20vh] overflow-y-scroll m-auto justify-center flex flex-col md:flex-row '>
@@ -57,8 +52,8 @@ const ProjectDetails = ({ project }) => {
             style={{'color': 'white !important'}}
             pagination={{ clickable: true }}
           >
-            {images.map((image, id) => (
-              <SwiperSlide className="p-10 select-none"><img key={id} className='w-full p-2 bg-[#2e2e2e] m-auto border-2 border-gray-700 rounded-lg' src={image} alt="" /></SwiperSlide>
+            {images?.map((image, id) => (
+              <SwiperSlide key={id} className="p-10 select-none"><img  className='w-full p-2 bg-[#2e2e2e] m-auto border-2 border-gray-700 rounded-lg' src={image} alt="" /></SwiperSlide>
             ))}
           </Swiper>
           <div className="flex justify-around w-1/2 gap-4 m-auto">
@@ -71,8 +66,8 @@ const ProjectDetails = ({ project }) => {
       <div className='md:w-1/2 px-6 z-10 flex flex-col bg-[#222] text-center'>
         <h1 className='my-4 text-2xl'>{title}</h1>
         <div className="flex flex-wrap gap-4 mx-auto my-4">
-          {skills.map((skill) => (
-            <p style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='text-xs border-2'>{skill.skill}</p>
+          {skills.map((skill, id) => (
+            <p key={id} style={{'borderImage': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='text-xs border-2'>{skill}</p>
           ))}
         </div>
         <p className='font-light text-left'>{desc}</p>
@@ -83,35 +78,32 @@ const ProjectDetails = ({ project }) => {
 
 export default ProjectDetails
 
-export async function getStaticPaths() {
-  const projects = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/projects?populate=*`)
-  const paths = projects.data.map((project) => {
-    return {
-      params: { slug: String(project.id) }
+export const getStaticPaths = async () => {
+  const query = `*[_type == "post"] {
+    slug {
+      current
+    }
+  }`;
+  const products = await client.fetch(query);
+  const paths = products.map((product) => ({
+    params: {
+      slug: product.slug.current
     }
   })
+  );
+  console.log(paths)
+
   return {
     paths,
     fallback: false
   }
 }
 
-export async function getStaticProps({ params }) {
-  const query = qs.stringify({
-    populate: ['projectImages', 'projectSkillz'], 
-  }, {
-    encodeValuesOnly: true, // prettify URL
-  });
-
-  const projectResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/projects?${query}`)
-  const projectData = projectResponse.data.find((project) => {
-    if (project.id == params.slug) {
-      return project
-    }
-  })
+export const getStaticProps = async ({ params: { slug } }) => {
+  const query = `*[_type == "post" && slug.current == '${slug}'][0]`;
+  const product = await client.fetch(query);
+  console.log(product)
   return {
-    props: {
-      project: projectData
-    }
+    props:{ product }
   }
-} 
+}

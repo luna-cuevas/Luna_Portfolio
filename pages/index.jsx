@@ -1,22 +1,18 @@
-import { fetcher } from '../pages/api/api'
 import Highlight from '../components/Highlight'
 import Button from '../components/Button'
 import emailjs from 'emailjs-com'
-
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-
 import { gsap } from "gsap";
 import MotionPathPlugin from 'gsap/dist/MotionPathPlugin'
-gsap.registerPlugin(MotionPathPlugin);
-
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css";
-
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { client } from '../lib/client'
+import { skillsData } from '../lib/skillsData'
+gsap.registerPlugin(MotionPathPlugin);
 
-const Home = ( { projects } ) => {
+const Home = ( { posts } ) => {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -46,32 +42,6 @@ const Home = ( { projects } ) => {
       alert('Please fill in all fields.');
     }
   };
-
-  const skillsData = [
-    {name: 'HTML', icon: '/images/skills/html5.svg'}, 
-    {name: 'CSS', icon: '/images/skills/css.svg'},
-    {name: 'Sass', icon: '/images/skills/sass.svg'},
-    {name: 'Bootstrap', icon: '/images/skills/bootstrap.svg'},
-    {name: 'Material', icon: '/images/skills/material.svg'},
-    {name: 'TailwindCSS', icon: '/images/skills/tailwind-css.svg'},
-    {name: 'GSAP', icon: '/images/skills/gsap.svg'},
-    {name: 'JavaScript', icon: '/images/skills/javascript.svg'}, 
-    {name: 'React', icon: '/images/skills/react.svg'}, 
-    {name: 'NextJS', icon: '/images/skills/nextjs.svg'},
-    {name: 'Node', icon: '/images/skills/nodejs.svg'}, 
-    {name: 'Wordpress', icon: '/images/skills/wordpress.png'},
-    {name: 'Jest', icon: '/images/skills/jest-icon.svg'},
-    {name: 'MongoDB', icon: '/images/skills/mongoDB.svg'},
-    {name: 'Sanity', icon: '/images/skills/sanity-seeklogo.com.svg'},
-    {name: 'Stripe', icon: '/images/skills/stripe-4.svg'},
-    {name: 'GraphQL', icon: '/images/skills/graphql.svg'},
-    {name: 'Shopify', icon: '/images/skills/shopify.svg'},
-    {name: 'Strapi', icon: '/images/skills/strapi.svg'},
-    {name: 'AWS S3', icon: '/images/skills/aws-s3.svg'},
-    {name: 'PostgreSQL', icon: '/images/skills/postgresql.svg'},
-    {name: 'Firebase', icon: '/images/skills/firebase.svg'},
-    {name: 'SQL', icon: '/images/skills/sql.png'},
-  ];
 
   const moonRef = useRef();
 
@@ -103,122 +73,8 @@ const Home = ( { projects } ) => {
       
       <div className=''>
         <div className='relative flex min-h-screen'>
-          <Particles 
-          init={particlesInit} 
-          loaded={particlesLoaded}
-          className='absolute top-0 bottom-0 left-0 right-0 z-0'
-          params={{
-            "particles": {
-              "number": {
-                "value": 10,
-                "density": {
-                  "enable": true,
-                  "value_area": 3000
-                }
-              },
-              "color": {
-                "value": "#ffffff"
-              },
-              "shape": {
-                "type": "image",
-                "stroke": {
-                  "width": 0,
-                  "color": "#fff"
-                },
-                "polygon": {
-                  "nb_sides": 5
-                },
-                "image": {
-                  "src": '/images/shooting-star.svg',
-                  "width": 5,
-                  "height": 5
-                }
-              },
-              "opacity": {
-                "value": 1,
-                "random": true,
-                "anim": {
-                  "enable": true,
-                  "speed": 2,
-                  "opacity_min": 0,
-                  "sync": false
-                }
-              },
-              "size": {
-                "value": 50,
-                "random": false,
-                "anim": {
-                  "enable": true,
-                  "speed": 10,
-                  "size_min": 0,
-                  "sync": false
-                }
-              },
-              "line_linked": {
-                "enable": false,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-              },
-              "move": {
-                "enable": true,
-                "speed": 4,
-                "direction": "bottom-left",
-                "random": false,
-                "straight": true,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                  "enable": false,
-                  "rotateX": 4261.397264814273,
-                  "rotateY": 4498.141557303954
-                }
-              }
-            },
-            "interactivity": {
-              "detect_on": "canvas",
-              "events": {
-                "onhover": {
-                  "enable": true,
-                  "mode": "grab"
-                },
-                "onclick": {
-                  "enable": true,
-                  "mode": "repulse"
-                },
-                "resize": true
-              },
-              "modes": {
-                "grab": {
-                  "distance": 194.89853095232286,
-                  "line_linked": {
-                    "opacity": 0.32082394169230544
-                  }
-                },
-                "bubble": {
-                  "distance": 400,
-                  "size": 40,
-                  "duration": 2,
-                  "opacity": 8,
-                  "speed": 3
-                },
-                "repulse": {
-                  "distance": 200,
-                  "duration": 0.4
-                },
-                "push": {
-                  "particles_nb": 4
-                },
-                "remove": {
-                  "particles_nb": 2
-                }
-              }
-            },
-              "retina_detect": true}} 
-        />
           <div style={{'-webkit-backface-visibility': 'hidden', '-webkit-transform-style': 'preserve-3d'}} className='m-auto flex flex-col w-screen md:flex-row justify-around md:max-w-[800px]'>
-            <svg className='fill-transparent z-0 stroke-white absolute top-0 md:top-auto bottom-auto md:left-auto w-[130%] -left-16 right-auto md:w-[200%] lg:w-[180%] xl:w-[140%]' viewBox="-213 10 812 190">
+            <svg className='fill-transparent z-0 stroke-white absolute top-0 md:top-auto bottom-auto md:left-auto w-[130%] -left-16 right-auto md:w-[240%] lg:w-[240%] xl:w-[240%]' viewBox="-213 10 812 190">
               {/* this sets the gradient fill on the sphere, check CSS for more info */}
               <linearGradient id="lg">
                 <stop style={{'stopColor': 'rgb(172, 171, 243)'}} offset="0" />
@@ -228,7 +84,7 @@ const Home = ( { projects } ) => {
               <circle fill="url(#lg)" className='stroke-[rgba(230,_129,_230,_0.582)]'  ref={moonRef}  cx="184.2" cy="36.1" r="12.9" x="0px" y="0px"/>
             </svg>
             <div id='scrollAnimation' className='md:w-1/2 md:text-right md:pr-4 z-10 py-4 text-center border-r-2 border-gray-300'>
-              <ScrollAnimation id='scrollAnimation' initiallyVisible animateIn='animate__fadeInLeft'>
+              <div id='scrollAnimation' initiallyVisible animateIn='animate__fadeInLeft'>
                 <h1 style={{"text-shadow": "2px 5px 3px rgb(238 114 238 / 84%)"}} className='text-7xl md:text-8xl bg-[#222] font-["spacerave"] text-[#cacdee]'>Luna <br />Cuevas</h1>
                 <div className='md:justify-end flex justify-center gap-4 my-2'>
                   <a target='_blank' className='my-auto' href="https://www.linkedin.com/in/luna-cuevas/">
@@ -241,10 +97,10 @@ const Home = ( { projects } ) => {
                     <img className='w-[40px] ' src="/images/upwork.png" alt="" />
                   </a>
                 </div>
-              </ScrollAnimation>
+              </div>
             </div>
             <div id='scrollAnimation' className='md:w-1/2 md:p-0 md:pl-4 z-10 flex flex-col w-screen p-10 py-4 m-auto'>
-              <ScrollAnimation id='scrollAnimation' initiallyVisible animateIn='animate__fadeInRight'>
+              <div id='scrollAnimation' initiallyVisible animateIn='animate__fadeInRight'>
                 <div className='bg-[#222]'>
                   I am a Full Stack developer specializing in front end technologies. My expertise is in building dynamic, mobile-responsive websites using React, Next.js, and Tailwind.
                   <br />
@@ -252,14 +108,14 @@ const Home = ( { projects } ) => {
                   I have a background in graphic design and can make cool animations using GSAP and Three.js. 
                 </div>
                 <div className='md:justify-start flex justify-center gap-4'>
-                  <button id='bn30'>
-                    <Link href='/projects'>Projects</Link>
-                  </button>
-                  <button id='bn30'>
-                    <Link href='/contact'>Contact</Link>
-                  </button>
+                  <Link href='/projects'>
+                    <button id='bn30'>Projects</button>
+                  </Link>
+                  <Link href='/contact'>
+                    <button id='bn30'>Contact</button>
+                  </Link>
                 </div>
-              </ScrollAnimation>
+              </div>
             </div>
           </div>
         </div>
@@ -268,33 +124,33 @@ const Home = ( { projects } ) => {
       <div className='flex flex-col items-center w-screen min-h-screen mb-20'>
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 h-fit mx-auto text-3xl py-[2px] border-gray-300'>Highlights</h1>
         <div className='h-fit'>
-          <Highlight projects={projects} />
+          <Highlight posts={posts} />
         </div>
         <div id='scrollAnimation' className='flex gap-4'>
-          <ScrollAnimation id='scrollAnimation' className='w-[70px] flex' animateIn='animate__fadeInLeft'>
+          <div id='scrollAnimation' className='w-[70px] flex' animateIn='animate__fadeInLeft'>
             <img src="/images/love-arrow-left.png" alt="" />
-            {/* <svg className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg> */}
-          </ScrollAnimation>
-          <button id='bn30'>
-            <Link href="/projects">See More Work</Link>
-          </button>
-          <ScrollAnimation id='scrollAnimation' className='w-[70px] flex' animateIn='animate__fadeInRight'>
+          </div>
+          <Link href="/projects">
+            <button id='bn30'>
+              See More Work
+            </button>
+          </Link>
+          <div id='scrollAnimation' className='w-[70px] flex' animateIn='animate__fadeInRight'>
             <img src="/images/love-arrow-right.png" alt="" />
-            {/* <svg  style={{'filter': 'invert(98%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(113%) contrast(100%);'}} className='m-auto' clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero"/></svg> */}
-          </ScrollAnimation>
+          </div>
         </div>
       </div>
       {/* About Me */}
       <div className='flex flex-col items-center justify-center w-screen min-h-screen p-4'>
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 py-[2px] h-fit mb-14 mx-auto text-3xl border-gray-300'>About Me</h1>
         <div id='scrollAnimation' className='md:max-w-[1200px] flex-col md:flex-row flex'>
-          <ScrollAnimation id='scrollAnimation'  animateOnce className='flex flex-col justify-center items-center md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
+          <div id='scrollAnimation'  animateOnce className='flex flex-col justify-center items-center md:w-1/2 gap-4 mb-4 p-4 text-base font-light text-left bg-[#222]' animateIn='animate__slideInLeft' animateOut='animate__fadeOutLeft'>
             <p>I'm a self-taught full stack developer primarily specializing in front end technologies and animation libraries like GSAP and three.js</p>
             <p>In the past year, I've found success as a freelance web developer working with e-commerce clients and content creators. I draft, design, and build beautiful mobile-responsive web pages with image optimization and cross browser compatibility. Clients often prefer to work with a CMS so I frequently implement a headless CMS like Strapi, Wordpress API, or Sanity. With E-Commerce clients, I've integrated Shopify, Shipstation, and Stripe APIs to empower businesses to scale at the speed they want.</p>
             <p>Currently open to new clients and opportunities. If you think we could collaborate, please feel free to  reach out below.</p>
-          </ScrollAnimation>
-          <ScrollAnimation id='scrollAnimation' duration={2} className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
-          <ScrollAnimation id='scrollAnimation' animateOnce className='md:w-1/2 flex flex-col gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
+          </div>
+          <div id='scrollAnimation' duration={2} className='max-h-30 border-2 border-gray-300' animateIn='animate__fadeIn' />
+          <div id='scrollAnimation' animateOnce className='md:w-1/2 flex flex-col gap-4 px-8 py-4 text-base font-light text-left' animateIn='animate__fadeInRight' animateOut='animate__fadeOutRight'>
             <h1 className='text-2xl underline'>Skills</h1>
             <div className='flex flex-wrap max-w-[500px] gap-8 text-sm'>
               {skillsData?.map(skill => (
@@ -304,7 +160,7 @@ const Home = ( { projects } ) => {
                 </div>
               ))}
             </div>
-          </ScrollAnimation>
+          </div>
         </div>
       </div>
       {/* Contact */}
@@ -312,7 +168,7 @@ const Home = ( { projects } ) => {
         <h1 style={{'border-image': 'linear-gradient(to right, #4568dc, #b06ab3) 1 1 100%'}} className='border-y-2 h-fit mb-14 py-[2px] mx-auto text-3xl border-gray-300'>Contact Me</h1>
         <div className='md:flex-row flex flex-col justify-center'>
           <div id='scrollAnimation' className='md:w-1/2 md:justify-end md:order-1 flex justify-center order-2'>            
-            <ScrollAnimation id='scrollAnimation' animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
+            <div id='scrollAnimation' animateOnce className='w-full m-auto' animateIn='animate__fadeInLeft'>
               <div style={{'boxShadow': '0 5px 10px 0 #000'}} className=' items-center h-[450px] m-auto p-10 w-11/12 bg-[#2b2b2b]'>
                 <div className='h-full'>
                   <div className='flex flex-col gap-6 m-auto'>
@@ -329,10 +185,10 @@ const Home = ( { projects } ) => {
                   <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message, we will be in touch in no time!</span>
                 </div>
               </div>
-            </ScrollAnimation>
+            </div>
           </div>
           <div id='scrollAnimation' className='md:w-1/3 md:pl-10 md:px-2 md:my-0 flex flex-col order-1 gap-2 px-8 my-10'>
-            <ScrollAnimation id='scrollAnimation' animateOnce animateIn='animate__fadeInRight'>
+            <div id='scrollAnimation' animateOnce animateIn='animate__fadeInRight'>
               <div className='bg-[#222]'>
                 <h1 className='md:text-left mb-4 text-3xl text-center'>Let's Talk?</h1>
                 <p>I'm available to take on projects and collaborate with a team to find solutions. Tell me more about your goals and the vision you're seeking to accomplish, I'll get back to you promptly.</p>
@@ -342,7 +198,7 @@ const Home = ( { projects } ) => {
               <div>
                 <Button link='https://github.com/luna-cuevas' text='Github' />
               </div>
-            </ScrollAnimation>
+            </div>
           </div>
         </div>
       </div>
@@ -352,11 +208,9 @@ const Home = ( { projects } ) => {
 
 export default Home;
 
-export async function getStaticProps() {
-  const projectResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/highlights?_sort=updatedAt:DESC&populate=*`)
+export const getStaticProps = async () => {
+  const posts = await client.fetch('*[_type == "projectHighlights"] | order(order asc)');
   return {
-    props: {
-      projects: projectResponse.data
-    }
+    props:{ posts }
   }
-};
+}
