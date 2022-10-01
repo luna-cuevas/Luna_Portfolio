@@ -14,7 +14,7 @@ const Layout = ({children}) => {
   
   return (
     <main className='bg-[#222] overflow-hidden min-h-screen text-white whitespace-pre-wrap'>
-      <Particles 
+      {/* <Particles 
         init={particlesInit} 
         loaded={particlesLoaded}
         className='absolute top-0 bottom-0 left-0 right-0'
@@ -127,7 +127,7 @@ const Layout = ({children}) => {
             }
           },
         "retina_detect": true}} 
-      />
+      /> */}
       <NavBar />
       {children}
       <Footer />
