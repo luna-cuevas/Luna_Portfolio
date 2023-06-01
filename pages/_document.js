@@ -18,25 +18,6 @@ export default function Document() {
         />
         <meta property="og:title" content="Luna's Portfolio" />
 
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-ED7F1Y8X3R"></script>
-
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-ED7F1Y8X3R', {
-            page_path: window.location.pathname,
-          });
-        `,
-          }}
-        />
-
         <title>Luna's Portfolio</title>
       </Head>
       <body>
