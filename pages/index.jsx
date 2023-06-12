@@ -12,7 +12,6 @@ import { skillsData } from "../lib/skillsData";
 gsap.registerPlugin(MotionPathPlugin);
 
 const Home = ({ posts }) => {
-  // test
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
